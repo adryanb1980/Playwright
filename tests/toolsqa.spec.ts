@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
+import testdata from '../test-data/input.json';
 
-test('Learning', async ({ page }, testInfo) => {
+test('Elements - Text Box', async ({ page }, testInfo) => {
   test.setTimeout(120000);
   await page.goto('/');
 
@@ -16,13 +17,17 @@ test('Learning', async ({ page }, testInfo) => {
   const screenshotelements = await page.screenshot();
   await testInfo.attach('Elements menu', { body: screenshotelements, contentType: 'image/png' });
 
-  await page.locator('text=Text Box').click();
-  await page.waitForTimeout(1000);
-  const textboxelements = await page.screenshot();
-  await testInfo.attach('Text box menu', { body: textboxelements, contentType: 'image/png' });
 
-  await page.getByPlaceholder('Full Name').fill("Adi");
-  await page.waitForTimeout(1000);
+  
+  await page.locator('text=Text Box').click();
+  await page.getByPlaceholder('Full Name').fill(testdata.fullname);
+  
+  await page.locator('#userEmail').fill(testdata.email);
+  await page.locator('#currentAddress').fill(testdata.currentaddress);
+  await page.locator('#permanentAddress').fill(testdata.permanentaddress);
+
+  const textboxelementsfullname = await page.screenshot();
+  await testInfo.attach('Textbox area', { body: textboxelementsfullname, contentType: 'image/png' });
 
   //Logout and close
   await page.waitForTimeout(4000);
