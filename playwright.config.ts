@@ -64,8 +64,8 @@ export default defineConfig({
     {
       name: 'firefox',
       use: { 
-        //...devices['Desktop Firefox'] 
-        viewport: null,
+        ...devices['Desktop Firefox'], 
+        //viewport: null,
       },
       
     },
@@ -104,9 +104,6 @@ export default defineConfig({
        channel: 'chrome' },
      
      },
-
-
-
   ],
 
   /* Run your local dev server before starting the tests */
