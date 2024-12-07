@@ -50,6 +50,6 @@ test('Elements - Text Box', async ({ page }, testElements) => {
 
 
   //Logout and close
-  await page.waitForTimeout(4000);
+  await page.waitForTimeout(3000);
   await page.close();
 });

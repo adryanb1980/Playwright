@@ -42,6 +42,7 @@ export default defineConfig({
     launchOptions: {
       // 1
       args: ["--start-maximized"],
+      slowMo: 0
     },
   },
   /* Configure projects for major browsers */
