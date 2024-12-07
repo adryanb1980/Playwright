@@ -34,12 +34,21 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('Submit', { body: submitbutton, contentType: 'image/png' });
   await page.mouse.wheel(0, -300);
 
-
-
   //Checkbox
   await page.locator('text=Check Box').click();
-  const checkboxpoption = await page.screenshot();
-  await testElements.attach('CheckBox area', { body: checkboxpoption, contentType: 'image/png' });
+  const checkboxoption = await page.screenshot();
+  await testElements.attach('CheckBox area', { body: checkboxoption, contentType: 'image/png' });
+
+  await page.locator('text=Home').click();
+  const checkboxcheck = await page.screenshot();
+  await testElements.attach('CheckBox checked', { body: checkboxcheck, contentType: 'image/png' });
+
+  await page.getByRole('button', { name: 'Toggle' }).click();
+  await page.waitForTimeout(2000);
+  const checkboxexpand = await page.screenshot();
+  await testElements.attach('CheckBox expanded', { body: checkboxexpand, contentType: 'image/png' });
+
+
   //Logout and close
   await page.waitForTimeout(4000);
   await page.close();
