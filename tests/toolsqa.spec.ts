@@ -49,6 +49,9 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('CheckBox expanded', { body: checkboxexpand, contentType: 'image/png' });
 
 
+
+  
+
   //Logout and close
   await page.waitForTimeout(3000);
   await page.close();
