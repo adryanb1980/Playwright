@@ -54,8 +54,6 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.locator('text=Yes').click();
   const radiobuttonselected = await page.screenshot();
   await testElements.attach('Radio buttons', { body: radiobuttonselected, contentType: 'image/png' });
-  await page.waitForTimeout(2000);
-
 
   //Web tables
   await page.locator('text=Web Tables').click();
@@ -64,7 +62,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
 
 
 
-  
+
 
   //Logout and close
   await page.waitForTimeout(3000);
