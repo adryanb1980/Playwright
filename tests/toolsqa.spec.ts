@@ -44,9 +44,23 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('CheckBox checked', { body: checkboxcheck, contentType: 'image/png' });
 
   await page.getByRole('button', { name: 'Toggle' }).click();
-  await page.waitForTimeout(2000);
   const checkboxexpand = await page.screenshot();
   await testElements.attach('CheckBox expanded', { body: checkboxexpand, contentType: 'image/png' });
+
+  // Radio Button
+  await page.locator('text=Radio Button').click();
+  await page.locator('text=Yes').click();
+  await page.locator('text=Impressive').click();
+  await page.locator('text=Yes').click();
+  const radiobuttonselected = await page.screenshot();
+  await testElements.attach('Radio buttons', { body: radiobuttonselected, contentType: 'image/png' });
+  await page.waitForTimeout(2000);
+
+
+  //Web tables
+  await page.locator('text=Web Tables').click();
+  const webtablesoption = await page.screenshot();
+  await testElements.attach('Web Tables area', { body: webtablesoption, contentType: 'image/png' });
 
 
 
