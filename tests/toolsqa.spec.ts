@@ -18,7 +18,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.locator('text=Elements').click();
   
   await page.mouse.up();
-  await page.waitForTimeout(1000);
+  //await page.waitForTimeout(1000);
   const screenshotelements = await page.screenshot();
   await testElements.attach('Elements menu', { body: screenshotelements, contentType: 'image/png' });
 
@@ -69,14 +69,15 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.locator('#age').fill(webtables.webtablesage);
   await page.locator('#salary').fill(webtables.webtablessalary);
   await page.locator('#department').fill(webtables.webtablesdepartment);
+  //await page.waitForTimeout(9000);
   await page.locator('#submit').click();
   await page.locator('#searchBox').fill(webtables.webtablesfirstname);
-  await page.waitForTimeout(1000);
+  //await page.waitForTimeout(1000);
   const webtablesoption1 = await page.screenshot();
   await testElements.attach('Web Tables area1', { body: webtablesoption1, contentType: 'image/png' });
   await page.locator('#searchBox').clear();
   
-  await page.waitForTimeout(1000);
+  //await page.waitForTimeout(1000);
   const webtablesoption = await page.screenshot();
   await testElements.attach('Web Tables area', { body: webtablesoption, contentType: 'image/png' });
 
