@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
-import testdata from '../test-data/input.json';
+import textboxdata from '../test-data/textbox.json';
+import webtables from '../test-data/webtables.json';
 
 test('Elements - Text Box', async ({ page }, testElements) => {
   test.setTimeout(120000);
@@ -18,11 +19,11 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('Elements menu', { body: screenshotelements, contentType: 'image/png' });
 
   await page.locator('text=Text Box').click();
-  await page.getByPlaceholder('Full Name').fill(testdata.fullname);
+  await page.getByPlaceholder('Full Name').fill(textboxdata.fullname);
   //Get elements by id
-  await page.locator('#userEmail').fill(testdata.email);
-  await page.locator('#currentAddress').fill(testdata.currentaddress);
-  await page.locator('#permanentAddress').fill(testdata.permanentaddress);
+  await page.locator('#userEmail').fill(textboxdata.email);
+  await page.locator('#currentAddress').fill(textboxdata.currentaddress);
+  await page.locator('#permanentAddress').fill(textboxdata.permanentaddress);
 
   const textboxelementsfullname = await page.screenshot();
   await testElements.attach('Textbox area', { body: textboxelementsfullname, contentType: 'image/png' });
@@ -57,10 +58,26 @@ test('Elements - Text Box', async ({ page }, testElements) => {
 
   //Web tables
   await page.locator('text=Web Tables').click();
+  await page.locator('#addNewRecordButton').click();
+  await page.locator('#firstName').fill(webtables.webtablesfirstname);
+  await page.locator('#lastName').fill(webtables.webtableslastname);
+  await page.locator('#userEmail').fill(webtables.webtablesemail);
+  await page.locator('#age').fill(webtables.webtablesage);
+  await page.locator('#salary').fill(webtables.webtablessalary);
+  await page.locator('#department').fill(webtables.webtablesdepartment);
+  await page.locator('#submit').click();
+  await page.locator('#searchBox').fill(webtables.webtablesfirstname);
+  await page.waitForTimeout(1000);
+  const webtablesoption1 = await page.screenshot();
+  await testElements.attach('Web Tables area1', { body: webtablesoption1, contentType: 'image/png' });
+  await page.locator('#searchBox').clear();
+  
+
+
+
+  await page.waitForTimeout(1000);
   const webtablesoption = await page.screenshot();
   await testElements.attach('Web Tables area', { body: webtablesoption, contentType: 'image/png' });
-
-
 
 
 
