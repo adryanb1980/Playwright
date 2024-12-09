@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import textboxdata from '../test-data/textbox.json';
 import webtables from '../test-data/webtables.json';
 
+
 test('Elements - Text Box', async ({ page }, testElements) => {
   test.setTimeout(120000);
   await page.goto('/');
@@ -12,9 +13,10 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   const screenshotloginpage = await page.screenshot();
   await testElements.attach('DEMOQA page', { body: screenshotloginpage, contentType: 'image/png' });
 
+
+  //Try locators
   await page.locator('text=Elements').click();
-
-
+  
   await page.mouse.up();
   await page.waitForTimeout(1000);
   const screenshotelements = await page.screenshot();
@@ -74,14 +76,9 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('Web Tables area1', { body: webtablesoption1, contentType: 'image/png' });
   await page.locator('#searchBox').clear();
   
-
-
-
   await page.waitForTimeout(1000);
   const webtablesoption = await page.screenshot();
   await testElements.attach('Web Tables area', { body: webtablesoption, contentType: 'image/png' });
-
-
 
   //Logout and close
   await page.waitForTimeout(3000);
