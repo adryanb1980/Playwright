@@ -13,6 +13,8 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('DEMOQA page', { body: screenshotloginpage, contentType: 'image/png' });
 
   await page.locator('text=Elements').click();
+
+
   await page.mouse.up();
   await page.waitForTimeout(1000);
   const screenshotelements = await page.screenshot();
