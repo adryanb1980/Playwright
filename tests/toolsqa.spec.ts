@@ -60,12 +60,11 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.locator(Locators.WebTables.WebTablesMenuOption).click();
   await page.locator(Locators.WebTables.AddNewRecordButton).click();
   await page.locator(Locators.WebTables.FirstName).fill(webtables.webtablesfirstname);
-  await page.locator('#lastName').fill(webtables.webtableslastname);
-  await page.locator('#userEmail').fill(webtables.webtablesemail);
-  await page.locator('#age').fill(webtables.webtablesage);
-  await page.locator('#salary').fill(webtables.webtablessalary);
-  await page.locator('#department').fill(webtables.webtablesdepartment);
-  //await page.waitForTimeout(9000);
+  await page.locator(Locators.WebTables.LastName).fill(webtables.webtableslastname);
+  await page.locator(Locators.WebTables.Email).fill(webtables.webtablesemail);
+  await page.locator(Locators.WebTables.Age).fill(webtables.webtablesage);
+  await page.locator(Locators.WebTables.Salary).fill(webtables.webtablessalary);
+  await page.locator(Locators.WebTables.Department).fill(webtables.webtablesdepartment);
   await page.locator('#submit').click();
   await page.locator('#searchBox').fill(webtables.webtablesfirstname);
   //await page.waitForTimeout(1000);

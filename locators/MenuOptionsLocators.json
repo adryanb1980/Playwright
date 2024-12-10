@@ -27,6 +27,11 @@
             "WebTables":{
                   "WebTablesMenuOption" : "text=Web Tables",
                   "AddNewRecordButton" : "#addNewRecordButton",
-                  "FirstName" : "#firstName"
+                  "FirstName" : "#firstName",
+                  "LastName" : "#lastName",
+                  "Email" : "#userEmail",
+                  "Age" : "#age",
+                  "Salary" : "#salary",
+                  "Department" : "#department"
             }
 }
