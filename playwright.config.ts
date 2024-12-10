@@ -63,11 +63,10 @@ export default defineConfig({
 
     {
       name: 'firefox',
-      use: {
-          //...devices['Desktop Firefox'],
-          viewport: null,
-          deviceScaleFactor: undefined,
-        },
+      use: { 
+        ...devices['Desktop Firefox'], 
+        //viewport: null,
+      },
     },
 
     {
