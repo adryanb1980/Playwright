@@ -1,0 +1,14 @@
+{
+
+  "Elements":{
+        "ElementsMenuOption" : "text=Elements"
+  },
+
+            "TextBox":{
+                  "TextBoxMenuOption" : "text=Text Box"
+            },
+
+            "CheckBox":{
+                  "CheckBoxMenuOption" : "text=Check Box"
+            }
+}

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import textboxdata from '../test-data/textbox.json';
 import webtables from '../test-data/webtables.json';
-
+import * as Locators from '../locators/MenuOptionsLocators.json';
 
 test('Elements - Text Box', async ({ page }, testElements) => {
   test.setTimeout(120000);
@@ -14,15 +14,15 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('DEMOQA page', { body: screenshotloginpage, contentType: 'image/png' });
 
 
-  //Try locators
-  await page.locator('text=Elements').click();
-  
+  //Try locators in separate files
+  await page.locator(Locators.Elements.ElementsMenuOption).click();
   await page.mouse.up();
   await page.waitForTimeout(1000);
   const screenshotelements = await page.screenshot();
   await testElements.attach('Elements menu', { body: screenshotelements, contentType: 'image/png' });
 
-  await page.locator('text=Text Box').click();
+  //Text Box
+  await page.locator(Locators.TextBox.TextBoxMenuOption).click();
   await page.getByPlaceholder('Full Name').fill(textboxdata.fullname);
   //Get elements by id
   await page.locator('#userEmail').fill(textboxdata.email);
@@ -40,7 +40,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.mouse.wheel(0, -300);
 
   //Checkbox
-  await page.locator('text=Check Box').click();
+  await page.locator(Locators.CheckBox.CheckBoxMenuOption).click();
   const checkboxoption = await page.screenshot();
   await testElements.attach('CheckBox area', { body: checkboxoption, contentType: 'image/png' });
 
