@@ -5,10 +5,24 @@
   },
 
             "TextBox":{
-                  "TextBoxMenuOption" : "text=Text Box"
+                  "TextBoxMenuOption" : "text=Text Box",
+                  "FullName" : "#userName",
+                  "UserEmail" : "#userEmail",
+                  "CurrentAddress" : "#currentAddress",
+                  "PermanentAddress" : "#permanentAddress",
+                  "Submit" : "#submit"
             },
 
             "CheckBox":{
-                  "CheckBoxMenuOption" : "text=Check Box"
+                  "CheckBoxMenuOption" : "text=Check Box",
+                  "Home" : "text=Home"
+            },
+
+            "RadioButton":{
+                  "RadioButtonMenuOption" : "text=Radio Button"
+            },
+
+            "WebTables":{
+                  "WebTablesMenuOption" : "text=Web Tables"
             }
 }

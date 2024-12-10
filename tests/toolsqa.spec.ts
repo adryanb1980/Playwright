@@ -13,27 +13,23 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   const screenshotloginpage = await page.screenshot();
   await testElements.attach('DEMOQA page', { body: screenshotloginpage, contentType: 'image/png' });
 
-
-  //Try locators in separate files
   await page.locator(Locators.Elements.ElementsMenuOption).click();
   await page.mouse.up();
-  //await page.waitForTimeout(1000);
   const screenshotelements = await page.screenshot();
   await testElements.attach('Elements menu', { body: screenshotelements, contentType: 'image/png' });
 
   //Text Box
   await page.locator(Locators.TextBox.TextBoxMenuOption).click();
-  await page.getByPlaceholder('Full Name').fill(textboxdata.fullname);
-  //Get elements by id
-  await page.locator('#userEmail').fill(textboxdata.email);
-  await page.locator('#currentAddress').fill(textboxdata.currentaddress);
-  await page.locator('#permanentAddress').fill(textboxdata.permanentaddress);
+  await page.locator(Locators.TextBox.FullName).fill(textboxdata.fullname); 
+  await page.locator(Locators.TextBox.UserEmail).fill(textboxdata.email);
+  await page.locator(Locators.TextBox.CurrentAddress).fill(textboxdata.currentaddress);
+  await page.locator(Locators.TextBox.PermanentAddress).fill(textboxdata.permanentaddress);
 
   const textboxelementsfullname = await page.screenshot();
   await testElements.attach('Textbox area', { body: textboxelementsfullname, contentType: 'image/png' });
 
   //Click Submit
-  await page.locator('#submit').click();
+  await page.locator(Locators.TextBox.Submit).click();
   await page.mouse.wheel(0, 300);
   const submitbutton = await page.screenshot();
   await testElements.attach('Submit', { body: submitbutton, contentType: 'image/png' });
@@ -44,7 +40,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   const checkboxoption = await page.screenshot();
   await testElements.attach('CheckBox area', { body: checkboxoption, contentType: 'image/png' });
 
-  await page.locator('text=Home').click();
+  await page.locator(Locators.CheckBox.Home).click();
   const checkboxcheck = await page.screenshot();
   await testElements.attach('CheckBox checked', { body: checkboxcheck, contentType: 'image/png' });
 
@@ -53,7 +49,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('CheckBox expanded', { body: checkboxexpand, contentType: 'image/png' });
 
   // Radio Button
-  await page.locator('text=Radio Button').click();
+  await page.locator(Locators.RadioButton.RadioButtonMenuOption).click();
   await page.locator('text=Yes').click();
   await page.locator('text=Impressive').click();
   await page.locator('text=Yes').click();
@@ -61,7 +57,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('Radio buttons', { body: radiobuttonselected, contentType: 'image/png' });
 
   //Web tables
-  await page.locator('text=Web Tables').click();
+  await page.locator(Locators.WebTables.WebTablesMenuOption).click();
   await page.locator('#addNewRecordButton').click();
   await page.locator('#firstName').fill(webtables.webtablesfirstname);
   await page.locator('#lastName').fill(webtables.webtableslastname);

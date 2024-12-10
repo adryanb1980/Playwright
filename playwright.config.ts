@@ -42,7 +42,7 @@ export default defineConfig({
     launchOptions: {
       // 1
       args: ["--start-maximized"],
-      slowMo: 500
+      slowMo: 300
     },
   },
   /* Configure projects for major browsers */
@@ -63,11 +63,11 @@ export default defineConfig({
 
     {
       name: 'firefox',
-      use: { 
-        ...devices['Desktop Firefox'], 
-        //viewport: null,
-      },
-      
+      use: {
+          //...devices['Desktop Firefox'],
+          viewport: null,
+          deviceScaleFactor: undefined,
+        },
     },
 
     {
