@@ -19,10 +19,14 @@
             },
 
             "RadioButton":{
-                  "RadioButtonMenuOption" : "text=Radio Button"
+                  "RadioButtonMenuOption" : "text=Radio Button",
+                  "YesOption" : "text =  Yes",
+                  "ImpressiveOption" : "text =  Impressive"
             },
 
             "WebTables":{
-                  "WebTablesMenuOption" : "text=Web Tables"
+                  "WebTablesMenuOption" : "text=Web Tables",
+                  "AddNewRecordButton" : "#addNewRecordButton",
+                  "FirstName" : "#firstName"
             }
 }

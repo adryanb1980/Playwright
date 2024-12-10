@@ -50,16 +50,16 @@ test('Elements - Text Box', async ({ page }, testElements) => {
 
   // Radio Button
   await page.locator(Locators.RadioButton.RadioButtonMenuOption).click();
-  await page.locator('text=Yes').click();
-  await page.locator('text=Impressive').click();
-  await page.locator('text=Yes').click();
+  await page.locator(Locators.RadioButton.YesOption).click();
+  await page.locator(Locators.RadioButton.ImpressiveOption).click();
+  await page.locator(Locators.RadioButton.YesOption).click();
   const radiobuttonselected = await page.screenshot();
   await testElements.attach('Radio buttons', { body: radiobuttonselected, contentType: 'image/png' });
 
   //Web tables
   await page.locator(Locators.WebTables.WebTablesMenuOption).click();
-  await page.locator('#addNewRecordButton').click();
-  await page.locator('#firstName').fill(webtables.webtablesfirstname);
+  await page.locator(Locators.WebTables.AddNewRecordButton).click();
+  await page.locator(Locators.WebTables.FirstName).fill(webtables.webtablesfirstname);
   await page.locator('#lastName').fill(webtables.webtableslastname);
   await page.locator('#userEmail').fill(webtables.webtablesemail);
   await page.locator('#age').fill(webtables.webtablesage);
