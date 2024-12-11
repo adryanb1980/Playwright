@@ -22,7 +22,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.locator(Locators.TextBox.PermanentAddress).fill(textboxdata.permanentaddress);
   const textboxelementsfullname = await page.screenshot();
   await testElements.attach('Textbox area', { body: textboxelementsfullname, contentType: 'image/png' });
-  await page.locator(Locators.TextBox.Submit).click();
+  await page.locator(Locators.General.Submit).click();
   await page.mouse.wheel(0, 300);
   const submitbutton = await page.screenshot();
   await testElements.attach('Submit', { body: submitbutton, contentType: 'image/png' });
@@ -56,14 +56,15 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.locator(Locators.WebTables.Age).fill(webtablesdata.webtablesage);
   await page.locator(Locators.WebTables.Salary).fill(webtablesdata.webtablessalary);
   await page.locator(Locators.WebTables.Department).fill(webtablesdata.webtablesdepartment);
-  await page.locator(Locators.TextBox.Submit).click();
-  
-  await page.locator('#searchBox').fill(webtablesdata.webtablesfirstname);
+  await page.locator(Locators.General.Submit).click();
+  await page.locator(Locators.WebTables.SearchBox).fill(webtablesdata.webtablesfirstname);
   const webtablesoption1 = await page.screenshot();
   await testElements.attach('Web Tables area1', { body: webtablesoption1, contentType: 'image/png' });
-  await page.locator('#searchBox').clear();
+  await page.locator(Locators.WebTables.SearchBox).clear();
   const webtablesoption = await page.screenshot();
   await testElements.attach('Web Tables area', { body: webtablesoption, contentType: 'image/png' });
+
+  //Buttons
 
   //Logout and close
   await page.waitForTimeout(3000);

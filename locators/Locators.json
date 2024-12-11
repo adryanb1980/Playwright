@@ -1,16 +1,14 @@
 {
-
-  "Elements":{
-        "ElementsMenuOption" : "text=Elements"
-  },
+"Elements":{
+      "ElementsMenuOption" : "text=Elements"
+},
 
             "TextBox":{
                   "TextBoxMenuOption" : "text=Text Box",
                   "FullName" : "#userName",
                   "UserEmail" : "#userEmail",
                   "CurrentAddress" : "#currentAddress",
-                  "PermanentAddress" : "#permanentAddress",
-                  "Submit" : "#submit"
+                  "PermanentAddress" : "#permanentAddress"
             },
 
             "CheckBox":{
@@ -32,6 +30,17 @@
                   "Email" : "#userEmail",
                   "Age" : "#age",
                   "Salary" : "#salary",
-                  "Department" : "#department"
-            }
+                  "Department" : "#department",
+                  "SearchBox" : "#searchBox"
+            },
+
+            "Buttons":{
+                  "ButtonOneClick" : ""
+                 
+            },
+
+"General":{
+      "Submit" : "#submit"
+}
+
 }
