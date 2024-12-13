@@ -1,12 +1,12 @@
 {
-    "fullname": "DataTest",
+    "fullname": "DataTest1213",
     "email": "test@test.com",
-    "currentaddress": "Current Address",
-    "permanentaddress": "Permanent Address",
-    "webtablesfirstname": "Adi",
-    "webtableslastname": "B",
-    "webtablesemail": "test@abcd.com",
-    "webtablesage": "20",
-    "webtablessalary": "80",
-    "webtablesdepartment": "Department"
+    "currentaddress": "Current Address 1213",
+    "permanentaddress": "Permanent Address 1213",
+    "webtablesfirstname": "Adi 1213",
+    "webtableslastname": "B1213",
+    "webtablesemail": "test1213@abcd.com",
+    "webtablesage": "201213",
+    "webtablessalary": "801213",
+    "webtablesdepartment": "Department1213"
 }
