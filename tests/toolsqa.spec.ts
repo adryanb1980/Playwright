@@ -28,6 +28,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('Submit', { body: submitbutton, contentType: 'image/png' });
   await page.mouse.wheel(0, -300);
 
+
   //Checkbox
   await page.locator(Locators.CheckBox.CheckBoxMenuOption).click();
   const checkboxoption = await page.screenshot();
@@ -38,6 +39,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.getByRole('button', { name: 'Toggle' }).click();
   const checkboxexpand = await page.screenshot();
   await testElements.attach('CheckBox expanded', { body: checkboxexpand, contentType: 'image/png' });
+
 
   // Radio Button
   await page.locator(Locators.RadioButton.RadioButtonMenuOption).click();
@@ -65,6 +67,12 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('Web Tables area', { body: webtablesoption, contentType: 'image/png' });
 
   //Buttons
+  await page.locator(Locators.Buttons.ButtonsMenuOption).click();
+  await page.locator(Locators.Buttons.ButtonDoubleClick).dblclick();
+  await page.locator(Locators.Buttons.ButtonRightClick).click({button:'right'});
+  await page.getByRole('button', { name: 'Click Me', exact: true }).click();
+  const buttonclick = await page.screenshot();
+  await testElements.attach('Buttons actions', { body: buttonclick, contentType: 'image/png' });
 
   //Logout and close
   await page.waitForTimeout(3000);

@@ -35,12 +35,12 @@
             },
 
             "Buttons":{
-                  "ButtonOneClick" : ""
-                 
+                  "ButtonsMenuOption" : "text=Buttons",
+                  "ButtonDoubleClick" : "#doubleClickBtn",
+                  "ButtonRightClick" : "#rightClickBtn"
             },
 
 "General":{
       "Submit" : "#submit"
 }
-
 }
