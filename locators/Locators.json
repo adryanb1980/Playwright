@@ -40,6 +40,11 @@
                   "ButtonRightClick" : "#rightClickBtn"
             },
 
+            "Links":{
+                  "LinksMenuOptionId" : "#item-5",
+                  "LinksMenuOption" : "Links"
+            },
+
 "General":{
       "Submit" : "#submit"
 }
