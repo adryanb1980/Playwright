@@ -77,8 +77,6 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   const linksclick = await page.screenshot();
   await testElements.attach('Links actions', { body: linksclick, contentType: 'image/png' });
 
-
-
   //Logout and close
   await page.waitForTimeout(3000);
   await page.close();
