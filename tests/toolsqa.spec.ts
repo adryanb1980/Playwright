@@ -64,7 +64,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   const webtablesoption = await page.screenshot();
   await testElements.attach('Web Tables area', { body: webtablesoption, contentType: 'image/png' });
 
-  //Buttons test
+  //Buttons
   await page.locator(Locators.Buttons.ButtonsMenuOption).click();
   await page.locator(Locators.Buttons.ButtonDoubleClick).dblclick();
   await page.locator(Locators.Buttons.ButtonRightClick).click({button:'right'});
