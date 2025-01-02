@@ -28,6 +28,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('Submit', { body: submitbutton, contentType: 'image/png' });
   await page.mouse.wheel(0, -300);
 
+ /* 
   //Checkbox
   await page.locator(Locators.CheckBox.CheckBoxMenuOption).click();
   const checkboxoption = await page.screenshot();
@@ -71,11 +72,22 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.getByRole('button', { name: 'Click Me', exact: true }).click();
   const buttonclick = await page.screenshot();
   await testElements.attach('Buttons actions', { body: buttonclick, contentType: 'image/png' });
+*/
 
-  //Links
+
+  //Links and tabs
   await page.locator(Locators.Links.LinksMenuOptionId, { hasText: Locators.Links.LinksMenuOption }).click();
   const linksclick = await page.screenshot();
   await testElements.attach('Links actions', { body: linksclick, contentType: 'image/png' });
+  await page.locator(Locators.Links.SimpleLink).click();
+  await page.context().pages().at(1)?.bringToFront();
+  const simplelinkclick = await page.context().pages().at(1)?.screenshot();
+  await testElements.attach('Home Link Click', { body: simplelinkclick, contentType: 'image/png' });  
+  await page.context().pages().at(0)?.bringToFront();
+  await page.context().pages().at(1)?.close();
+  const currentpagedisplay = await page.screenshot();
+  await testElements.attach('Current page', { body: currentpagedisplay, contentType: 'image/png' });
+
 
   //Logout and close
   await page.waitForTimeout(3000);

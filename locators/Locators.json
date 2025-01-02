@@ -42,7 +42,8 @@
 
             "Links":{
                   "LinksMenuOptionId" : "#item-5",
-                  "LinksMenuOption" : "Links"
+                  "LinksMenuOption" : "Links",
+                  "SimpleLink":"#simpleLink"
             },
 
 "General":{
