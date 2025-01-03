@@ -81,10 +81,12 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('Links actions', { body: linksclick, contentType: 'image/png' });
   await page.locator(Locators.Links.SimpleLink).click();
   await page.context().pages().at(1)?.bringToFront();
+  await page.waitForTimeout(1000);
   const simplelinkclick = await page.context().pages().at(1)?.screenshot();
   await testElements.attach('Home Link Click', { body: simplelinkclick, contentType: 'image/png' });  
   await page.context().pages().at(0)?.bringToFront();
   await page.context().pages().at(1)?.close();
+  await page.waitForTimeout(1000);
   const currentpagedisplay = await page.screenshot();
   await testElements.attach('Current page', { body: currentpagedisplay, contentType: 'image/png' });
 
