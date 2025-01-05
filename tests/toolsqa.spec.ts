@@ -4,7 +4,7 @@ import webtablesdata from '../test-data/webtables.json';
 import * as Locators from '../locators/Locators.json';
 
 test('Elements - Text Box', async ({ page }, testElements) => {
-  test.setTimeout(120000);
+  test.setTimeout(70000);
   await page.goto('/');
   await expect(page).toHaveTitle("DEMOQA");
   const screenshotloginpage = await page.screenshot();
@@ -89,7 +89,17 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.waitForTimeout(1000);
   const currentpagedisplay = await page.screenshot();
   await testElements.attach('Current page', { body: currentpagedisplay, contentType: 'image/png' });
-
+  await page.locator(Locators.Links.CreatedAPI).click();
+  await page.mouse.wheel(0, 200);
+  const createdAPI = await page.screenshot();
+  await testElements.attach('CreatedAPI call', { body: createdAPI, contentType: 'image/png' });
+  await page.mouse.wheel(0, -200);
+  await page.locator(Locators.Links.NoContentAPI).click();
+  await page.mouse.wheel(0, 200);
+  const nocontentAPI = await page.screenshot();
+  await testElements.attach('NoContentAPI call', { body: nocontentAPI, contentType: 'image/png' });
+  //Broken links - similar with links - will not be implemented
+  //Upload and download 
 
   //Logout and close
   await page.waitForTimeout(3000);

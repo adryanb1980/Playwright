@@ -43,7 +43,9 @@
             "Links":{
                   "LinksMenuOptionId" : "#item-5",
                   "LinksMenuOption" : "Links",
-                  "SimpleLink":"#simpleLink"
+                  "SimpleLink":"#simpleLink",
+                  "CreatedAPI":"#created",
+                  "NoContentAPI":"#no-content"
             },
 
 "General":{
