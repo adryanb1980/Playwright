@@ -36,8 +36,7 @@ async function downloadfile(){
            console.log("Download Completed");
         });
      });
-    } 
-   
+    }   
 }
 
 
