@@ -58,8 +58,14 @@
 
 "Forms":{
       "FormsMenuOption" : "text=Forms",
-      "PracticeFormMenuOption" : "text=Practice Form"
-},
+      "PracticeFormMenuOption" : "text=Practice Form",
+      "FirstName" : "#firstName",
+      "LastName" : "#lastName",
+      "UserEmail" : "#userEmail",
+      "Gender1" : "text=Female",
+      "Gender2" : "text=Other",
+      "Gender3" : "Male"
+      },
 
 "General":{
       "Submit" : "#submit"

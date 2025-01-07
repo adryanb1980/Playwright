@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import textboxdata from '../test-data/textbox.json';
 import webtablesdata from '../test-data/webtables.json';
 import * as Locators from '../locators/Locators.json';
+import * as PracticeFormData from '../test-data/practiceform.json';
 
 test('Elements - Text Box', async ({ page }, testElements) => {
   test.setTimeout(70000);
@@ -108,15 +109,15 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await download.saveAs(Locators.DownloadUpload.SavePath + filenames);
   //Download confirmation message
   page.on('dialog', async (dialog) => {
-    await page.waitForTimeout(3000);
+    await page.waitForTimeout(1000);
     await dialog.accept(); // or dialog.dismiss();
   })
   page.evaluate(() => alert(`File has been downloaded...`));
   //Upload file
   await page.locator(Locators.DownloadUpload.UploadButton).setInputFiles(Locators.DownloadUpload.UploadPath);
   await page.mouse.wheel(0, -300);
-  const downloaduploadscressnshot = await page.screenshot();
-  await testElements.attach('Upload - Download', { body: downloaduploadscressnshot, contentType: 'image/png' });
+  const downloaduploadscreenshot = await page.screenshot();
+  await testElements.attach('Upload - Download', { body: downloaduploadscreenshot, contentType: 'image/png' });
   await page.locator(Locators.Elements.ElementsMenuOption).click();
  
   //Forms
@@ -124,7 +125,16 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.locator(Locators.Forms.PracticeFormMenuOption).click();
   const formspage = await page.screenshot();
   await testElements.attach('Forms menu', { body: formspage, contentType: 'image/png' });
-
+  await page.locator(Locators.Forms.FirstName).fill(PracticeFormData.firstname);
+  await page.locator(Locators.Forms.LastName).fill(PracticeFormData.lastname);
+  await page.locator(Locators.Forms.UserEmail).fill(PracticeFormData.emailaddress);
+  
+  await page.locator(Locators.Forms.Gender1).setChecked(true);
+  await page.waitForTimeout(1000);
+  await page.locator(Locators.Forms.Gender2).setChecked(true);
+  await page.waitForTimeout(1000);
+  
+  await page.getByText(Locators.Forms.Gender3,{exact:true}).setChecked(true);
   //Logout and close
   await page.waitForTimeout(5000);
   await page.close();
