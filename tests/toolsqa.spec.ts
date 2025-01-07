@@ -72,8 +72,6 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.getByRole('button', { name: 'Click Me', exact: true }).click();
   const buttonclick = await page.screenshot();
   await testElements.attach('Buttons actions', { body: buttonclick, contentType: 'image/png' });
-*/
-
 
   //Links and tabs
   await page.locator(Locators.Links.LinksMenuOptionId, { hasText: Locators.Links.LinksMenuOption }).click();
@@ -99,9 +97,20 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   const nocontentAPI = await page.screenshot();
   await testElements.attach('NoContentAPI call', { body: nocontentAPI, contentType: 'image/png' });
   //Broken links - similar with links - will not be implemented
-  //Upload and download 
+  
+  //Download file
+  await page.locator(Locators.DownloadUpload.DownloadUploadMenuOption).click();
+  const downloadPromise = page.waitForEvent('download');
+  await page.locator(Locators.DownloadUpload.DownloadButton).click();
+  const download = await downloadPromise;
+  await download.saveAs(Locators.DownloadUpload.SavePath + download.suggestedFilename());
+  //Upload file
+  await page.locator(Locators.DownloadUpload.UploadButton).setInputFiles("E:/Playwright/test-data/uploadfile.txt");
+
+  //Dynamic Properties will not be implemented
+*/
 
   //Logout and close
-  await page.waitForTimeout(3000);
+  await page.waitForTimeout(5000);
   await page.close();
 });

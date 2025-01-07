@@ -48,6 +48,13 @@
                   "NoContentAPI":"#no-content"
             },
 
+            "DownloadUpload":{
+                  "DownloadUploadMenuOption":"text=Upload and Download",
+                  "DownloadButton":"#downloadButton",
+                  "SavePath": "E:/Playwright/tests/",
+                  "UploadButton": "#uploadFile"
+            },
+
 "General":{
       "Submit" : "#submit"
 }
