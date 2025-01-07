@@ -1,6 +1,10 @@
 {
     "firstname": "FName",
     "lastname": "LName",
-    "emailaddress": "practiceformdata@test.com"
+    "emailaddress": "practiceformdata@test.com",
+    "gender1": "Female",
+    "gender2": "Male",
+    "gender3": "Other",
+    "phone1": "01234567"
    
 }

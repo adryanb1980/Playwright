@@ -13,7 +13,8 @@
 
             "CheckBox":{
                   "CheckBoxMenuOption" : "text=Check Box",
-                  "Home" : "text=Home"
+                  "Home" : "text=Home",
+                  "Toggle" : "Toggle"
             },
 
             "RadioButton":{
@@ -37,7 +38,8 @@
             "Buttons":{
                   "ButtonsMenuOption" : "text=Buttons",
                   "ButtonDoubleClick" : "#doubleClickBtn",
-                  "ButtonRightClick" : "#rightClickBtn"
+                  "ButtonRightClick" : "#rightClickBtn",
+                  "ButtonClickMe" : "Click Me"
             },
 
             "Links":{
@@ -62,9 +64,10 @@
       "FirstName" : "#firstName",
       "LastName" : "#lastName",
       "UserEmail" : "#userEmail",
-      "Gender1" : "text=Female",
-      "Gender2" : "text=Other",
-      "Gender3" : "Male"
+      "Gender1" : "Female",
+      "Gender2" : "Other",
+      "Gender3" : "Male",
+      "PhoneNumber": "#userNumber"
       },
 
 "General":{

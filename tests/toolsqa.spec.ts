@@ -4,7 +4,7 @@ import webtablesdata from '../test-data/webtables.json';
 import * as Locators from '../locators/Locators.json';
 import * as PracticeFormData from '../test-data/practiceform.json';
 
-test('Elements - Text Box', async ({ page }, testElements) => {
+test('DemoQA Test Report', async ({ page }, testElements) => {
   test.setTimeout(70000);
   await page.goto('/');
   await expect(page).toHaveTitle("DEMOQA");
@@ -29,7 +29,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('Submit', { body: submitbutton, contentType: 'image/png' });
   await page.mouse.wheel(0, -300);
 
-/* 
+/*
   //Checkbox
   await page.locator(Locators.CheckBox.CheckBoxMenuOption).click();
   const checkboxoption = await page.screenshot();
@@ -37,7 +37,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.locator(Locators.CheckBox.Home).click();
   const checkboxcheck = await page.screenshot();
   await testElements.attach('CheckBox checked', { body: checkboxcheck, contentType: 'image/png' });
-  await page.getByRole('button', { name: 'Toggle' }).click();
+  await page.getByRole('button', { name: Locators.CheckBox.Toggle }).click();
   const checkboxexpand = await page.screenshot();
   await testElements.attach('CheckBox expanded', { body: checkboxexpand, contentType: 'image/png' });
 
@@ -70,7 +70,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.locator(Locators.Buttons.ButtonsMenuOption).click();
   await page.locator(Locators.Buttons.ButtonDoubleClick).dblclick();
   await page.locator(Locators.Buttons.ButtonRightClick).click({button:'right'});
-  await page.getByRole('button', { name: 'Click Me', exact: true }).click();
+  await page.getByRole('button', { name: Locators.Buttons.ButtonClickMe, exact: true }).click();
   const buttonclick = await page.screenshot();
   await testElements.attach('Buttons actions', { body: buttonclick, contentType: 'image/png' });
 
@@ -128,13 +128,15 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await page.locator(Locators.Forms.FirstName).fill(PracticeFormData.firstname);
   await page.locator(Locators.Forms.LastName).fill(PracticeFormData.lastname);
   await page.locator(Locators.Forms.UserEmail).fill(PracticeFormData.emailaddress);
-  
-  await page.locator(Locators.Forms.Gender1).setChecked(true);
-  await page.waitForTimeout(1000);
-  await page.locator(Locators.Forms.Gender2).setChecked(true);
-  await page.waitForTimeout(1000);
-  
-  await page.getByText(Locators.Forms.Gender3,{exact:true}).setChecked(true);
+  await page.getByText(PracticeFormData.gender1,{exact:true}).setChecked(true);
+  await page.waitForTimeout(500);
+  await page.getByText(PracticeFormData.gender2,{exact:true}).setChecked(true);
+  await page.waitForTimeout(500);
+  await page.getByText(PracticeFormData.gender3,{exact:true}).setChecked(true);
+  await page.waitForTimeout(500);
+  await page.locator(Locators.Forms.PhoneNumber).fill(PracticeFormData.phone1) 
+ 
+
   //Logout and close
   await page.waitForTimeout(5000);
   await page.close();
