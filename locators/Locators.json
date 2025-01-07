@@ -52,8 +52,14 @@
                   "DownloadUploadMenuOption":"text=Upload and Download",
                   "DownloadButton":"#downloadButton",
                   "SavePath": "E:/Playwright/tests/",
+                  "UploadPath": "E:/Playwright/test-data/uploadfile.txt",
                   "UploadButton": "#uploadFile"
             },
+
+"Forms":{
+      "FormsMenuOption" : "text=Forms",
+      "PracticeFormMenuOption" : "text=Practice Form"
+},
 
 "General":{
       "Submit" : "#submit"

@@ -28,7 +28,7 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   await testElements.attach('Submit', { body: submitbutton, contentType: 'image/png' });
   await page.mouse.wheel(0, -300);
 
- /* 
+/* 
   //Checkbox
   await page.locator(Locators.CheckBox.CheckBoxMenuOption).click();
   const checkboxoption = await page.screenshot();
@@ -97,18 +97,33 @@ test('Elements - Text Box', async ({ page }, testElements) => {
   const nocontentAPI = await page.screenshot();
   await testElements.attach('NoContentAPI call', { body: nocontentAPI, contentType: 'image/png' });
   //Broken links - similar with links - will not be implemented
-  
+ */
+
   //Download file
   await page.locator(Locators.DownloadUpload.DownloadUploadMenuOption).click();
   const downloadPromise = page.waitForEvent('download');
   await page.locator(Locators.DownloadUpload.DownloadButton).click();
   const download = await downloadPromise;
-  await download.saveAs(Locators.DownloadUpload.SavePath + download.suggestedFilename());
+  const filenames = download.suggestedFilename();
+  await download.saveAs(Locators.DownloadUpload.SavePath + filenames);
+  //Download confirmation message
+  page.on('dialog', async (dialog) => {
+    await page.waitForTimeout(3000);
+    await dialog.accept(); // or dialog.dismiss();
+  })
+  page.evaluate(() => alert(`File has been downloaded...`));
   //Upload file
-  await page.locator(Locators.DownloadUpload.UploadButton).setInputFiles("E:/Playwright/test-data/uploadfile.txt");
-
-  //Dynamic Properties will not be implemented
-*/
+  await page.locator(Locators.DownloadUpload.UploadButton).setInputFiles(Locators.DownloadUpload.UploadPath);
+  await page.mouse.wheel(0, -300);
+  const downloaduploadscressnshot = await page.screenshot();
+  await testElements.attach('Upload - Download', { body: downloaduploadscressnshot, contentType: 'image/png' });
+  await page.locator(Locators.Elements.ElementsMenuOption).click();
+ 
+  //Forms
+  await page.locator(Locators.Forms.FormsMenuOption).click();
+  await page.locator(Locators.Forms.PracticeFormMenuOption).click();
+  const formspage = await page.screenshot();
+  await testElements.attach('Forms menu', { body: formspage, contentType: 'image/png' });
 
   //Logout and close
   await page.waitForTimeout(5000);
