@@ -127,12 +127,23 @@ test('DemoQA Test Report', async ({ page }, testReport) => {
   await page.locator(Locators.Forms.LastName).fill(PracticeFormData.lastname);
   await page.locator(Locators.Forms.UserEmail).fill(PracticeFormData.emailaddress);
   await page.getByText(PracticeFormData.gender1,{exact:true}).setChecked(true);
-  await page.waitForTimeout(500);
   await page.getByText(PracticeFormData.gender2,{exact:true}).setChecked(true);
-  await page.waitForTimeout(500);
   await page.getByText(PracticeFormData.gender3,{exact:true}).setChecked(true);
+  await page.locator(Locators.Forms.PhoneNumber).fill(PracticeFormData.phone1); 
+  await page.locator(Locators.Forms.DateofBirth).fill(PracticeFormData.dob);
+  await page.locator(Locators.Forms.SubjectContainer).click();
+  await page.locator(Locators.Forms.SubjectContainer).fill(PracticeFormData.subject)
+  //await page.waitForTimeout(500);
+  await page.getByText(PracticeFormData.hobby1).setChecked(true);
+  await page.getByText(PracticeFormData.hobby2).setChecked(true);
+  await page.getByText(PracticeFormData.hobby3).setChecked(true);
+  await page.getByText(PracticeFormData.hobby1).setChecked(false);
+  await page.locator(Locators.Forms.UploadButton2).setInputFiles(Locators.Forms.UploadPath2);
+  await page.mouse.wheel(0, 300);
+  await page.locator(Locators.Forms.CurrentAddress).fill(PracticeFormData.currentaddress);
   await page.waitForTimeout(500);
-  await page.locator(Locators.Forms.PhoneNumber).fill(PracticeFormData.phone1) 
+
+
   const formspagefillin = await page.screenshot();
   await testReport.attach('Forms menu', { body: formspagefillin, contentType: 'image/png' });
 

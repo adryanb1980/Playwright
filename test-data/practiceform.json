@@ -5,6 +5,11 @@
     "gender1": "Female",
     "gender2": "Male",
     "gender3": "Other",
-    "phone1": "01234567"
-   
+    "phone1": "01234567",
+    "dob": "05 May 2023",
+    "subject": "Subject",
+    "hobby1": "Sports",
+    "hobby2": "Reading",
+    "hobby3": "Music",
+    "currentaddress": "Current Address"
 }

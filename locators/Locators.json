@@ -67,7 +67,12 @@
       "Gender1" : "Female",
       "Gender2" : "Other",
       "Gender3" : "Male",
-      "PhoneNumber": "#userNumber"
+      "PhoneNumber": "#userNumber",
+      "DateofBirth": "#dateOfBirthInput",
+      "SubjectContainer": "#subjectsInput",
+      "UploadButton2": "#uploadPicture",
+      "UploadPath2": "E:/Playwright/test-data/uploadfile.txt",
+      "CurrentAddress": "#currentAddress"
       },
 
 "General":{
