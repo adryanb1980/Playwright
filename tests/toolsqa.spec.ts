@@ -141,9 +141,15 @@ test('DemoQA Test Report', async ({ page }, testReport) => {
   await page.locator(Locators.Forms.UploadButton2).setInputFiles(Locators.Forms.UploadPath2);
   await page.mouse.wheel(0, 300);
   await page.locator(Locators.Forms.CurrentAddress).fill(PracticeFormData.currentaddress);
+
+
+  await page.locator(Locators.General.Submit).click();
+  //await page.mouse.wheel(0, 300);
+  const submitbutton2 = await page.screenshot();
+  await testReport.attach('Submit', { body: submitbutton2, contentType: 'image/png' });
+
+
   await page.waitForTimeout(500);
-
-
   const formspagefillin = await page.screenshot();
   await testReport.attach('Forms menu', { body: formspagefillin, contentType: 'image/png' });
 
