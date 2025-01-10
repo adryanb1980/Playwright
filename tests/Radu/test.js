@@ -6,8 +6,8 @@ const downloadlocation = "https://file-examples.com/storage/fe602ed48f677b231994
 const downloadedfile = "sourcefile.pdf";
 
 // Source file path and destination file path
-const sourceFile = 'E:/Playwright/tests/sourcefile.pdf';
-const destFile = 'E:/Playwright/tests/Copie/destinationfile.pdf';
+const sourceFile = 'E:/Playwright/tests/Radu/sourcefile.pdf';
+const destFile = 'E:/Playwright/tests/Radu/Copie/destinationfile.pdf';
 
 // File system 
 const fs = require('fs');
