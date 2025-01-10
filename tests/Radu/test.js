@@ -57,6 +57,7 @@ async function run(){
     downloadfile();
     await sleep(4000);
     copyfile();
+    await sleep(2000);
     }
 
 run();
