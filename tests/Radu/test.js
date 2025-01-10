@@ -10,7 +10,6 @@ const sourceFile = 'E:/Playwright/tests/Radu/sourcefile.pdf';
 const destFile = 'E:/Playwright/tests/Radu/Copie/destinationfile.pdf';
 
 const { Console } = require('console');
-// File system 
 const fs = require('fs');
 
 //Timeout between download and copy so that the file is properly saved
