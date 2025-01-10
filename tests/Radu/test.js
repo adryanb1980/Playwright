@@ -9,6 +9,7 @@ const downloadedfile = "sourcefile.pdf";
 const sourceFile = 'E:/Playwright/tests/Radu/sourcefile.pdf';
 const destFile = 'E:/Playwright/tests/Radu/Copie/destinationfile.pdf';
 
+const { Console } = require('console');
 // File system 
 const fs = require('fs');
 
@@ -22,7 +23,7 @@ async function sleep(ms) {
 //Download the file
 async function downloadfile(){
     if (fs.existsSync(sourceFile)) {
-        console.log('File exists!');
+        console.log('File exists! It will not be downloaded. Copying file...');
       } 
     else {
         console.log('File does not exist. The download starts...');
