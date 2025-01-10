@@ -1,11 +1,11 @@
 //Requires node.js
-//Run the script with node test.js
+//Run the script: node test.js
 
-//Download location and source file
+//Set up download location and source file
 const downloadlocation = "https://file-examples.com/storage/fe602ed48f677b2319947f8/2017/10/file-sample_150kB.pdf";
 const downloadedfile = "sourcefile.pdf";
 
-// Source file path and destination file path
+//Set up source file and destination file
 const sourceFile = 'E:/Playwright/tests/Radu/sourcefile.pdf';
 const destFile = 'E:/Playwright/tests/Radu/Copie/destinationfile.pdf';
 
@@ -30,7 +30,7 @@ async function downloadfile(){
         const file = fs.createWriteStream(downloadedfile);   
         const request = http.get(downloadlocation, function(response) {
         response.pipe(file);  
-        // after download completed close filestream
+        // after the download is completed, close filestream
         file.on("finish", () => {
            file.close();
            console.log("Download Completed");
@@ -51,7 +51,7 @@ fs.copyFile(sourceFile, destFile, (err) => {
 });
 }
 
-//Run the previous functions
+//Run the above
 async function run(){
     downloadfile();
     await sleep(4000);
