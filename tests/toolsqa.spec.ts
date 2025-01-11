@@ -119,7 +119,6 @@ test('DemoQA Test Report', async ({ page }, testReport) => {
   const downloaduploadscreenshot = await page.screenshot();
   await testReport.attach('Upload - Download', { body: downloaduploadscreenshot, contentType: 'image/png' });
   await page.locator(Locators.Elements.ElementsMenuOption).click();
- 
   //Forms
   await page.locator(Locators.Forms.FormsMenuOption).click();
   await page.locator(Locators.Forms.PracticeFormMenuOption).click();

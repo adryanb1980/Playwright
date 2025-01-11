@@ -39,7 +39,6 @@ async function downloadfile(){
     }   
 }
 
-
 // Copy the file
 async function copyfile(){   
 fs.copyFile(sourceFile, destFile, (err) => {
