@@ -54,7 +54,7 @@
                   "DownloadUploadMenuOption":"text=Upload and Download",
                   "DownloadButton":"#downloadButton",
                   "SavePath": "E:/Playwright/tests/",
-                  "UploadPath": "E:/Playwright/test-data/uploadfile.txt",
+                  "UploadPath": "E:/Work/Automation/Playwright/Playwright/test-data/uploadfile.txt",
                   "UploadButton": "#uploadFile"
             },
 
