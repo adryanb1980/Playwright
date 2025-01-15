@@ -72,7 +72,18 @@
       "SubjectContainer": "#subjectsInput",
       "UploadButton2": "#uploadPicture",
       "UploadPath2": "E:/Playwright/test-data/uploadfile.txt",
-      "CurrentAddress": "#currentAddress"
+      "CurrentAddress": "#currentAddress",
+      "CloseLargeModal": "#closeLargeModal"
+      },
+
+"AlertsWindowsFrames":{
+      "AlertsWindowsFramesOption" : "text=Alerts, Frame & Windows",
+      "BrowserWindowsMenuOption" : "text=Browser Windows",
+      "NewTabButton" : "#tabButton",
+      "NewWindowButton" : "#windowButton",
+      "MessageWindowButton" : "#messageWindowButton",
+      "AlertsMenuOption" : "#item-1",
+      "AlertButton" : "#confirmButton"
       },
 
 "General":{
