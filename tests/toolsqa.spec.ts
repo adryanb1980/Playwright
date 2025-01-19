@@ -171,28 +171,36 @@ test('DemoQA Test Report', async ({ page }, testReport) => {
   const messagewindow = await page.context().pages().at(1)?.screenshot();
   await testReport.attach('Message Window', { body: messagewindow, contentType: 'image/png' });
   await page.context().pages().at(1)?.close();
-  await page.waitForTimeout(1000);
+  await page.locator(Locators.AlertsWindowsFrames.AlertsMenuOption).filter({hasText:'Alerts'}).isVisible(); 
   await page.locator(Locators.AlertsWindowsFrames.AlertsMenuOption).filter({hasText:'Alerts'}).click(); 
   const alertsmenuoption = await page.screenshot();
   await testReport.attach('Alerts menu', { body: alertsmenuoption, contentType: 'image/png' });
-  
   /*
   await page.waitForTimeout(2000);
   page.on('dialog', dialog => dialog.accept());
   const alertbutton1 = await page.screenshot();
   await testReport.attach('Alerts button', { body: alertbutton1, contentType: 'image/png' });
   await page.waitForTimeout(2000);
-  
-  await page.waitForTimeout(5000);
-  await page.mouse.wheel(0, 300);
+ 
+
+  //await page.waitForTimeout(5000);
+  await page.mouse.wheel(0, 500);
   page.on('dialog', dialog => dialog.dismiss());
   await page.waitForTimeout(5000);
   await page.locator(Locators.AlertsWindowsFrames.AlertButton).click();
-  await page.waitForTimeout(5000);
   const alertbutton = await page.screenshot();
   await testReport.attach('Alerts button', { body: alertbutton, contentType: 'image/png' });
-*/
-
+  */
+  await page.locator(Locators.AlertsWindowsFrames.FramesMenuOption).filter({hasText:'Frames'}).isVisible(); 
+  await page.locator(Locators.AlertsWindowsFrames.FramesMenuOption).filter({hasText:'Frames'}).click(); 
+  await page.mouse.wheel(0, 500);
+  const framesmenuoption = await page.screenshot();
+  await testReport.attach('Frames menu', { body: framesmenuoption, contentType: 'image/png' });
+  await page.locator(Locators.AlertsWindowsFrames.Frame2).isVisible();
+  await page.locator(Locators.AlertsWindowsFrames.Frame2).dblclick();
+  await page.locator(Locators.AlertsWindowsFrames.Frame2).selectText();
+  const framestextselect = await page.screenshot();
+  await testReport.attach('Frames text select', { body: framestextselect, contentType: 'image/png' });
 
   //Logout and close
   await page.waitForTimeout(5000);

@@ -79,11 +79,14 @@
 "AlertsWindowsFrames":{
       "AlertsWindowsFramesOption" : "text=Alerts, Frame & Windows",
       "BrowserWindowsMenuOption" : "text=Browser Windows",
+      "AlertsMenuOption" : "#item-1",
+      "FramesMenuOption" : "#item-2",
       "NewTabButton" : "#tabButton",
       "NewWindowButton" : "#windowButton",
       "MessageWindowButton" : "#messageWindowButton",
-      "AlertsMenuOption" : "#item-1",
-      "AlertButton" : "#confirmButton"
+      "AlertButton" : "#promtButton",
+      "Frame1" : "#frame1",
+      "Frame2" : "#frame2"
       },
 
 "General":{
