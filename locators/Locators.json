@@ -81,12 +81,24 @@
       "BrowserWindowsMenuOption" : "text=Browser Windows",
       "AlertsMenuOption" : "#item-1",
       "FramesMenuOption" : "#item-2",
+      "ModalDialogMenuOption" : "#item-4",
       "NewTabButton" : "#tabButton",
       "NewWindowButton" : "#windowButton",
       "MessageWindowButton" : "#messageWindowButton",
       "AlertButton" : "#promtButton",
       "Frame1" : "#frame1",
-      "Frame2" : "#frame2"
+      "Frame2" : "#frame2",
+      "SmallModal" : "#showSmallModal",
+      "LargeModal" : "#showLargeModal",
+      "CloseSmallModal" : "#closeSmallModal",
+      "CloseLargeModal" : "#closeLargeModal"
+      },
+
+"Widgets":{
+      "WidgetsOption" : "text=Widgets",
+      "AccordianOption" : "text=Accordian",
+      "Accordian2" : "#section2Heading",
+      "Accordian3" : "#section3Heading"
       },
 
 "General":{

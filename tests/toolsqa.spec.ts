@@ -192,8 +192,10 @@ test('DemoQA Test Report', async ({ page }, testReport) => {
   await testReport.attach('Alerts button', { body: alertbutton, contentType: 'image/png' });
   */
   await page.locator(Locators.AlertsWindowsFrames.FramesMenuOption).filter({hasText:'Frames'}).isVisible(); 
-  await page.locator(Locators.AlertsWindowsFrames.FramesMenuOption).filter({hasText:'Frames'}).click(); 
-  await page.mouse.wheel(0, 500);
+  await page.locator(Locators.AlertsWindowsFrames.FramesMenuOption).filter({hasText:'Frames'}).click();
+  await page.locator(Locators.AlertsWindowsFrames.Frame2).isVisible();
+  await page.mouse.wheel(0, 500); 
+  
   const framesmenuoption = await page.screenshot();
   await testReport.attach('Frames menu', { body: framesmenuoption, contentType: 'image/png' });
   await page.locator(Locators.AlertsWindowsFrames.Frame2).isVisible();
@@ -202,6 +204,26 @@ test('DemoQA Test Report', async ({ page }, testReport) => {
   const framestextselect = await page.screenshot();
   await testReport.attach('Frames text select', { body: framestextselect, contentType: 'image/png' });
 
+  await page.locator(Locators.AlertsWindowsFrames.ModalDialogMenuOption).filter({hasText:'Modal Dialogs'}).click();
+  await page.locator(Locators.AlertsWindowsFrames.SmallModal).click();
+  const modals = await page.screenshot();
+  await testReport.attach('Modals', { body: modals, contentType: 'image/png' });
+  await page.locator(Locators.AlertsWindowsFrames.CloseSmallModal).click();
+ 
+  //Widgets
+  await page.mouse.wheel(0, 300);
+  await page.locator(Locators.Widgets.WidgetsOption).click();
+  const widgetsmenu = await page.screenshot();
+  await testReport.attach('Widgets menu', { body: widgetsmenu, contentType: 'image/png' });
+  await page.locator(Locators.Widgets.AccordianOption).click();
+  await page.locator(Locators.Widgets.Accordian2).click();
+  await page.mouse.wheel(0, -200);
+  const accordian2 = await page.screenshot();
+  await testReport.attach('Accordian option', { body: accordian2, contentType: 'image/png' });
+
+  await page.locator(Locators.Widgets.Accordian3).click();
+  const accordian3 = await page.screenshot();
+  await testReport.attach('Accordian option 2', { body: accordian3, contentType: 'image/png' });
   //Logout and close
   await page.waitForTimeout(5000);
   await page.close();
