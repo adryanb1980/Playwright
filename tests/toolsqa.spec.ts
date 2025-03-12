@@ -167,7 +167,7 @@ test('DemoQA Test Report', async ({ page }, testReport) => {
   await page.context().pages().at(1)?.close();
   await page.locator(Locators.AlertsWindowsFrames.MessageWindowButton).click();
   await page.context().pages().at(1)?.bringToFront();
-  await page.waitForTimeout(1000);
+  await page.waitForTimeout(300);
   const messagewindow = await page.context().pages().at(1)?.screenshot();
   await testReport.attach('Message Window', { body: messagewindow, contentType: 'image/png' });
   await page.context().pages().at(1)?.close();
