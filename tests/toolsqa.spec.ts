@@ -143,7 +143,10 @@ test('DemoQA Test Report', async ({ page }, testReport) => {
   await page.locator(Locators.Forms.CurrentAddress).fill(PracticeFormData.currentaddress);
   await page.locator(Locators.General.Submit).click();
   const submitbutton2 = await page.screenshot();
-  await testReport.attach('Submit form', { body: submitbutton2, contentType: 'image/png' });
+  await testReport.attach('Su
+  
+  
+  bmit form', { body: submitbutton2, contentType: 'image/png' });
   await page.waitForTimeout(300);
   await page.locator(Locators.Forms.CloseLargeModal).click();
  */
