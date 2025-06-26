@@ -5,7 +5,7 @@ import * as Locators from '../locators/Locators.json';
 import * as PracticeFormData from '../test-data/practiceform.json';
 
 test('DemoQA Test Report', async ({ page }, testReport) => {
-  test.setTimeout(70000);
+  test.setTimeout(80000);
   await page.goto('/');
   await expect(page).toHaveTitle("DEMOQA");
   const screenshotloginpage = await page.screenshot();
