@@ -63,6 +63,9 @@ export default defineConfig({
       use: { 
         ...devices['Desktop Firefox'], 
         //viewport: null,
+        //...devices['Desktop Edge'],
+       viewport: null, 
+       channel: 'firefox' },
       },
     },
 
