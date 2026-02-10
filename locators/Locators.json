@@ -1,7 +1,7 @@
 {
-"Elements":{
-      "ElementsMenuOption" : "text=Elements"
-},
+            "Elements":{
+                   "ElementsMenuOption" : "text=Elements"
+            },
 
             "TextBox":{
                   "TextBoxMenuOption" : "text=Text Box",
