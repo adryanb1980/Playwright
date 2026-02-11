@@ -1,0 +1,16 @@
+{
+            "Login":{
+                            "UserName" : "#username",
+                            "Password" : "#password",
+                            "Autentificare" : "#btnOk"     
+            },
+            "MainMenu":{
+                "MainMenuAccess" : "data-testid=AppsIcon"
+                
+
+                              
+            }
+
+
+
+}

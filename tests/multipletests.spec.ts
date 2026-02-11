@@ -1,10 +1,17 @@
 import { test, expect } from '@playwright/test';
+import * as Locators from '../locators/app.json';
+import * as AppData from '../test-data/appdata.json';
 
-test('has title', async ({ page }) => {
+test('App Data Creation', async ({ page }) => {
   await page.goto('http://localhost:3000/auth/login-page');
 
-  // Expect a title "to contain" a substring.
+  await page.locator(Locators.Login.UserName).click();
+  await page.locator(Locators.Login.UserName).fill(AppData.username);
+  await page.locator(Locators.Login.Password).click();
+  await page.locator(Locators.Login.Password).fill(AppData.password);
+  await page.locator(Locators.Login.Autentificare).click();
 
+  await page.locator(Locators.MainMenu.MainMenuAccess).click();
     //Logout and close
   await page.waitForTimeout(2000);
   await page.close();
