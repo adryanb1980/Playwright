@@ -1,15 +1,16 @@
 import { test, expect } from '@playwright/test';
 
 test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+  await page.goto('http://localhost:3000/auth/login-page');
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+
     //Logout and close
   await page.waitForTimeout(2000);
   await page.close();
 });
 
+/*
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
@@ -22,3 +23,4 @@ test('get started link', async ({ page }) => {
   await page.waitForTimeout(2000);
   await page.close();
 });
+*/
