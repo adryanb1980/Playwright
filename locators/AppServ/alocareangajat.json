@@ -1,0 +1,14 @@
+{
+              "Angajati":{
+                "ChipNealocatiPePost" : "Nealocați pe post",
+                "SearchByCNP": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[1]/div[1]/div[2]/div/div[5]/input",
+                "ShortMenuDisplay": "1921120275297",
+                "ButonAlocarePost":"data-testid=AssignmentIndIcon"
+            },
+
+            "General":{
+                "Salvare": "#btnOk"
+            }
+
+
+}
