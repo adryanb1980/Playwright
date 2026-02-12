@@ -24,10 +24,8 @@ test('Alocare angajat', async ({ page }) => {
   await page.getByRole('button', {name:'Nealocați pe post'}).click();
   await page.locator(AlocareLocators.Angajati.SearchByCNP).click();
   await page.locator(AlocareLocators.Angajati.SearchByCNP).fill(AlocareData.cnp);
-  //await page.getByRole('gridcell',{name:AlocareLocators.Angajati.ShortMenuDisplay}).click();
   await page.getByRole('gridcell',{name:AlocareData.cnp}).click();
   await page.locator(AlocareLocators.Angajati.ButonAlocarePost).click();
-  
 
 
   /*
