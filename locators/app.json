@@ -4,13 +4,44 @@
                             "Password" : "#password",
                             "Autentificare" : "#btnOk"     
             },
+
             "MainMenu":{
-                "MainMenuAccess" : "data-testid=AppsIcon"
-                
+                "MainMenuAccess" : "data-testid=AppsIcon",
+                "Angajati" : "Angajați"
+              
+            },
 
-                              
+            "OperatiiAngajati":{
+                  "Adauga" : "Adaugă"                 
+
+            },
+
+            "AdaugaAngajat":{
+                "Marca" : "#externalId",
+                "Nume" : "#lastName",
+                "Prenume" : "#firstName",
+                "CNP" : "#personalCode",
+                "Telefon" : "#phone",
+                "Email": "#email",
+                "Document": "#mui-component-select-documentType",
+                "Serie": "#series",
+                "Numar": "#number",
+                "EmisLa": "#issuedOn",
+                "ExpiraLa": "#expiresOn",
+                "EmisDe": "#issuedBy",
+                "Judet": "#mui-component-select-homeRegionId",
+                "Localitate": "#mui-component-select-homeLocalityId",
+                "Strada": "#homeStreet",
+                "Nr": "#homeNumber",
+                "Ap": "#homeApartment",
+                "CodPostal": "#homePostalCode",
+                "CopiazaAdresaDeDomiciliu": "#btnCopyHomeAddress"
+
+            },
+
+            "General":{
+                "Salvare": "#btnOk"
             }
-
 
 
 }
