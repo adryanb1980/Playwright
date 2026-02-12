@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import * as Locators from '../locators/app.json';
-import * as LoginData from '../test-data/login.json';
-import * as EmployeeData from '../test-data/employeedata.json';
+import * as Locators from '../../locators/AppServ/creareangajat.json';
+import * as LoginData from '../../test-data/AppServ/login.json';
+import * as EmployeeData from '../../test-data/AppServ/creareangajat.json';
 
 
 test('Creare angajat', async ({ page }) => {
@@ -65,16 +65,15 @@ test('Creare angajat', async ({ page }) => {
   await page.locator(Locators.AdaugaAngajat.CodPostal).click();
   await page.locator(Locators.AdaugaAngajat.CodPostal).fill(EmployeeData.codpostal);
   await page.locator(Locators.AdaugaAngajat.CopiazaAdresaDeDomiciliu).click();
-
   //SalveazaAngajat
   await page.locator(Locators.General.Salvare).click();
+ 
+ 
 
 
-/*
 //Logout and close
   await page.waitForTimeout(5000);
   await page.close();
-*/
 
 
 });
