@@ -5,6 +5,11 @@
                 "ShortMenuDisplay": "1921120275297",
                 "ButonAlocarePost":"data-testid=AssignmentIndIcon"
             },
+              "Alocare":{
+                "Departament": "#mui-component-select-departmentId",
+                "Subdepartament": "#mui-component-select-subdepartmentId",
+                "Post" : "data-testid=CheckIcon"
+            },
 
             "General":{
                 "Salvare": "#btnOk"

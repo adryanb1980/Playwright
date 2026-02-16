@@ -27,6 +27,16 @@ test('Alocare angajat', async ({ page }) => {
   await page.getByRole('gridcell',{name:AlocareData.cnp}).click();
   await page.locator(AlocareLocators.Angajati.ButonAlocarePost).click();
 
+  //Drop down Departament
+  await page.locator(AlocareLocators.Alocare.Departament).click();
+  await page.getByRole('option', {name:'Fabrica de Confectii'}).click();
+
+  //Drop down Subdepartament
+  await page.locator(AlocareLocators.Alocare.Subdepartament).click();
+  await page.getByRole('option', {name:'Croitorie Bazaltului'}).click();
+
+  //Selectare post
+  await page.locator(AlocareLocators.Alocare.Post).first().click();
 
   /*
 //Logout and close
