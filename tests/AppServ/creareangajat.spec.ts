@@ -2,7 +2,8 @@ import { test, expect } from '@playwright/test';
 import * as Locators from '../../locators/AppServ/creareangajat.json';
 import * as LoginData from '../../test-data/AppServ/login.json';
 import * as EmployeeData from '../../test-data/AppServ/creareangajat.json';
-
+import * as AlocareLocators from '../../locators/AppServ/alocareangajat.json';
+import * as AlocareData from '../../test-data/AppServ/alocareangajat.json';
 
 test('Creare angajat', async ({ page }) => {
   await page.goto('http://localhost:3000/auth/login-page');
@@ -68,11 +69,27 @@ test('Creare angajat', async ({ page }) => {
   //SalveazaAngajat
   await page.locator(Locators.General.Salvare).click();
  
- 
+  //Alocare pe post
+  await page.getByRole('button', {name:'Nealocați pe post'}).click();
+  await page.locator(AlocareLocators.Angajati.SearchByCNP).click();
+  await page.locator(AlocareLocators.Angajati.SearchByCNP).fill(AlocareData.cnp);
+  await page.getByRole('gridcell',{name:AlocareData.cnp}).click();
+  await page.locator(AlocareLocators.Angajati.ButonAlocarePost).click();
+
+  //Drop down Departament
+  await page.locator(AlocareLocators.Alocare.Departament).click();
+  await page.getByRole('option', {name:'Fabrica de Confectii'}).click();
+
+  //Drop down Subdepartament
+  await page.locator(AlocareLocators.Alocare.Subdepartament).click();
+  await page.getByRole('option', {name:'Croitorie Bazaltului'}).click();
+
+  //Selectare post
+  await page.locator(AlocareLocators.Alocare.Post).first().click();
 
 
 //Logout and close
-  await page.waitForTimeout(5000);
+  await page.waitForTimeout(3000);
   await page.close();
 
 
