@@ -78,11 +78,11 @@ test('Creare angajat', async ({ page }) => {
 
   //Drop down Departament
   await page.locator(AlocareLocators.Alocare.Departament).click();
-  await page.getByRole('option', {name:'Fabrica de Confectii'}).click();
+  await page.getByRole('option', {name:AlocareData.Departament}).click();
 
   //Drop down Subdepartament
   await page.locator(AlocareLocators.Alocare.Subdepartament).click();
-  await page.getByRole('option', {name:'Croitorie Bazaltului'}).click();
+  await page.getByRole('option', {name:AlocareData.Subdepartament}).click();
 
   //Selectare post
   await page.locator(AlocareLocators.Alocare.Post).first().click();
