@@ -2,7 +2,10 @@
               "Angajati":{
                 "ChipNealocatiPePost" : "Nealocați pe post",
                 "SearchByCNP": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[1]/div[1]/div[2]/div/div[5]/input",               
-                "ButonAlocarePost":"data-testid=AssignmentIndIcon"
+                "ButonAlocarePost":"data-testid=AssignmentIndIcon",
+                "ChipActivi": "Activi",
+                "SearchByCNPActivi": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[1]/div[1]/div[2]/div/div[11]/input"
+                
             },
               "Alocare":{
                 "Departament": "#mui-component-select-departmentId",

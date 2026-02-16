@@ -4,6 +4,10 @@ import * as LoginData from '../../test-data/AppServ/login.json';
 import * as EmployeeData from '../../test-data/AppServ/creareangajat.json';
 import * as AlocareLocators from '../../locators/AppServ/alocareangajat.json';
 import * as AlocareData from '../../test-data/AppServ/alocareangajat.json';
+import * as FormalitatiDeAngajareLocators from '../../locators/AppServ/formalitatideangajare.json';
+import * as FormalitatiDeAngajareData from '../../test-data/AppServ/formalitatideangajare.json';
+
+
 
 test('Creare angajat', async ({ page }) => {
   await page.goto('http://localhost:3000/auth/login-page');
@@ -16,11 +20,15 @@ test('Creare angajat', async ({ page }) => {
   await page.locator(Locators.Login.Autentificare).click();
   await page.locator(Locators.MainMenu.MainMenuAccess).click();
   
+
   //Click angajati
   await page.getByText(Locators.MainMenu.Angajati,{exact:true}).click();
-  await page.getByText(Locators.OperatiiAngajati.Adauga,{exact:true}).click();
-
+  
+  
+ 
+ 
   //Adauga angajat
+  await page.getByText(Locators.OperatiiAngajati.Adauga,{exact:true}).click();
   await page.locator(Locators.AdaugaAngajat.Marca).click();
   await page.locator(Locators.AdaugaAngajat.Marca).fill(EmployeeData.marca);
   await page.locator(Locators.AdaugaAngajat.Nume).click();
@@ -36,7 +44,6 @@ test('Creare angajat', async ({ page }) => {
   //Drop down tip act identitate
   await page.locator(Locators.AdaugaAngajat.Document).click();
   await page.getByRole('option', {name:'Pașaport'}).click();
-  //
   await page.locator(Locators.AdaugaAngajat.Serie).click();
   await page.locator(Locators.AdaugaAngajat.Serie).fill(EmployeeData.serie);
   await page.locator(Locators.AdaugaAngajat.Numar).click();
@@ -70,16 +77,17 @@ test('Creare angajat', async ({ page }) => {
   await page.locator(Locators.General.Salvare).click();
  
   //Alocare pe post
-  await page.getByRole('button', {name:'Nealocați pe post'}).click();
+  await page.getByRole('button', {name:AlocareLocators.Angajati.ChipNealocatiPePost}).click();
   await page.locator(AlocareLocators.Angajati.SearchByCNP).click();
-  await page.locator(AlocareLocators.Angajati.SearchByCNP).fill(AlocareData.cnp);
-  await page.getByRole('gridcell',{name:AlocareData.cnp}).click();
+  await page.locator(AlocareLocators.Angajati.SearchByCNP).fill(EmployeeData.cnp);
+  await page.getByRole('gridcell',{name:EmployeeData.cnp}).click();
   await page.locator(AlocareLocators.Angajati.ButonAlocarePost).click();
 
   //Drop down Departament
   await page.locator(AlocareLocators.Alocare.Departament).click();
   await page.getByRole('option', {name:AlocareData.Departament}).click();
 
+  
   //Drop down Subdepartament
   await page.locator(AlocareLocators.Alocare.Subdepartament).click();
   await page.getByRole('option', {name:AlocareData.Subdepartament}).click();
@@ -88,10 +96,42 @@ test('Creare angajat', async ({ page }) => {
   await page.locator(AlocareLocators.Alocare.Post).first().click();
 
 
+
+  //Formalitati de angajare
+  //FIFR&FSEMA
+  await page.getByRole('button', {name:AlocareLocators.Angajati.ChipActivi,exact:true}).click();
+  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).click(); 
+  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).clear();
+  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).click();
+  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).fill(EmployeeData.cnp);
+  //display meniu dreapta angajat
+  const box = await page.getByRole('checkbox').boundingBox();
+  await page.mouse.click(box.x + box.width / 2 + 100, box.y + box.height / 2);
+  //click buton formalitati de angajare
+
+  
+  /*
+  await page.locator(FormalitatiDeAngajareLocators.FifrFsema.Angajare).click();
+  await page.locator(FormalitatiDeAngajareLocators.FifrFsema.DataAngajare).fill(FormalitatiDeAngajareData.dataangajare);
+  await page.locator(FormalitatiDeAngajareLocators.FifrFsema.DataFifr).click();
+  await page.locator(FormalitatiDeAngajareLocators.FifrFsema.DataFifr).fill(FormalitatiDeAngajareData.datafifr);
+  await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
+  */
+  /*
+  //Activi
+  await page.getByRole('button', {name:AlocareLocators.Angajati.ChipActivi,exact:true}).click();
+  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).click(); 
+  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).clear();
+  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).click();
+  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).fill(EmployeeData.cnp);
+  */
+
+
 //Logout and close
+  /*
   await page.waitForTimeout(3000);
   await page.close();
-
+  */
 
 });
 

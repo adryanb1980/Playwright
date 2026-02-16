@@ -1,0 +1,17 @@
+{
+            "FifrFsema":{
+                            "Angajare" : "#request",
+                            "DataAngajare": "#date",
+                            "DataFifr":"#dateFifr"             
+                        
+                        },
+
+
+
+
+            "General":{
+                "Salvare": "#btnOk"
+            }
+
+
+}
