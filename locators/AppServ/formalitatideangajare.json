@@ -10,7 +10,10 @@
             "FisaPsihologica":{
                             "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[4]/button",                                                    
                             "Apt": "#result",
-                            "Concluzii": "#conclusion"
+                            "Concluzii": "#conclusion",
+                            "DataPsihologic": "#date",
+                            "UploadButton": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div/div/form/div[2]/div[2]/div/div[1]/div"
+                            
                         },            
 
 

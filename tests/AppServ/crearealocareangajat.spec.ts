@@ -1,5 +1,4 @@
 import { test, expect, selectors } from '@playwright/test';
-import { Request } from '@playwright/test';
 import * as Locators from '../../locators/AppServ/creareangajat.json';
 import * as LoginData from '../../test-data/AppServ/login.json';
 import * as EmployeeData from '../../test-data/AppServ/creareangajat.json';
@@ -127,23 +126,16 @@ test('Creare angajat', async ({ page }) => {
   await page.keyboard.press('Tab');  
   await page.keyboard.press('Space');
   await page.locator(FormalitatiDeAngajareLocators.FisaPsihologica.Concluzii).fill(FormalitatiDeAngajareData.concluzii);
-  
+  await page.locator(FormalitatiDeAngajareLocators.FisaPsihologica.DataPsihologic).click();
+  await page.locator(FormalitatiDeAngajareLocators.FisaPsihologica.DataPsihologic).fill(FormalitatiDeAngajareData.datapsihologic);
 
-/*  
-//Activi
-  await page.getByRole('button', {name:AlocareLocators.Angajati.ChipActivi,exact:true}).click();
-  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).click(); 
-  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).clear();
-  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).click();
-  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).fill(EmployeeData.cnp);
-*/
-
-
-
-//Logout and close
-  /*
-  await page.waitForTimeout(3000);
-  await page.close();
-  */
+//Upload file
+  //const fileChooserPromise = page.waitForEvent('filechooser');
+  //await page.locator(FormalitatiDeAngajareLocators.FisaPsihologica.UploadButton).setInputFiles('D:/Automation/Playwright/test-data/AppServ/PDF_file-sample.pdf');
+  const fileChooserPromise = page.waitForEvent('filechooser');
+  await page.getByText("Trageți un fișier sau click").click();
+  const fileChooser = await fileChooserPromise;
+  await fileChooser.setFiles('D:/Automation/Playwright/test-data/AppServ/PDF_file-sample.pdf');
 
 });
+

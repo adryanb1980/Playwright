@@ -1,5 +1,7 @@
 {
     "dataangajare": "2025-07-12",
     "datafifr": "2025-08-01",
-    "concluzii": "Apt psihologic"
+    "concluzii": "Apt psihologic",
+    "datapsihologic": "2025-08-01",
+    "UploadPath": "D:/Automation/Playwright/test-data/AppServ/PDF_file-sample.pdf"
 }
