@@ -1,4 +1,5 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, selectors } from '@playwright/test';
+import { Request } from '@playwright/test';
 import * as Locators from '../../locators/AppServ/creareangajat.json';
 import * as LoginData from '../../test-data/AppServ/login.json';
 import * as EmployeeData from '../../test-data/AppServ/creareangajat.json';
@@ -11,7 +12,6 @@ import * as FormalitatiDeAngajareData from '../../test-data/AppServ/formalitatid
 
 test('Creare angajat', async ({ page }) => {
   await page.goto('http://localhost:3000/auth/login-page');
-
   //Acces meniu mare
   await page.locator(Locators.Login.UserName).click();
   await page.locator(Locators.Login.UserName).fill(LoginData.username);
@@ -23,8 +23,7 @@ test('Creare angajat', async ({ page }) => {
 
   //Click angajati
   await page.getByText(Locators.MainMenu.Angajati,{exact:true}).click();
-  
-  
+ 
  
  
   //Adauga angajat
@@ -95,36 +94,50 @@ test('Creare angajat', async ({ page }) => {
   //Selectare post
   await page.locator(AlocareLocators.Alocare.Post).first().click();
 
-
-
   //Formalitati de angajare
   //FIFR&FSEMA
   await page.getByRole('button', {name:AlocareLocators.Angajati.ChipActivi,exact:true}).click();
-  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).click(); 
-  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).clear();
-  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).click();
-  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).fill(EmployeeData.cnp);
-  //display meniu dreapta angajat
-  const box = await page.getByRole('checkbox').boundingBox();
-  await page.mouse.click(box.x + box.width / 2 + 100, box.y + box.height / 2);
-  //click buton formalitati de angajare
-
   
-  /*
-  await page.locator(FormalitatiDeAngajareLocators.FifrFsema.Angajare).click();
+  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).click(); 
+  await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).fill(EmployeeData.cnp);
+  await page.mouse.wheel(100, 0);
+  await page.getByRole('gridcell').filter({ hasText: EmployeeData.cnp}).last().click({ position: { x: 30, y: 0 } }); 
+  await page.locator(FormalitatiDeAngajareLocators.FifrFsema.FormalitatiDeAngajare).isVisible();
+  await page.locator(FormalitatiDeAngajareLocators.FifrFsema.FormalitatiDeAngajare).click();  
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Space');
+  await page.locator(FormalitatiDeAngajareLocators.FifrFsema.DataAngajare).click();
   await page.locator(FormalitatiDeAngajareLocators.FifrFsema.DataAngajare).fill(FormalitatiDeAngajareData.dataangajare);
   await page.locator(FormalitatiDeAngajareLocators.FifrFsema.DataFifr).click();
   await page.locator(FormalitatiDeAngajareLocators.FifrFsema.DataFifr).fill(FormalitatiDeAngajareData.datafifr);
+  const page2Promise = page.waitForEvent('popup');
   await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
-  */
-  /*
-  //Activi
+  const page2 = await page2Promise;
+  await page2.close();
+  //FisaPsihologica
+  await page.locator(FormalitatiDeAngajareLocators.FifrFsema.Back).click();
+  await page.getByRole('gridcell').filter({ hasText: EmployeeData.cnp}).last().click({ position: { x: 20, y: 0 } }); 
+  await page.locator(FormalitatiDeAngajareLocators.FisaPsihologica.FormalitatiDeAngajare).click();
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');  
+  await page.keyboard.press('Space');
+  await page.locator(FormalitatiDeAngajareLocators.FisaPsihologica.Concluzii).fill(FormalitatiDeAngajareData.concluzii);
+  
+
+/*  
+//Activi
   await page.getByRole('button', {name:AlocareLocators.Angajati.ChipActivi,exact:true}).click();
   await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).click(); 
   await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).clear();
   await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).click();
   await page.locator(AlocareLocators.Angajati.SearchByCNPActivi).fill(EmployeeData.cnp);
-  */
+*/
+
 
 
 //Logout and close
@@ -134,20 +147,3 @@ test('Creare angajat', async ({ page }) => {
   */
 
 });
-
-
-
-/*
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-    //Logout and close
-  await page.waitForTimeout(2000);
-  await page.close();
-});
-*/

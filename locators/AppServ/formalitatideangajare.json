@@ -1,11 +1,17 @@
 {
             "FifrFsema":{
                             "Angajare" : "#request",
+                            "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[4]/button",                                                    
                             "DataAngajare": "#date",
-                            "DataFifr":"#dateFifr"             
-                        
+                            "DataFifr":"#dateFifr",     
+                            "Back": "data-testid=ArrowBackIcon"
                         },
 
+            "FisaPsihologica":{
+                            "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[4]/button",                                                    
+                            "Apt": "#result",
+                            "Concluzii": "#conclusion"
+                        },            
 
 
 
