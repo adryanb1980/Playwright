@@ -128,10 +128,13 @@ test('Creare angajat', async ({ page }) => {
   await page.locator(FormalitatiDeAngajareLocators.FisaPsihologica.Concluzii).fill(FormalitatiDeAngajareData.concluzii);
   await page.locator(FormalitatiDeAngajareLocators.FisaPsihologica.DataPsihologic).click();
   await page.locator(FormalitatiDeAngajareLocators.FisaPsihologica.DataPsihologic).fill(FormalitatiDeAngajareData.datapsihologic);
-
-//Upload file
+  const fileChooserPromise = page.waitForEvent('filechooser');
   await page.getByText("Trageți un fișier sau click").click();
+  const fileChooser = await fileChooserPromise;
+  await fileChooser.setFiles(FormalitatiDeAngajareData.UploadPath);
   await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
-  
+  //Dosar medical
+  await page.getByRole('gridcell').filter({ hasText: EmployeeData.cnp}).last().click({ position: { x: 20, y: 0 } }); 
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.FormalitatiDeAngajare).click();
 });
 
