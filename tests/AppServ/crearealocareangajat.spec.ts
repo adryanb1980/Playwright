@@ -136,5 +136,12 @@ test('Creare angajat', async ({ page }) => {
   //Dosar medical
   await page.getByRole('gridcell').filter({ hasText: EmployeeData.cnp}).last().click({ position: { x: 20, y: 0 } }); 
   await page.locator(FormalitatiDeAngajareLocators.DosarMedical.FormalitatiDeAngajare).click();
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.NrDosar).click();
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.NrDosar).fill(FormalitatiDeAngajareData.nrdosarmedical);
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DataDosar).click();
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DataDosar).fill(FormalitatiDeAngajareData.datadosarmedical);
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DataDosarAngajare).click();
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DataDosarAngajare).fill(FormalitatiDeAngajareData.datadosarangajare);
+  
 });
 
