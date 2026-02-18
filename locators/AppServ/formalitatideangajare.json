@@ -20,7 +20,11 @@
                             "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[4]/button",
                             "NrDosar": "#medicalFileNo",
                             "DataDosar": "#date",
-                            "DataDosarAngajare": "#dateEmploymentMedicalApplicationForm"
+                            "DataDosarAngajare": "#dateEmploymentMedicalApplicationForm",
+                            "DosarT": "#T",
+                            "DosarG": "#G",
+                            "AvizMedical": "#medicalOpinionText",
+                            "AvizApt": "#medicalOpinion"
                         },            
 
 

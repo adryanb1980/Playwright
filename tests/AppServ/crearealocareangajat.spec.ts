@@ -142,6 +142,14 @@ test('Creare angajat', async ({ page }) => {
   await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DataDosar).fill(FormalitatiDeAngajareData.datadosarmedical);
   await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DataDosarAngajare).click();
   await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DataDosarAngajare).fill(FormalitatiDeAngajareData.datadosarangajare);
-  
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DosarT).click();
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DosarT).fill(FormalitatiDeAngajareData.dosarT);
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DosarG).click();
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DosarG).fill(FormalitatiDeAngajareData.dosarG);
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.AvizMedical).click();
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.AvizMedical).fill(FormalitatiDeAngajareData.avizmedical);
+  await page.keyboard.press('Tab');  
+  await page.keyboard.press('Space');
+ 
 });
 
