@@ -130,12 +130,13 @@ test('Creare angajat', async ({ page }) => {
   await page.locator(FormalitatiDeAngajareLocators.FisaPsihologica.DataPsihologic).fill(FormalitatiDeAngajareData.datapsihologic);
 
 //Upload file
-  //const fileChooserPromise = page.waitForEvent('filechooser');
-  //await page.locator(FormalitatiDeAngajareLocators.FisaPsihologica.UploadButton).setInputFiles('D:/Automation/Playwright/test-data/AppServ/PDF_file-sample.pdf');
   const fileChooserPromise = page.waitForEvent('filechooser');
   await page.getByText("Trageți un fișier sau click").click();
   const fileChooser = await fileChooserPromise;
   await fileChooser.setFiles('D:/Automation/Playwright/test-data/AppServ/PDF_file-sample.pdf');
-
+  const page3Promise = page.waitForEvent('popup');
+  await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
+  const page3 = await page3Promise;
+  await page3.close();
 });
 
