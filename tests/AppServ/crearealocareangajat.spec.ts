@@ -150,6 +150,15 @@ test('Creare angajat', async ({ page }) => {
   await page.locator(FormalitatiDeAngajareLocators.DosarMedical.AvizMedical).fill(FormalitatiDeAngajareData.avizmedical);
   await page.keyboard.press('Tab');  
   await page.keyboard.press('Space');
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DataAviz).click();
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DataAviz).fill(FormalitatiDeAngajareData.dataaviz);
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DataControlUrmator).click();
+  await page.locator(FormalitatiDeAngajareLocators.DosarMedical.DataControlUrmator).fill(FormalitatiDeAngajareData.datacontrolurmator);
+  const fileChooserPromise2 = page.waitForEvent('filechooser');
+  await page.getByText("Trageți un fișier sau click").click();
+  const fileChooser2 = await fileChooserPromise2;
+  await fileChooser2.setFiles(FormalitatiDeAngajareData.UploadPath);
+  await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
  
 });
 

@@ -24,7 +24,9 @@
                             "DosarT": "#T",
                             "DosarG": "#G",
                             "AvizMedical": "#medicalOpinionText",
-                            "AvizApt": "#medicalOpinion"
+                            "AvizApt": "#medicalOpinion",
+                            "DataAviz": "#medicalExaminationDate",
+                            "DataControlUrmator": "#medicalExaminationNextDate"
                         },            
 
 
