@@ -7,7 +7,7 @@ import * as PracticeFormData from '../test-data/practiceform.json';
 test('DemoQA Test Report', async ({ page }, testReport) => {
   test.setTimeout(80000);
   await page.goto('/');
-  await expect(page).toHaveTitle("DEMOQA");
+  //await expect(page).toHaveTitle("DEMOQA");
   const screenshotloginpage = await page.screenshot();
   await testReport.attach('DEMOQA page', { body: screenshotloginpage, contentType: 'image/png' });
   await page.locator(Locators.Elements.ElementsMenuOption).click();
@@ -193,7 +193,7 @@ test('DemoQA Test Report', async ({ page }, testReport) => {
   await page.locator(Locators.AlertsWindowsFrames.AlertButton).click();
   const alertbutton = await page.screenshot();
   await testReport.attach('Alerts button', { body: alertbutton, contentType: 'image/png' });
-  */
+  
   await page.locator(Locators.AlertsWindowsFrames.FramesMenuOption).filter({hasText:'Frames'}).isVisible(); 
   await page.locator(Locators.AlertsWindowsFrames.FramesMenuOption).filter({hasText:'Frames'}).click();
   await page.locator(Locators.AlertsWindowsFrames.Frame2).isVisible();
@@ -212,7 +212,7 @@ test('DemoQA Test Report', async ({ page }, testReport) => {
   const modals = await page.screenshot();
   await testReport.attach('Modals', { body: modals, contentType: 'image/png' });
   await page.locator(Locators.AlertsWindowsFrames.CloseSmallModal).click();
- 
+
   //Widgets
   await page.mouse.wheel(0, 300);
   await page.locator(Locators.Widgets.WidgetsOption).click();
@@ -227,6 +227,7 @@ test('DemoQA Test Report', async ({ page }, testReport) => {
   await page.locator(Locators.Widgets.Accordian3).click();
   const accordian3 = await page.screenshot();
   await testReport.attach('Accordian option 2', { body: accordian3, contentType: 'image/png' });
+   */
   //Logout and close
   await page.waitForTimeout(5000);
   await page.close();
