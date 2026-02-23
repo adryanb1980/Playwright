@@ -116,7 +116,7 @@ test('Creare angajat', async ({ page }) => {
   const page2 = await page2Promise;
   await page2.close();
   //FisaPsihologica
-  await page.locator(FormalitatiDeAngajareLocators.FifrFsema.Back).click();
+  await page.locator(FormalitatiDeAngajareLocators.General.Back).click();
   await page.getByRole('gridcell').filter({ hasText: EmployeeData.cnp}).last().click({ position: { x: 20, y: 0 } }); 
   await page.locator(FormalitatiDeAngajareLocators.FisaPsihologica.FormalitatiDeAngajare).click();
   await page.keyboard.press('Tab');
@@ -178,6 +178,10 @@ test('Creare angajat', async ({ page }) => {
   await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.FormalitatiDeAngajare).click();
   await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.NrContract).click();
   await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.NrContract).fill(FormalitatiDeAngajareData.numarcontract);
+  await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.DataIncheiereContract).click();
+  await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.DataIncheiereContract).fill(FormalitatiDeAngajareData.dataincheierecontract);
+  await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.DataIncepereActivitate).click();
+  await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.DataIncepereActivitate).fill(FormalitatiDeAngajareData.dataincepereactivitate);
   const page5Promise = page.waitForEvent('popup');
   await page.getByRole('button', {name: 'Anexe CIM cu stagiu'}).click();
   const page5 = await page5Promise;
@@ -195,6 +199,8 @@ test('Creare angajat', async ({ page }) => {
   const page8 = await page8Promise;
   await page8.close(); 
   await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
+  await page.locator(FormalitatiDeAngajareLocators.General.Back).click();
+  
 
 });
 
