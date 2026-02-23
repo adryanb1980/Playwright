@@ -187,11 +187,11 @@ test('Creare angajat', async ({ page }) => {
   const page6 = await page6Promise;
   await page6.close(); 
   const page7Promise = page.waitForEvent('popup');
-  await page.getByRole('button', {name: 'Fișa postului'}).click();
+  await page.getByRole('button', {name: 'Fișa postului', exact: true}).click();
   const page7 = await page7Promise;
   await page7.close(); 
   const page8Promise = page.waitForEvent('popup');
-  await page.getByRole('button', {name: 'Fișa postului necalificat'}).click();
+  await page.getByRole('button', {name: 'Fișa postului necalificat', exact: true}).click();
   const page8 = await page8Promise;
   await page8.close(); 
   await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
