@@ -27,7 +27,17 @@
                             "AvizApt": "#medicalOpinion",
                             "DataAviz": "#medicalExaminationDate",
                             "DataControlUrmator": "#medicalExaminationNextDate"
-                        },            
+                        },        
+                        
+            "FisadeAptitudini":{
+                            "Nrfisadeaptitudini": "#number",
+                            "Datafisaaptitudini": "#date"
+                        },
+
+            "ContractDeMunca":{
+                            "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[4]/button",
+                            "NrContract": "#number"
+                        },
 
 
             "General":{

@@ -1,15 +1,18 @@
 {
-    "dataangajare": "2026-02-18",
+    "dataangajare": "2026-02-19",
     "datafifr": "2026-02-16",
     "concluzii": "Apt psihologic",
-    "datapsihologic": "2026-02-18",
+    "datapsihologic": "2026-02-19",
     "UploadPath": "D:/Automation/Playwright/test-data/AppServ/PDF_file-sample.pdf",
     "nrdosarmedical": "123456789",
-    "datadosarmedical": "2026-02-18",
-    "datadosarangajare": "2026-02-18",
+    "datadosarmedical": "2026-02-19",
+    "datadosarangajare": "2026-02-19",
     "dosarT": "10",
     "dosarG": "11",
     "avizmedical": "Aviz medical text",
-    "dataaviz": "2026-02-18",
-    "datacontrolurmator": "2027-08-18"
+    "dataaviz": "2026-02-19",
+    "datacontrolurmator": "2027-08-19",
+    "nrfisadeaptitudini": "123456",
+    "datafisaaptitudini": "2026-02-19",
+    "numarcontract": "202602191"
 }

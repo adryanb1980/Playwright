@@ -159,6 +159,42 @@ test('Creare angajat', async ({ page }) => {
   const fileChooser2 = await fileChooserPromise2;
   await fileChooser2.setFiles(FormalitatiDeAngajareData.UploadPath);
   await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
- 
+  //Fisa de aptitudini
+  await page.locator(FormalitatiDeAngajareLocators.FisadeAptitudini.Nrfisadeaptitudini).click();
+  await page.locator(FormalitatiDeAngajareLocators.FisadeAptitudini.Nrfisadeaptitudini).fill(FormalitatiDeAngajareData.nrfisadeaptitudini);
+  await page.locator(FormalitatiDeAngajareLocators.FisadeAptitudini.Datafisaaptitudini).click();
+  await page.locator(FormalitatiDeAngajareLocators.FisadeAptitudini.Datafisaaptitudini).fill(FormalitatiDeAngajareData.datafisaaptitudini);
+  const fileChooserPromise3 = page.waitForEvent('filechooser');
+  await page.getByText("Trageți un fișier sau click").click();
+  const fileChooser3 = await fileChooserPromise3;
+  await fileChooser3.setFiles(FormalitatiDeAngajareData.UploadPath);
+  const page4Promise = page.waitForEvent('popup');
+  await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
+  const page4 = await page4Promise;
+  await page4.close(); 
+  await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
+  //Contract de munca
+  await page.getByRole('gridcell').filter({ hasText: EmployeeData.cnp}).last().click({ position: { x: 20, y: 0 } }); 
+  await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.FormalitatiDeAngajare).click();
+  await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.NrContract).click();
+  await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.NrContract).fill(FormalitatiDeAngajareData.numarcontract);
+  const page5Promise = page.waitForEvent('popup');
+  await page.getByRole('button', {name: 'Anexe CIM cu stagiu'}).click();
+  const page5 = await page5Promise;
+  await page5.close(); 
+  const page6Promise = page.waitForEvent('popup');
+  await page.getByRole('button', {name: 'Anexe CIM fără stagiu'}).click();
+  const page6 = await page6Promise;
+  await page6.close(); 
+  const page7Promise = page.waitForEvent('popup');
+  await page.getByRole('button', {name: 'Fișa postului'}).click();
+  const page7 = await page7Promise;
+  await page7.close(); 
+  const page8Promise = page.waitForEvent('popup');
+  await page.getByRole('button', {name: 'Fișa postului necalificat'}).click();
+  const page8 = await page8Promise;
+  await page8.close(); 
+  await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
+
 });
 

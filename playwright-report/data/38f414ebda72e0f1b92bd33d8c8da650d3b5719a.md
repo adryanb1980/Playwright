@@ -1,0 +1,315 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img "..." [ref=e8]
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "Barbos Adrian-Ioan" [ref=e11] [cursor=pointer]:
+              - /url: /admin/employees/21684/employment-formalities
+              - generic [ref=e12]: Barbos Adrian-Ioan
+      - list [ref=e14]:
+        - listitem [ref=e15]:
+          - link "Resurse umane" [ref=e16] [cursor=pointer]:
+            - /url: /admin/employees/21684/employment-formalities
+            - img [ref=e17]
+            - generic [ref=e19]: Resurse umane
+        - listitem [ref=e21]:
+          - link "Pontaje" [ref=e22] [cursor=pointer]:
+            - /url: /admin/employees/21684/employment-formalities
+            - img [ref=e23]
+            - generic [ref=e26]: Pontaje
+        - listitem [ref=e28]:
+          - link "Salarizare" [ref=e29] [cursor=pointer]:
+            - /url: /admin/employees/21684/employment-formalities
+            - img [ref=e30]
+            - generic [ref=e32]: Salarizare
+        - listitem [ref=e34]:
+          - link "Producție" [ref=e35] [cursor=pointer]:
+            - /url: /admin/employees/21684/employment-formalities
+            - img [ref=e36]
+            - generic [ref=e38]: Producție
+        - listitem [ref=e40]:
+          - link "Calitate" [ref=e41] [cursor=pointer]:
+            - /url: /admin/employees/21684/employment-formalities
+            - img [ref=e42]
+            - generic [ref=e44]: Calitate
+        - listitem [ref=e46]:
+          - link "Planificare producție" [ref=e47] [cursor=pointer]:
+            - /url: /admin/employees/21684/employment-formalities
+            - img [ref=e48]
+            - generic [ref=e50]: Planificare producție
+        - listitem [ref=e52]:
+          - link "Mentenanță" [ref=e53] [cursor=pointer]:
+            - /url: /admin/employees/21684/employment-formalities
+            - img [ref=e54]
+            - generic [ref=e56]: Mentenanță
+        - listitem [ref=e58]:
+          - link "Management proiect" [ref=e59] [cursor=pointer]:
+            - /url: /admin/employees/21684/employment-formalities
+            - img [ref=e60]
+            - generic [ref=e62]: Management proiect
+    - img [ref=e65]
+  - banner [ref=e68]:
+    - generic [ref=e69]:
+      - button [ref=e72] [cursor=pointer]:
+        - img [ref=e73]
+      - generic [ref=e76]:
+        - button [ref=e77] [cursor=pointer]:
+          - img [ref=e78]
+        - link "Angajați" [ref=e80] [cursor=pointer]:
+          - /url: /admin/employees
+        - text: /Fabrica de Confectii/Croitorie Bazaltului/Confectioner 1/Adi Test190215
+      - generic [ref=e82]:
+        - button [ref=e83] [cursor=pointer]:
+          - img [ref=e84]
+        - button [ref=e86] [cursor=pointer]:
+          - img [ref=e87]
+        - button [ref=e89] [cursor=pointer]:
+          - img [ref=e90]
+        - button [ref=e92] [cursor=pointer]:
+          - img [ref=e93]
+        - button [ref=e96] [cursor=pointer]:
+          - img [ref=e97]
+  - generic [ref=e103]:
+    - generic [ref=e105]:
+      - button "Date personale" [ref=e107] [cursor=pointer]:
+        - generic [ref=e108]:
+          - img [ref=e110]
+          - generic [ref=e113]: Date personale
+      - button "FIFR&FSEMA" [ref=e117] [cursor=pointer]:
+        - generic [ref=e118]:
+          - img [ref=e120]
+          - generic [ref=e123]: FIFR&FSEMA
+      - button "Fișa psihologică" [ref=e127] [cursor=pointer]:
+        - generic [ref=e128]:
+          - img [ref=e130]
+          - generic [ref=e133]: Fișa psihologică
+      - button "Dosar medical" [ref=e137] [cursor=pointer]:
+        - generic [ref=e138]:
+          - img [ref=e140]
+          - generic [ref=e143]: Dosar medical
+      - button "Fișa de aptitudini" [ref=e147] [cursor=pointer]:
+        - generic [ref=e148]:
+          - img [ref=e150]
+          - generic [ref=e153]: Fișa de aptitudini
+      - button "Contract" [ref=e157] [cursor=pointer]:
+        - generic [ref=e158]:
+          - img [ref=e160]
+          - generic [ref=e163]: Contract
+    - generic [ref=e164]:
+      - generic [ref=e165]:
+        - generic "[object Object]" [ref=e167]:
+          - generic [ref=e168]:
+            - img [ref=e171]
+            - generic [ref=e174]: Contract
+          - generic [ref=e176]:
+            - generic [ref=e178]:
+              - generic [ref=e179]: Tip contract
+              - generic [ref=e180]:
+                - combobox "Contract individual de muncă" [ref=e181] [cursor=pointer]
+                - textbox: ContractIndividualMunca
+                - img
+            - generic [ref=e183]:
+              - generic [ref=e184]: Nr. contract
+              - textbox "Nr. contract" [ref=e186]: "202602191"
+              - paragraph
+            - generic [ref=e188]:
+              - generic [ref=e189]: Dată încheiere
+              - textbox "Dată încheiere" [ref=e191]: 2026-02-19
+              - paragraph
+        - generic "[object Object]" [ref=e193]:
+          - generic [ref=e194]:
+            - img [ref=e197]
+            - generic [ref=e200]: Obiectul contractului
+          - generic [ref=e202]:
+            - generic [ref=e204]:
+              - generic [ref=e205]: Obiectul contractului
+              - textbox "Obiectul contractului" [ref=e207]: Prestare munca in folosul angajatorului in schimbul platii activitatii prestate
+              - paragraph
+            - generic [ref=e209]:
+              - generic [ref=e210]: Alte clauze
+              - textbox "Alte clauze" [ref=e212]
+              - paragraph
+        - generic "[object Object]" [ref=e214]:
+          - generic [ref=e215]:
+            - img [ref=e218]
+            - generic [ref=e221]: Durata contractului
+          - generic [ref=e223]:
+            - generic [ref=e225]:
+              - generic [ref=e226]: Durata contract
+              - generic [ref=e227]:
+                - combobox "Nedeterminată" [ref=e228] [cursor=pointer]
+                - textbox: Nedeterminata
+                - img
+            - generic [ref=e230]:
+              - generic [ref=e231]: Data începere activitate
+              - textbox "Data începere activitate" [ref=e233]: 2026-02-20
+              - paragraph
+        - generic "[object Object]" [ref=e235]:
+          - generic [ref=e236]:
+            - img [ref=e239]
+            - generic [ref=e242]: Durata muncii
+          - generic [ref=e244]:
+            - generic [ref=e246]:
+              - generic [ref=e247]: Durată timp muncă
+              - generic [ref=e248]:
+                - combobox "Normă întreagă 8/40" [ref=e249] [cursor=pointer]
+                - textbox: NormaIntreaga840
+                - img
+            - generic [ref=e251]:
+              - generic [ref=e252]: Repartizare muncă
+              - generic [ref=e253]:
+                - combobox "Schimburi" [ref=e254] [cursor=pointer]
+                - textbox: Schimburi
+                - img
+            - generic [ref=e256]:
+              - generic [ref=e257]: Tip tură
+              - generic [ref=e258]:
+                - combobox "Alta" [ref=e259] [cursor=pointer]
+                - textbox: Alta
+                - img
+            - generic [ref=e261] [cursor=pointer]:
+              - generic [ref=e262]:
+                - checkbox "Ore de zi" [checked] [ref=e263]
+                - img [ref=e264]
+              - generic [ref=e266]: Ore de zi
+            - generic [ref=e268] [cursor=pointer]:
+              - checkbox "Ore de noapte" [ref=e270]
+              - generic [ref=e272]: Ore de noapte
+            - generic [ref=e274] [cursor=pointer]:
+              - checkbox "Ore de repaus" [ref=e276]
+              - generic [ref=e278]: Ore de repaus
+            - generic [ref=e279]:
+              - text: Program de lucru
+              - generic [ref=e280]:
+                - generic [ref=e282]:
+                  - textbox [ref=e284]: "pe schimburi:"
+                  - paragraph
+                - generic [ref=e286]:
+                  - textbox [ref=e288]: 06-14; 14-22
+                  - paragraph
+        - generic "[object Object]" [ref=e290]:
+          - generic [ref=e291]:
+            - img [ref=e294]
+            - generic [ref=e297]: Felul muncii
+          - generic [ref=e299]:
+            - generic [ref=e302]:
+              - generic [ref=e303]: Funcția / ocupația
+              - generic [ref=e304]:
+                - combobox "Funcția / ocupația" [ref=e305]: 932905 Muncitor necalificat în industria confectiilor
+                - button "Open" [ref=e307] [cursor=pointer]:
+                  - img [ref=e308]
+              - paragraph
+            - generic [ref=e311]:
+              - generic [ref=e312]: Locul de muncă
+              - textbox "Locul de muncă" [ref=e314]: Secțiile Producție aflate la sediul principal al Angajatorului
+              - paragraph
+            - generic [ref=e316]:
+              - generic [ref=e317]: Tip loc muncă
+              - generic [ref=e318]:
+                - combobox "Fix" [ref=e319] [cursor=pointer]
+                - textbox: Fix
+                - img
+            - generic [ref=e321] [cursor=pointer]:
+              - checkbox "Muncă la domiciliu" [ref=e323]
+              - generic [ref=e325]: Muncă la domiciliu
+        - generic "[object Object]" [ref=e327]:
+          - generic [ref=e328]:
+            - img [ref=e331]
+            - generic [ref=e334]: Salariu și beneficii
+          - generic [ref=e336]:
+            - generic [ref=e338]:
+              - generic [ref=e339]: Salariu de baza brut
+              - spinbutton "Salariu de baza brut" [ref=e341]: "4060"
+              - paragraph
+            - generic [ref=e343]:
+              - generic [ref=e344]: Sporuri
+              - spinbutton "Sporuri" [ref=e346]
+              - paragraph
+            - generic [ref=e348]:
+              - generic [ref=e349]: Indemnizații
+              - spinbutton "Indemnizații" [ref=e351]
+              - paragraph
+            - generic [ref=e353]:
+              - generic [ref=e354]: Alte adaosuri
+              - spinbutton "Alte adaosuri" [ref=e356]
+              - paragraph
+            - generic [ref=e358]:
+              - generic [ref=e359]: Ziua de plată salariu
+              - spinbutton "Ziua de plată salariu" [ref=e361]: "15"
+              - paragraph
+        - generic "[object Object]" [ref=e363]:
+          - generic [ref=e364]:
+            - img [ref=e367]
+            - generic [ref=e370]: Concediu
+          - generic [ref=e372]:
+            - generic [ref=e374]:
+              - generic [ref=e375]: Concediu anual
+              - spinbutton "Concediu anual" [ref=e377]: "20"
+              - paragraph
+            - generic [ref=e379]:
+              - generic [ref=e380]: Concediu suplimentar
+              - spinbutton "Concediu suplimentar" [ref=e382]: "0"
+              - paragraph
+        - generic "[object Object]" [ref=e384]:
+          - generic [ref=e385]:
+            - img [ref=e388]
+            - generic [ref=e391]: Preavize
+          - generic [ref=e393]:
+            - generic [ref=e395]:
+              - generic [ref=e396]: Perioada de proba
+              - spinbutton "Perioada de proba" [ref=e398]: "90"
+              - paragraph
+            - generic [ref=e400]:
+              - generic [ref=e401]: Preaviz concediere
+              - spinbutton "Preaviz concediere" [ref=e403]: "20"
+              - paragraph
+            - generic [ref=e405]:
+              - generic [ref=e406]: Preaviz demisie
+              - spinbutton "Preaviz demisie" [ref=e408]: "20"
+              - paragraph
+        - generic "[object Object]" [ref=e410]:
+          - generic [ref=e411]:
+            - img [ref=e414]
+            - generic [ref=e417]: Sănătate și siguranță
+          - generic [ref=e419]:
+            - generic [ref=e421]:
+              - generic [ref=e422]: Condiții de muncă
+              - generic [ref=e423]:
+                - combobox "Normale" [ref=e424] [cursor=pointer]
+                - textbox: Normal
+                - img
+            - generic [ref=e426]:
+              - generic [ref=e427]: Echipament de protecție
+              - textbox "Echipament de protecție" [ref=e429]: DA
+              - paragraph
+            - generic [ref=e431]:
+              - generic [ref=e432]: Echipament de muncă
+              - textbox "Echipament de muncă" [ref=e434]: DA
+              - paragraph
+            - generic [ref=e436]:
+              - generic [ref=e437]: Igienico-sanitare
+              - textbox "Igienico-sanitare" [ref=e439]: DA
+              - paragraph
+            - generic [ref=e441]:
+              - generic [ref=e442]: Alimentație de protecție
+              - textbox "Alimentație de protecție" [ref=e444]: DA
+              - paragraph
+            - generic [ref=e446]:
+              - generic [ref=e447]: Alte SSM
+              - textbox "Alte SSM" [ref=e449]: DA
+              - paragraph
+      - generic [ref=e450]:
+        - button "Anexe CIM cu stagiu" [ref=e452] [cursor=pointer]: Anexe CIM cu stagiu
+        - button "Anexe CIM fără stagiu" [active] [ref=e454] [cursor=pointer]: Anexe CIM fără stagiu
+        - button "Fișa postului" [ref=e456] [cursor=pointer]: Fișa postului
+        - button "Fișa postului necalificat" [ref=e458] [cursor=pointer]: Fișa postului necalificat
+        - button "Tipărire" [ref=e461] [cursor=pointer]: Tipărire
+        - button "Anulare" [ref=e463] [cursor=pointer]: Anulare
+        - button "Salvare" [ref=e465] [cursor=pointer]: Salvare
+        - button "Modifică fișa postului" [ref=e468] [cursor=pointer]: Modifică fișa postului
+```
