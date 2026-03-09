@@ -1,18 +1,21 @@
 {
-    "marca": "202603052",
+    "marca": "2026030906",
     "lastname": "Adi",
-    "firstname": "Test030502",
-    "cnp" : "1970927419036",
+    "firstname": "Test030906",
+    "cnp" : "1941206202296",
     "phone" : "",
-    "email" : "abcd030502@test.com",
+    "email" : "abcd030906@test.com",
     "serie": "VV",
-    "numar": "030502",
+    "numar": "030906",
     "emisla": "2020-02-12",
     "expirala": "2030-01-12",
     "emisde": "SPCLEP",
     "strada": "Strada",
     "nr": "11",
     "ap": "3",
-    "codpostal": "234567"
+    "codpostal": "234567",
+    "localitate": "Aciuta",
+    "judet": "Arad",
+    "document": "Carte de rezidență"
 }
 

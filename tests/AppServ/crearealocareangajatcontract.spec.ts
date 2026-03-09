@@ -41,7 +41,7 @@ test('Creare angajat si contract', async ({ page }) => {
   await page.locator(Locators.AdaugaAngajat.Email).fill(EmployeeData.email);
   //Drop down tip act identitate
   await page.locator(Locators.AdaugaAngajat.Document).click();
-  await page.getByRole('option', {name:'Pașaport'}).click();
+  await page.getByRole('option', {name:EmployeeData.document}).click();
   await page.locator(Locators.AdaugaAngajat.Serie).click();
   await page.locator(Locators.AdaugaAngajat.Serie).fill(EmployeeData.serie);
   await page.locator(Locators.AdaugaAngajat.Numar).click();
@@ -55,11 +55,11 @@ test('Creare angajat si contract', async ({ page }) => {
 
 //Drop down Judet
   await page.locator(Locators.AdaugaAngajat.Judet).click();
-  await page.getByRole('option', {name:'Arad'}).click();
+  await page.getByRole('option', {name:EmployeeData.judet}).click();
 //
 //Drop down Localitate
   await page.locator(Locators.AdaugaAngajat.Localitate).click();
-  await page.getByRole('option', {name:'Aciuta'}).click();
+  await page.getByRole('option', {name:EmployeeData.localitate}).click();
 //
 
   await page.locator(Locators.AdaugaAngajat.Strada).click();
