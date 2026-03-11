@@ -10,7 +10,7 @@ import * as FormalitatiDeAngajareData from '../../test-data/AppServ/formalitatid
 
 
 test('Creare angajat si contract', async ({ page }) => {
-  await page.goto('http://localhost:3000/auth/login-page');
+  await page.goto(LoginData.link);
   //Acces meniu mare
   await page.locator(Locators.Login.UserName).click();
   await page.locator(Locators.Login.UserName).fill(LoginData.username);
