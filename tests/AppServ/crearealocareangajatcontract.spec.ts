@@ -173,7 +173,8 @@ test('Creare angajat si contract', async ({ page }) => {
   const page4 = await page4Promise;
   await page4.close(); 
   await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
-  //Contract de munca
+
+   //Contract de munca
   await page.getByRole('gridcell').filter({ hasText: EmployeeData.cnp}).last().click({ position: { x: 20, y: 0 } }); 
   await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.FormalitatiDeAngajare).click();
   await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.NrContract).click();
