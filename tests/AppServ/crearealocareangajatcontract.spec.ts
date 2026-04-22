@@ -18,11 +18,10 @@ test('Creare angajat si contract', async ({ page }) => {
   await page.locator(Locators.Login.Password).fill(LoginData.password);
   await page.locator(Locators.Login.Autentificare).click();
   await page.locator(Locators.MainMenu.MainMenuAccess).click();
-  
+ 
 
   //Click angajati
   await page.getByText(Locators.MainMenu.Angajati,{exact:true}).click();
- 
  
  
   //Adauga angajat
@@ -174,7 +173,8 @@ test('Creare angajat si contract', async ({ page }) => {
   await page4.close(); 
   await page.locator(FormalitatiDeAngajareLocators.General.Salvare).click();
 
-   //Contract de munca
+
+  //Contract de munca
   await page.getByRole('gridcell').filter({ hasText: EmployeeData.cnp}).last().click({ position: { x: 20, y: 0 } }); 
   await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.FormalitatiDeAngajare).click();
   await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.NrContract).click();
