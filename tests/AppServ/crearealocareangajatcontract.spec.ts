@@ -19,11 +19,9 @@ test('Creare angajat si contract', async ({ page }) => {
   await page.locator(Locators.Login.Autentificare).click();
   await page.locator(Locators.MainMenu.MainMenuAccess).click();
  
-
   //Click angajati
   await page.getByText(Locators.MainMenu.Angajati,{exact:true}).click();
- 
- 
+  
   //Adauga angajat
   await page.getByText(Locators.OperatiiAngajati.Adauga,{exact:true}).click();
   await page.locator(Locators.AdaugaAngajat.Marca).click();
@@ -38,6 +36,7 @@ test('Creare angajat si contract', async ({ page }) => {
   await page.locator(Locators.AdaugaAngajat.Telefon).fill(EmployeeData.phone);
   await page.locator(Locators.AdaugaAngajat.Email).click();
   await page.locator(Locators.AdaugaAngajat.Email).fill(EmployeeData.email);
+ 
   //Drop down tip act identitate
   await page.locator(Locators.AdaugaAngajat.Document).click();
   await page.getByRole('option', {name:EmployeeData.document}).click();
