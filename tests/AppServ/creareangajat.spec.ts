@@ -14,11 +14,8 @@ test('Creare angajat', async ({ page }) => {
   await page.locator(Locators.Login.Autentificare).click();
   await page.locator(Locators.MainMenu.MainMenuAccess).click();
   
-
   //Click angajati
   await page.getByText(Locators.MainMenu.Angajati,{exact:true}).click();
- 
- 
  
   //Adauga angajat
   await page.getByText(Locators.OperatiiAngajati.Adauga,{exact:true}).click();
