@@ -1,0 +1,21 @@
+{
+    "marca": "2026051902",
+    "lastname": "Adi",
+    "firstname": "Test051902",
+    "cnp" : "1710127408474",
+    "phone" : "",
+    "email" : "abcd051902@test.com",
+    "serie": "VT",
+    "numar": "051902",
+    "emisla": "2020-02-12",
+    "expirala": "2030-01-12",
+    "emisde": "SPCLEP",
+    "strada": "Strada",
+    "nr": "12",
+    "ap": "3",
+    "codpostal": "234567",
+    "localitate": "Aciuta",
+    "judet": "Arad",
+    "document": "Carte de rezidență"
+}
+
