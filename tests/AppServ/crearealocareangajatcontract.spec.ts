@@ -176,8 +176,12 @@ test('Creare angajat si contract', async ({ page }) => {
   //Contract de munca
   await page.getByRole('gridcell').filter({ hasText: EmployeeData.cnp}).last().click({ position: { x: 20, y: 0 } }); 
   await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.FormalitatiDeAngajare).click();
-  await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.NrContract).click();
-  await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.NrContract).fill(FormalitatiDeAngajareData.numarcontract);
+
+                     //Nr de contract se completeaza automat pe ticketul #1336
+  //await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.NrContract).click();
+  //await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.NrContract).fill(FormalitatiDeAngajareData.numarcontract);
+
+
   await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.DataIncheiereContract).click();
   await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.DataIncheiereContract).fill(FormalitatiDeAngajareData.dataincheierecontract);
   await page.locator(FormalitatiDeAngajareLocators.ContractDeMunca.DataIncepereActivitate).click();
