@@ -1,7 +1,9 @@
 {
             "Logout":{
+                           
                             "Logout" : "data-testid=PersonIcon",
                             "Iesire" : "Ieșire"
                                         }
 
-        }
+
+}

@@ -1,7 +1,7 @@
 import { test, expect, selectors } from '@playwright/test';
 import * as Locators from '../../locators/AppServ/creareangajat.json';
 import * as LoginData from '../../test-data/AppServ/login.json';
-import * as LogoutLocators from '../../locators/AppServ/logout.json';
+import * as GeneralLocators from '../../locators/AppServ/generalcontrols.json';
 import * as EmployeeData from '../../test-data/AppServ/creareangajat.json';
 
 test('Creare puncte de lucru - in progress', async ({ page }) => {
@@ -22,9 +22,11 @@ test('Creare puncte de lucru - in progress', async ({ page }) => {
  
   //Logout
   //await page.waitForTimeout(4000);
-  await page.locator(LogoutLocators.Logout.Logout).click();
-  await page.getByRole('menuitem', {name: LogoutLocators.Logout.Iesire, exact: true}).click();
+  await page.locator(GeneralLocators.Logout.Logout).click();
+  await page.getByRole('menuitem', {name: GeneralLocators.Logout.Iesire, exact: true}).click();
 
+  await page.context().close();
+  await page.close();
 });
 
 
@@ -44,11 +46,13 @@ test('Creare organizatii - in progress', async ({ page }) => {
   
   //Click angajati
   //await page.getByText(Locators.MainMenu.Angajati,{exact:true}).click();
- 
- //Logout
-  //await page.waitForTimeout(4000);
-  await page.locator(LogoutLocators.Logout.Logout).click();
-  await page.getByRole('menuitem', {name: LogoutLocators.Logout.Iesire, exact: true}).click();
-  
-});
 
+  
+  //Logout
+  //await page.waitForTimeout(4000);
+  await page.locator(GeneralLocators.Logout.Logout).click();
+  await page.getByRole('menuitem', {name: GeneralLocators.Logout.Iesire, exact: true}).click();
+
+  await page.context().close();
+  await page.close();
+});
