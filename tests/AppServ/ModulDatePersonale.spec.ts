@@ -19,6 +19,7 @@ test('Creare puncte de lucru - in progress', async ({ page }) => {
   
   //Click Puncte de lucru
   await page.getByText(Locators.MainMenu.PuncteDeLucru,{exact:true}).click();
+  await page.locator(GeneralLocators.Butoane.Adaugare).click();
  
   //Logout
   //await page.waitForTimeout(4000);

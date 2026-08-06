@@ -3,7 +3,13 @@
                            
                             "Logout" : "data-testid=PersonIcon",
                             "Iesire" : "Ieșire"
+                                        },
+
+
+            "Butoane":{                          
+                            "Adaugare": "data-testid=AddIcon"
                                         }
+
 
 
 }
