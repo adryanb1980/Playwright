@@ -4,7 +4,7 @@ import * as LoginData from '../../test-data/AppServ/login.json';
 import * as LogoutLocators from '../../locators/AppServ/logout.json';
 import * as EmployeeData from '../../test-data/AppServ/creareangajat.json';
 
-test('Creare puncte de lucru', async ({ page }) => {
+test('Creare puncte de lucru - in progress', async ({ page }) => {
   
   test.setTimeout(80000);
   await page.goto(LoginData.link);
@@ -28,7 +28,7 @@ test('Creare puncte de lucru', async ({ page }) => {
 });
 
 
-test('Creare organizatii', async ({ page }) => {
+test('Creare organizatii - in progress', async ({ page }) => {
   await page.goto(LoginData.link);
   
   //Acces meniu mare
@@ -45,9 +45,10 @@ test('Creare organizatii', async ({ page }) => {
   //Click angajati
   //await page.getByText(Locators.MainMenu.Angajati,{exact:true}).click();
  
- 
+ //Logout
+  //await page.waitForTimeout(4000);
+  await page.locator(LogoutLocators.Logout.Logout).click();
+  await page.getByRole('menuitem', {name: LogoutLocators.Logout.Iesire, exact: true}).click();
   
-  
-
 });
 
