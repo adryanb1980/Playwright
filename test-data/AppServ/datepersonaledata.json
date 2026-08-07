@@ -1,0 +1,14 @@
+{
+     "PuncteDeLucru":{
+                         "Nume" : "PunctDeLucruAdi",
+                         "Tip" : "Sediu principal",
+                         "Tara" : "România",  
+                         "Judet": "Arad",
+                         "Localitate": "Aciuta"
+            },
+        
+     "Organizatii":{
+                         "Nume" : "OrganizatieAdi",
+                         "Tip" : "TestTip"     
+            }
+}
