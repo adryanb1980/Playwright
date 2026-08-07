@@ -27,25 +27,25 @@ test('Creare puncte de lucru', async ({ page }) => {
 
   //Nume
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Nume).click();
-  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Nume).fill(DatePersonaleData.PuncteDeLucru.Nume);
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Nume).fill(DatePersonaleData.CrearePuncteDeLucru.Nume);
   //Tip
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Tip).click();
-  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.Tip}).click();
+  await page.getByRole('option', {name:DatePersonaleData.CrearePuncteDeLucru.Tip}).click();
   //Tara
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Tara).click();
-  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.Tara}).click();
+  await page.getByRole('option', {name:DatePersonaleData.CrearePuncteDeLucru.Tara}).click();
   //Judet
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Judet).click();
-  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.Judet}).click();
+  await page.getByRole('option', {name:DatePersonaleData.CrearePuncteDeLucru.Judet}).click();
   //Localitate
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Localitate).click();
-  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.Localitate}).click();
+  await page.getByRole('option', {name:DatePersonaleData.CrearePuncteDeLucru.Localitate}).click();
   //Adresa
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Adresa).click();
-  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Adresa).fill(DatePersonaleData.PuncteDeLucru.Adresa);
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Adresa).fill(DatePersonaleData.CrearePuncteDeLucru.Adresa);
   //CUI
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.CUI).click();
-  await page.locator(LocatorsDatePersonale.PuncteDeLucru.CUI).fill(DatePersonaleData.PuncteDeLucru.CUI);
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.CUI).fill(DatePersonaleData.CrearePuncteDeLucru.CUI);
   //Salvare
   await page.locator(GeneralLocators.Butoane.Salveaza).click();
   await page.waitForTimeout(2000);
