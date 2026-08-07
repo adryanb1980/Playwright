@@ -8,7 +8,7 @@ import * as DatePersonaleData from '../../test-data/AppServ/datepersonaledata.js
 
 
 
-test('Creare puncte de lucru - in progress', async ({ page }) => {
+test('Creare puncte de lucru', async ({ page }) => {
   
   test.setTimeout(80000);
   await page.goto(LoginData.link);
@@ -40,6 +40,16 @@ test('Creare puncte de lucru - in progress', async ({ page }) => {
   //Localitate
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Localitate).click();
   await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.Localitate}).click();
+  //Adresa
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Adresa).click();
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Adresa).fill(DatePersonaleData.PuncteDeLucru.Adresa);
+  //CUI
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.CUI).click();
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.CUI).fill(DatePersonaleData.PuncteDeLucru.CUI);
+  //Salvare
+  await page.locator(GeneralLocators.Butoane.Salveaza).click();
+  await page.waitForTimeout(2000);
+
 
   //Logout
   //await page.waitForTimeout(4000);

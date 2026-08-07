@@ -4,7 +4,9 @@
                             "Tip" : "#mui-component-select-type",
                             "Tara" : "#mui-component-select-countryId",   
                             "Judet": "#mui-component-select-regionId",
-                            "Localitate": "#mui-component-select-localityId"
+                            "Localitate": "#mui-component-select-localityId",
+                            "Adresa": "#address",
+                            "CUI" : "#uniqueRegistrationCode"
             },
 
             "Organizatii":{

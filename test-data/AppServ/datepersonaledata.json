@@ -1,14 +1,16 @@
 {
      "PuncteDeLucru":{
-                         "Nume" : "PunctDeLucruAdi",
+                         "Nume" : "PunctDeLucruAdiTest2",
                          "Tip" : "Sediu principal",
-                         "Tara" : "România",  
-                         "Judet": "Arad",
-                         "Localitate": "Aciuta"
+                         "Tara" : "România",
+                         "Judet": "Arges",
+                         "Localitate": "Pitesti",
+                         "Adresa": "Strada Test nr. 2",
+                         "CUI" : "11223344"
             },
         
      "Organizatii":{
-                         "Nume" : "OrganizatieAdi",
+                         "Nume" : "OrganizatieAdiTest2",
                          "Tip" : "TestTip"     
             }
 }
