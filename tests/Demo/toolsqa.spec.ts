@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import textboxdata from '../../test-data/textbox.json';
-import webtablesdata from '../../test-data/webtables.json';
-import * as Locators from '../../locators/Locators.json';
-import * as PracticeFormData from '../../test-data/practiceform.json';
+import textboxdata from '../../test-data/Demo/textbox.json';
+import webtablesdata from '../../test-data/Demo/webtables.json';
+import * as Locators from '../../locators/Demo/Locators.json';
+import * as PracticeFormData from '../../test-data/Demo/practiceform.json';
 
 test('DemoQA Test Report', async ({ page }, testReport) => {
   test.setTimeout(80000);
