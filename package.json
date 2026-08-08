@@ -14,5 +14,8 @@
   "dependencies": {
     "node": "^26.7.0",
     "playwright": "^1.62.1"
+  },
+  "allowScripts": {
+    "node@26.7.0": true
   }
 }
