@@ -9,6 +9,16 @@
                             "CUI" : "#uniqueRegistrationCode"
             },
 
+            "EditarePuncteDeLucru":{
+                            "Nume" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input",
+                            "Modifica": "data-testid=EditIcon"
+            },
+
+            "StergerePuncteDeLucru":{
+                            "Nume" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input"
+            },
+
+
             "Organizatii":{
                             "UserName" : "#username",                         
                             "Autentificare" : "#btnOk"     

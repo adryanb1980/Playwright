@@ -8,7 +8,8 @@
 
             "Butoane":{                          
                             "Adaugare": "data-testid=AddIcon",
-                            "Salveaza": "#btnOk"
+                            "Salveaza": "#btnOk",
+                            "Sterge": "data-testid=DeleteOutlineIcon"
                                         }
 
 
