@@ -1,8 +1,7 @@
 import { test, expect, selectors } from '@playwright/test';
+import {loginUser, logoutUser} from './CommonActions.spec.ts';
 import * as Locators from '../../locators/AppServ/creareangajat.json';
-import * as LoginData from '../../test-data/AppServ/login.json';
-import * as GeneralLocators from '../../locators/AppServ/generalcontrols.json';
-import * as EmployeeData from '../../test-data/AppServ/creareangajat.json';
+import * as GeneralLocators from '../../locators/AppServ/globallocators.json';
 import * as LocatorsDatePersonale from '../../locators/AppServ/datepersonalelocators.json'; 
 import * as DatePersonaleData from '../../test-data/AppServ/datepersonaledata.json';
 
@@ -11,16 +10,9 @@ import * as DatePersonaleData from '../../test-data/AppServ/datepersonaledata.js
 test('Creare puncte de lucru', async ({ page }) => {
   
   test.setTimeout(50000);
-  await page.goto(LoginData.link);
-  
-  //Acces meniu mare
-  await page.locator(Locators.Login.UserName).click();
-  await page.locator(Locators.Login.UserName).fill(LoginData.username);
-  await page.locator(Locators.Login.Password).click();
-  await page.locator(Locators.Login.Password).fill(LoginData.password);
-  await page.locator(Locators.Login.Autentificare).click();
-  await page.locator(Locators.MainMenu.MainMenuAccess).click();
-  
+  //Login & main menu access
+  await loginUser(page);
+    
   //Click Puncte de lucru
   await page.getByText(Locators.MainMenu.PuncteDeLucru,{exact:true}).click();
   await page.locator(GeneralLocators.Butoane.Adaugare).click();
@@ -59,25 +51,14 @@ test('Creare puncte de lucru', async ({ page }) => {
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.AdaugarePuncteDeLucru.FiltruNume).fill(DatePersonaleData.PuncteDeLucru.CrearePuncteDeLucru.Nume);
 
   //Logout
-  //await page.waitForTimeout(4000);
-  await page.locator(GeneralLocators.Logout.Logout).click();
-  await page.getByRole('menuitem', {name: GeneralLocators.Logout.Iesire, exact: true}).click();
-  await page.context().close();
-  await page.close();
+  await logoutUser(page);
 });
 
 test('Editare puncte de lucru', async ({ page }) => {
   
   test.setTimeout(50000);
-  await page.goto(LoginData.link);
-  
-  //Acces meniu mare
-  await page.locator(Locators.Login.UserName).click();
-  await page.locator(Locators.Login.UserName).fill(LoginData.username);
-  await page.locator(Locators.Login.Password).click();
-  await page.locator(Locators.Login.Password).fill(LoginData.password);
-  await page.locator(Locators.Login.Autentificare).click();
-  await page.locator(Locators.MainMenu.MainMenuAccess).click();
+  //Login & main menu access
+  await loginUser(page);
   
   //Click Puncte de lucru
   await page.getByText(Locators.MainMenu.PuncteDeLucru,{exact:true}).click();
@@ -127,25 +108,14 @@ test('Editare puncte de lucru', async ({ page }) => {
   await page.waitForTimeout(2000);
 
   //Logout
-  //await page.waitForTimeout(4000);
-  await page.locator(GeneralLocators.Logout.Logout).click();
-  await page.getByRole('menuitem', {name: GeneralLocators.Logout.Iesire, exact: true}).click();
-  await page.context().close();
-  await page.close();
+  await logoutUser(page);
 });
 
 test('Stergere puncte de lucru', async ({ page }) => {
   
-  test.setTimeout(50000);
-  await page.goto(LoginData.link);
-  
-  //Acces meniu mare
-  await page.locator(Locators.Login.UserName).click();
-  await page.locator(Locators.Login.UserName).fill(LoginData.username);
-  await page.locator(Locators.Login.Password).click();
-  await page.locator(Locators.Login.Password).fill(LoginData.password);
-  await page.locator(Locators.Login.Autentificare).click();
-  await page.locator(Locators.MainMenu.MainMenuAccess).click();
+  test.setTimeout(50000);  
+   //Login & main menu access
+  await loginUser(page);
   
   //Click Puncte de lucru
   await page.getByText(Locators.MainMenu.PuncteDeLucru,{exact:true}).click();
@@ -175,24 +145,15 @@ test('Stergere puncte de lucru', async ({ page }) => {
   await page.waitForTimeout(2000);
 
   //Logout
-  await page.locator(GeneralLocators.Logout.Logout).click();
-  await page.getByRole('menuitem', {name: GeneralLocators.Logout.Iesire, exact: true}).click();
-  await page.context().close();
-  await page.close();
+  await logoutUser(page);
 });
 
 //Meniu mare - Organizatii
 
 test('Creare organizatii', async ({ page }) => {
-  await page.goto(LoginData.link);
-  
-  //Acces meniu mare
-  await page.locator(Locators.Login.UserName).click();
-  await page.locator(Locators.Login.UserName).fill(LoginData.username);
-  await page.locator(Locators.Login.Password).click();
-  await page.locator(Locators.Login.Password).fill(LoginData.password);
-  await page.locator(Locators.Login.Autentificare).click();
-  await page.locator(Locators.MainMenu.MainMenuAccess).click();
+  test.setTimeout(50000);
+  //Login & main menu access
+  await loginUser(page);
   
   //Click Organizatii
   await page.getByText(Locators.MainMenu.Organizatii,{exact:true}).click();
@@ -213,23 +174,15 @@ test('Creare organizatii', async ({ page }) => {
   }
   
   //Logout
-  await page.locator(GeneralLocators.Logout.Logout).click();
-  await page.getByRole('menuitem', {name: GeneralLocators.Logout.Iesire, exact: true}).click();
-  await page.context().close();
-  await page.close();
+  await logoutUser(page);
+ 
 });
 
 
 test('Editare organizatii', async ({ page }) => {
-  await page.goto(LoginData.link);
-  
-  //Acces meniu mare
-  await page.locator(Locators.Login.UserName).click();
-  await page.locator(Locators.Login.UserName).fill(LoginData.username);
-  await page.locator(Locators.Login.Password).click();
-  await page.locator(Locators.Login.Password).fill(LoginData.password);
-  await page.locator(Locators.Login.Autentificare).click();
-  await page.locator(Locators.MainMenu.MainMenuAccess).click();
+  test.setTimeout(50000);
+  //Login & main menu access
+  await loginUser(page);
   
   //Click Organizatii
   await page.getByText(Locators.MainMenu.Organizatii,{exact:true}).click();
@@ -262,22 +215,13 @@ test('Editare organizatii', async ({ page }) => {
   await page.waitForTimeout(2000);
 
   //Logout
-  await page.locator(GeneralLocators.Logout.Logout).click();
-  await page.getByRole('menuitem', {name: GeneralLocators.Logout.Iesire, exact: true}).click();
-  await page.context().close();
-  await page.close();
+  await logoutUser(page);
 });
 
 test('Stergere organizatii', async ({ page }) => {
-  await page.goto(LoginData.link);
-  
-  //Acces meniu mare
-  await page.locator(Locators.Login.UserName).click();
-  await page.locator(Locators.Login.UserName).fill(LoginData.username);
-  await page.locator(Locators.Login.Password).click();
-  await page.locator(Locators.Login.Password).fill(LoginData.password);
-  await page.locator(Locators.Login.Autentificare).click();
-  await page.locator(Locators.MainMenu.MainMenuAccess).click();
+  test.setTimeout(50000);
+  //Login & main menu access
+  await loginUser(page);
   
   //Click Organizatii
   await page.getByText(Locators.MainMenu.Organizatii,{exact:true}).click();
@@ -304,8 +248,5 @@ test('Stergere organizatii', async ({ page }) => {
   await page.locator(LocatorsDatePersonale.Organizatii.StergereOrganizatii.FiltrareNume).fill(DatePersonaleData.Organizatii.StergereOrganizatii.Nume);
   
   //Logout
-  await page.locator(GeneralLocators.Logout.Logout).click();
-  await page.getByRole('menuitem', {name: GeneralLocators.Logout.Iesire, exact: true}).click();
-  await page.context().close();
-  await page.close();
+  await logoutUser(page);
 });

@@ -30,16 +30,16 @@
      "Organizatii":{
         
               "CreareOrganizatii":{
-                         "Nume" : "OrganizatieAdiTest8"
+                         "Nume" : "OrganizatieAdiTestLogout"
               },
 
               "EditareOrganizatii":{
-                         "NumeInitial" : "OrganizatieAdiTest8",
-                         "Nume" : "OrganizatieAdiTest8-UPD"
+                         "NumeInitial" : "OrganizatieAdiTestLogout",
+                         "Nume" : "OrganizatieAdiTestLogout-UPD"
               },
 
               "StergereOrganizatii":{
-                         "Nume" : "OrganizatieAdiTest8-UPD"
+                         "Nume" : "OrganizatieAdiTestLogout-UPD"
               }
        }
 }
