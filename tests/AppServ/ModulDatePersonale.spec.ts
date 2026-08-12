@@ -27,43 +27,37 @@ test('Creare puncte de lucru', async ({ page }) => {
 
   //Nume
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Nume).click();
-  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Nume).fill(DatePersonaleData.CrearePuncteDeLucru.Nume);
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Nume).fill(DatePersonaleData.PuncteDeLucru.CrearePuncteDeLucru.Nume);
   //Tip
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Tip).click();
-  await page.getByRole('option', {name:DatePersonaleData.CrearePuncteDeLucru.Tip}).click();
+  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.CrearePuncteDeLucru.Tip}).click();
   //Tara
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Tara).click();
-  await page.getByRole('option', {name:DatePersonaleData.CrearePuncteDeLucru.Tara}).click();
+  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.CrearePuncteDeLucru.Tara}).click();
   //Judet
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Judet).click();
-  await page.getByRole('option', {name:DatePersonaleData.CrearePuncteDeLucru.Judet}).click();
+  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.CrearePuncteDeLucru.Judet}).click();
   //Localitate
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Localitate).click();
-  await page.getByRole('option', {name:DatePersonaleData.CrearePuncteDeLucru.Localitate}).click();
+  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.CrearePuncteDeLucru.Localitate}).click();
   //Adresa
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Adresa).click();
-  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Adresa).fill(DatePersonaleData.CrearePuncteDeLucru.Adresa);
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Adresa).fill(DatePersonaleData.PuncteDeLucru.CrearePuncteDeLucru.Adresa);
   //CUI
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.CUI).click();
-  await page.locator(LocatorsDatePersonale.PuncteDeLucru.CUI).fill(DatePersonaleData.CrearePuncteDeLucru.CUI);
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.CUI).fill(DatePersonaleData.PuncteDeLucru.CrearePuncteDeLucru.CUI);
   //Salvare
   try {
     await page.locator(GeneralLocators.Butoane.Salveaza).click();
     await page.waitForTimeout(2000);
-  
   } catch (error) {
-
-    console.error('Eroare la click pe butonul Salveaza:', error);
-    
+    console.error('Eroare la click pe butonul Salveaza:', error);   
   }
   
-
-
   //Logout
   //await page.waitForTimeout(4000);
   await page.locator(GeneralLocators.Logout.Logout).click();
   await page.getByRole('menuitem', {name: GeneralLocators.Logout.Iesire, exact: true}).click();
-
   await page.context().close();
   await page.close();
 });
@@ -84,52 +78,47 @@ test('Editare puncte de lucru', async ({ page }) => {
   //Click Puncte de lucru
   await page.getByText(Locators.MainMenu.PuncteDeLucru,{exact:true}).click();
   
-  
   //Edit the component
   await page.locator(LocatorsDatePersonale.EditarePuncteDeLucru.Nume).click();
-  await page.locator(LocatorsDatePersonale.EditarePuncteDeLucru.Nume).fill(DatePersonaleData.EditarePuncteDeLucru.NumeInitial);
+  await page.locator(LocatorsDatePersonale.EditarePuncteDeLucru.Nume).fill(DatePersonaleData.PuncteDeLucru.EditarePuncteDeLucru.NumeInitial);
   await page.mouse.wheel(100, 0);
-  await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.EditarePuncteDeLucru.NumeInitial}).last().click({ position: { x: 30, y: 0 } }); 
+  await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.PuncteDeLucru.EditarePuncteDeLucru.NumeInitial}).last().click({ position: { x: 30, y: 0 } }); 
   await page.locator(LocatorsDatePersonale.EditarePuncteDeLucru.Modifica).click();
   
   //Nume
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Nume).click();
-  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Nume).fill(DatePersonaleData.EditarePuncteDeLucru.Nume);
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Nume).fill(DatePersonaleData.PuncteDeLucru.EditarePuncteDeLucru.Nume);
   //Tip
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Tip).click();
-  await page.getByRole('option', {name:DatePersonaleData.EditarePuncteDeLucru.Tip}).click();
+  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.EditarePuncteDeLucru.Tip}).click();
   //Tara
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Tara).click();
-  await page.getByRole('option', {name:DatePersonaleData.EditarePuncteDeLucru.Tara}).click(); 
+  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.EditarePuncteDeLucru.Tara}).click(); 
   //Judet
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Judet).click();
-  await page.getByRole('option', {name:DatePersonaleData.EditarePuncteDeLucru.Judet}).click();
+  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.EditarePuncteDeLucru.Judet}).click();
   //Localitate
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Localitate).click();
-  await page.getByRole('option', {name:DatePersonaleData.EditarePuncteDeLucru.Localitate,exact:true}).click();
+  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.EditarePuncteDeLucru.Localitate,exact:true}).click();
   //Adresa
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.Adresa).click();
-  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Adresa).fill(DatePersonaleData.EditarePuncteDeLucru.Adresa);
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.Adresa).fill(DatePersonaleData.PuncteDeLucru.EditarePuncteDeLucru.Adresa);
   //CUI
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.CUI).click();
-  await page.locator(LocatorsDatePersonale.PuncteDeLucru.CUI).fill(DatePersonaleData.EditarePuncteDeLucru.CUI);
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.CUI).fill(DatePersonaleData.PuncteDeLucru.EditarePuncteDeLucru.CUI);
   //Salvare
   try {
     await page.locator(GeneralLocators.Butoane.Salveaza).click();
-    //await page.waitForTimeout(2000);
-  
   } catch (error) {
-
     console.error('Eroare la click pe butonul Salveaza:', error);
-    
   }
 
   //Afisare date punct de lucru editat
   await page.locator(LocatorsDatePersonale.EditarePuncteDeLucru.Nume).click();
   await page.locator(LocatorsDatePersonale.EditarePuncteDeLucru.Nume).clear();
-  await page.locator(LocatorsDatePersonale.EditarePuncteDeLucru.Nume).fill(DatePersonaleData.EditarePuncteDeLucru.Nume);
+  await page.locator(LocatorsDatePersonale.EditarePuncteDeLucru.Nume).fill(DatePersonaleData.PuncteDeLucru.EditarePuncteDeLucru.Nume);
   await page.mouse.wheel(100, 0);
-  await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.EditarePuncteDeLucru.Nume}).last().click({ position: { x: 30, y: 0 } }); 
+  await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.PuncteDeLucru.EditarePuncteDeLucru.Nume}).last().click({ position: { x: 30, y: 0 } }); 
   await page.locator(LocatorsDatePersonale.EditarePuncteDeLucru.Modifica).click();
   await page.waitForTimeout(2000);
 
@@ -137,10 +126,8 @@ test('Editare puncte de lucru', async ({ page }) => {
   //await page.waitForTimeout(4000);
   await page.locator(GeneralLocators.Logout.Logout).click();
   await page.getByRole('menuitem', {name: GeneralLocators.Logout.Iesire, exact: true}).click();
-
   await page.context().close();
   await page.close();
- 
 });
 
 test('Stergere puncte de lucru', async ({ page }) => {
@@ -158,45 +145,37 @@ test('Stergere puncte de lucru', async ({ page }) => {
   
   //Click Puncte de lucru
   await page.getByText(Locators.MainMenu.PuncteDeLucru,{exact:true}).click();
-  
-  
+    
   //Edit the component
   await page.locator(LocatorsDatePersonale.StergerePuncteDeLucru.Nume).click();
-  await page.locator(LocatorsDatePersonale.StergerePuncteDeLucru.Nume).fill(DatePersonaleData.StergerePuncteDeLucru.Nume);
+  await page.locator(LocatorsDatePersonale.StergerePuncteDeLucru.Nume).fill(DatePersonaleData.PuncteDeLucru.StergerePuncteDeLucru.Nume);
   await page.mouse.wheel(100, 0);
-  await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.StergerePuncteDeLucru.Nume}).last().click({ position: { x: 30, y: 0 } }); 
+  await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.PuncteDeLucru.StergerePuncteDeLucru.Nume}).last().click({ position: { x: 30, y: 0 } }); 
   
-  
-
-
   //Salvare
   try {
     //Sterge
     await page.locator(GeneralLocators.Butoane.Sterge).click();
     //Confirma
     await page.locator(GeneralLocators.Butoane.Sterge).click();
-    //await page.waitForTimeout(2000);
   } catch (error) {
     console.error('Eroare la click pe butonul Sterge', error);
-    
   }
 
   //Afisare date punct de lucru sters
   await page.locator(LocatorsDatePersonale.StergerePuncteDeLucru.Nume).click();
   await page.locator(LocatorsDatePersonale.StergerePuncteDeLucru.Nume).clear();
-  await page.locator(LocatorsDatePersonale.StergerePuncteDeLucru.Nume).fill(DatePersonaleData.StergerePuncteDeLucru.Nume);
+  await page.locator(LocatorsDatePersonale.StergerePuncteDeLucru.Nume).fill(DatePersonaleData.PuncteDeLucru.StergerePuncteDeLucru.Nume);
   await page.mouse.wheel(100, 0);
-  await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.StergerePuncteDeLucru.Nume}); 
+  await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.PuncteDeLucru.StergerePuncteDeLucru.Nume}); 
   await page.waitForTimeout(2000);
 
   //Logout
   //await page.waitForTimeout(4000);
   await page.locator(GeneralLocators.Logout.Logout).click();
   await page.getByRole('menuitem', {name: GeneralLocators.Logout.Iesire, exact: true}).click();
-
   await page.context().close();
   await page.close();
- 
 });
 
 /*

@@ -1,6 +1,7 @@
 {
-     "CrearePuncteDeLucru":{
-                         "Nume" : "PDLAdiTest0812-1",
+     "PuncteDeLucru":{    
+       "CrearePuncteDeLucru":{
+                         "Nume" : "PDLAdiTest0812-3",
                          "Tip" : "Sediu principal",
                          "Tara" : "România",
                          "Judet": "Arges",
@@ -10,8 +11,8 @@
             },
 
      "EditarePuncteDeLucru":{
-                         "NumeInitial" : "PDLAdiTest0812-1",
-                         "Nume" : "PDLAdiTest0812-1-UPD",
+                         "NumeInitial" : "PDLAdiTest0812-3",
+                         "Nume" : "PDLAdiTest0812-3-UPD",
                          "Tip" : "Sediu secundar",
                          "Tara" : "România",
                          "Judet": "Neamt",
@@ -21,8 +22,9 @@
             },
             
      "StergerePuncteDeLucru":{
-                         "Nume" : "PunctDeLucruAdiTest10"
-            },       
+                         "Nume" : "PDLAdiTest0812-3-UPD"
+            }
+     },
             
      "CreareOrganizatii":{
                          "Nume" : "OrganizatieAdiTest8",
