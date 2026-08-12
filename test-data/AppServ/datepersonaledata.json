@@ -1,5 +1,6 @@
 {
-     "PuncteDeLucru":{    
+     "PuncteDeLucru":{  
+
        "CrearePuncteDeLucru":{
                          "Nume" : "PDLAdiTest0812-3",
                          "Tip" : "Sediu principal",
@@ -10,7 +11,7 @@
                          "CUI" : "08121"
             },
 
-     "EditarePuncteDeLucru":{
+       "EditarePuncteDeLucru":{
                          "NumeInitial" : "PDLAdiTest0812-3",
                          "Nume" : "PDLAdiTest0812-3-UPD",
                          "Tip" : "Sediu secundar",
@@ -21,13 +22,16 @@
                          "CUI" : "081211"
             },
             
-     "StergerePuncteDeLucru":{
+        "StergerePuncteDeLucru":{
                          "Nume" : "PDLAdiTest0812-3-UPD"
             }
      },
-            
-     "CreareOrganizatii":{
+        
+     "Organizatii":{
+        
+        "CreareOrganizatii":{
                          "Nume" : "OrganizatieAdiTest8",
                          "Tip" : "TestTip"     
             }
+       }
 }
