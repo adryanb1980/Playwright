@@ -1,8 +1,7 @@
 // utils/auth.ts
 import { Page } from '@playwright/test';
-import * as GeneralLocators from '../../locators/AppServ/globallocators.json';
+import * as GeneralLocators from '../../locators/AppServ/Global_Locators/globallocators.json';
 import * as LoginData from '../../test-data/AppServ/login.json';
-import * as Locators from '../../locators/AppServ/creareangajat.json';
 
 export async function logoutUser(page: Page) {
  //Logout
@@ -21,5 +20,5 @@ export async function loginUser(page: Page) {
   await page.locator(GeneralLocators.Login.Password).fill(LoginData.password);
   await page.locator(GeneralLocators.Login.Autentificare).click();
   //Acces meniu mare
-  await page.locator(Locators.MainMenu.MainMenuAccess).click();
+  await page.locator(GeneralLocators.MainMenu.MainMenuAccess).click();
 }

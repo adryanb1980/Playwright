@@ -1,5 +1,5 @@
 import { test, expect, selectors } from '@playwright/test';
-import * as Locators from '../../locators/AppServ/creareangajat.json';
+import * as Locators from '../../locators/AppServ/Resurse_Umane/creareangajat.json';
 import * as LoginData from '../../test-data/AppServ/login.json';
 import * as EmployeeData from '../../test-data/AppServ/creareangajat.json';
 

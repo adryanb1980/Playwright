@@ -5,14 +5,7 @@
                             "Autentificare" : "#btnOk"     
             },
 
-            "MainMenu":{
-                "MainMenuAccess" : "data-testid=AppsIcon",
-                "Angajati" : "Angajați",
-                "PuncteDeLucru" : "Puncte de lucru",
-                "Organizatii" : "Organizații"
-
-              
-            },
+           
 
             "OperatiiAngajati":{
                   "Adauga" : "Adaugă"                 

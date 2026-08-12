@@ -1,8 +1,7 @@
 import { test, expect, selectors } from '@playwright/test';
 import {loginUser, logoutUser} from './CommonActions.spec.ts';
-import * as Locators from '../../locators/AppServ/creareangajat.json';
-import * as GeneralLocators from '../../locators/AppServ/globallocators.json';
-import * as LocatorsDatePersonale from '../../locators/AppServ/datepersonalelocators.json'; 
+import * as GeneralLocators from '../../locators/AppServ/Global_Locators/globallocators.json';
+import * as LocatorsDatePersonale from '../../locators/AppServ/Date_Personale/datepersonalelocators.json'; 
 import * as DatePersonaleData from '../../test-data/AppServ/datepersonaledata.json';
 
 
@@ -14,7 +13,7 @@ test('Creare puncte de lucru', async ({ page }) => {
   await loginUser(page);
     
   //Click Puncte de lucru
-  await page.getByText(Locators.MainMenu.PuncteDeLucru,{exact:true}).click();
+  await page.getByText(GeneralLocators.MainMenu.PuncteDeLucru,{exact:true}).click();
   await page.locator(GeneralLocators.Butoane.Adaugare).click();
 
   //Nume
@@ -61,7 +60,7 @@ test('Editare puncte de lucru', async ({ page }) => {
   await loginUser(page);
   
   //Click Puncte de lucru
-  await page.getByText(Locators.MainMenu.PuncteDeLucru,{exact:true}).click();
+  await page.getByText(GeneralLocators.MainMenu.PuncteDeLucru,{exact:true}).click();
   
   //Edit the component
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.EditarePuncteDeLucru.Nume).click();
@@ -118,7 +117,7 @@ test('Stergere puncte de lucru', async ({ page }) => {
   await loginUser(page);
   
   //Click Puncte de lucru
-  await page.getByText(Locators.MainMenu.PuncteDeLucru,{exact:true}).click();
+  await page.getByText(GeneralLocators.MainMenu.PuncteDeLucru,{exact:true}).click();
     
   //Edit the component
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.StergerePuncteDeLucru.Nume).click();
@@ -156,7 +155,7 @@ test('Creare organizatii', async ({ page }) => {
   await loginUser(page);
   
   //Click Organizatii
-  await page.getByText(Locators.MainMenu.Organizatii,{exact:true}).click();
+  await page.getByText(GeneralLocators.MainMenu.Organizatii,{exact:true}).click();
   await page.locator(GeneralLocators.Butoane.Adaugare).click(); 
 
   //Nume
@@ -185,7 +184,7 @@ test('Editare organizatii', async ({ page }) => {
   await loginUser(page);
   
   //Click Organizatii
-  await page.getByText(Locators.MainMenu.Organizatii,{exact:true}).click();
+  await page.getByText(GeneralLocators.MainMenu.Organizatii,{exact:true}).click();
 
   //Edit the component
   await page.locator(LocatorsDatePersonale.Organizatii.EditareOrganizatii.FiltrareNume).click();
@@ -224,7 +223,7 @@ test('Stergere organizatii', async ({ page }) => {
   await loginUser(page);
   
   //Click Organizatii
-  await page.getByText(Locators.MainMenu.Organizatii,{exact:true}).click();
+  await page.getByText(GeneralLocators.MainMenu.Organizatii,{exact:true}).click();
 
   //Edit the component
   await page.locator(LocatorsDatePersonale.Organizatii.StergereOrganizatii.FiltrareNume).click();
