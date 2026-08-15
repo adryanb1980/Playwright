@@ -1,0 +1,52 @@
+{
+    "PuncteDeLucru":{  
+            "AdaugarePuncteDeLucru":{
+                            "Nume" : "#name",
+                            "FiltruNume" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input",
+                            "Tip" : "#mui-component-select-type",
+                            "Tara" : "#mui-component-select-countryId",   
+                            "Judet": "#mui-component-select-regionId",
+                            "Localitate": "#mui-component-select-localityId",
+                            "Adresa": "#address",
+                            "CUI" : "#uniqueRegistrationCode"
+            },
+
+            "EditarePuncteDeLucru":{
+                            "Nume" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input",
+                            "Modifica": "data-testid=EditIcon"
+            },
+
+            "StergerePuncteDeLucru":{
+                            "Nume" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input"
+            }
+        },
+
+    "Organizatii":{
+           
+            "AdaugareOrganizatii":{
+                            "Nume" : "#name",                         
+                            "Implicita" : "#defaultOrganization"     
+            },
+
+            "EditareOrganizatii":{
+                            "FiltrareNume" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input",
+                            "Nume" : "#name",
+                            "Modifica": "data-testid=EditIcon"
+            },
+
+            "StergereOrganizatii":{
+                            "FiltrareNume" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input"
+            }
+    },   
+           
+           
+    "Persoane":{
+            "Persoane":{
+                            "UserName" : "#username",
+                            "Autentificare" : "#btnOk"     
+            }
+    }                 
+    
+
+
+}

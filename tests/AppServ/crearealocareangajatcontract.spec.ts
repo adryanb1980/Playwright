@@ -1,10 +1,11 @@
 import { test, expect, selectors } from '@playwright/test';
-import * as Locators from '../../locators/AppServ/creareangajat.json';
+import * as Locators from '../../locators/AppServ/Resurse_Umane/creareangajat.json';
+import * as GeneralLocators from '../../locators/AppServ/Global_Locators/globallocators.json';
 import * as LoginData from '../../test-data/AppServ/login.json';
 import * as EmployeeData from '../../test-data/AppServ/creareangajat.json';
-import * as AlocareLocators from '../../locators/AppServ/alocareangajat.json';
+import * as AlocareLocators from '../../locators/AppServ/Resurse_Umane/alocareangajat.json';
 import * as AlocareData from '../../test-data/AppServ/alocareangajat.json';
-import * as FormalitatiDeAngajareLocators from '../../locators/AppServ/formalitatideangajare.json';
+import * as FormalitatiDeAngajareLocators from '../../locators/AppServ/Resurse_Umane/formalitatideangajare.json';
 import * as FormalitatiDeAngajareData from '../../test-data/AppServ/formalitatideangajare.json';
 
 
@@ -17,10 +18,10 @@ test('Creare angajat si contract', async ({ page }) => {
   await page.locator(Locators.Login.Password).click();
   await page.locator(Locators.Login.Password).fill(LoginData.password);
   await page.locator(Locators.Login.Autentificare).click();
-  await page.locator(Locators.MainMenu.MainMenuAccess).click();
+  await page.locator(GeneralLocators.MainMenu.MainMenuAccess).click();
  
   //Click angajati
-  await page.getByText(Locators.MainMenu.Angajati,{exact:true}).click();
+  await page.getByText(GeneralLocators.MainMenu.Angajati,{exact:true}).click();
   
   //Adauga angajat
   await page.getByText(Locators.OperatiiAngajati.Adauga,{exact:true}).click();

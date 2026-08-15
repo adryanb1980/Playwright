@@ -1,16 +1,45 @@
 {
-     "CrearePuncteDeLucru":{
-                         "Nume" : "PunctDeLucruAdiTest5",
+     "PuncteDeLucru":{  
+
+       "CrearePuncteDeLucru":{
+                         "Nume" : "PDLAdiTest0812-4",
                          "Tip" : "Sediu principal",
                          "Tara" : "România",
                          "Judet": "Arges",
                          "Localitate": "Pitesti",
-                         "Adresa": "Strada Test nr. 35",
-                         "CUI" : "11777755"
+                         "Adresa": "Strada Test nr. 08124",
+                         "CUI" : "08124"
             },
 
-     "Organizatii":{
-                         "Nume" : "OrganizatieAdiTest5",
-                         "Tip" : "TestTip"     
+       "EditarePuncteDeLucru":{
+                         "NumeInitial" : "PDLAdiTest0812-4",
+                         "Nume" : "PDLAdiTest0812-4-UPD",
+                         "Tip" : "Sediu secundar",
+                         "Tara" : "România",
+                         "Judet": "Neamt",
+                         "Localitate": "Bahna",
+                         "Adresa": "Street No. 00",
+                         "CUI" : "081211"
+            },
+            
+        "StergerePuncteDeLucru":{
+                         "Nume" : "PDLAdiTest0812-4-UPD"
             }
+     },
+        
+     "Organizatii":{
+        
+              "CreareOrganizatii":{
+                         "Nume" : "OrganizatieAdiTestLogout"
+              },
+
+              "EditareOrganizatii":{
+                         "NumeInitial" : "OrganizatieAdiTestLogout",
+                         "Nume" : "OrganizatieAdiTestLogout-UPD"
+              },
+
+              "StergereOrganizatii":{
+                         "Nume" : "OrganizatieAdiTestLogout-UPD"
+              }
+       }
 }
