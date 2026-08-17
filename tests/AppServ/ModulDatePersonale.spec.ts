@@ -249,3 +249,16 @@ test('Stergere organizatii', async ({ page }) => {
   //Logout
   await logoutUser(page);
 });
+
+test('Adaugare persoane', async ({ page }) => {
+  test.setTimeout(50000);
+  //Login & main menu access
+  await loginUser(page);
+  
+  //Click Persoane
+  await page.getByText(GeneralLocators.MainMenu.Persoane,{exact:true}).click();
+
+ 
+  //Logout
+  await logoutUser(page);
+});

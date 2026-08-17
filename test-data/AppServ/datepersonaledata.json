@@ -25,9 +25,9 @@
         "StergerePuncteDeLucru":{
                          "Nume" : "PDLAdiTest0812-4-UPD"
             }
-     },
+       },
         
-     "Organizatii":{
+       "Organizatii":{
         
               "CreareOrganizatii":{
                          "Nume" : "OrganizatieAdiTestLogout"
@@ -41,5 +41,35 @@
               "StergereOrganizatii":{
                          "Nume" : "OrganizatieAdiTestLogout-UPD"
               }
-       }
+       },
+
+       "Persoane":{
+        
+              "AdaugarePersoana":{
+                            "Nume" : "Test",
+                            "Prenume" : "Adi",
+                            "CNP" : "1900101020304",
+                            "Telefon" : "0712345678",
+                            "Email" : "abcd@efgh.com",
+                            "Organizatia" : "Aramis Invest",
+                            "NumarCard" : " ",
+                            "Nationalitate" : "România",
+                            "Refugiat" : "false",
+                            "NumeAnterior" : "NumeAnterior",
+                            "Judet" : "Maramures",
+                            "Localitate" : "Somcuta Mare",
+                            "Strada" : "Strada",
+                            "Numar" : "1",
+                            "Ap" : "2",
+                            "CodPostal" : "111111"
+              },
+
+              "EditarePersoana":{
+                         "TBD" : "EP"
+              },
+
+              "StergerePersoana":{
+                         "TBD" : "SP"
+              }
+       } 
 }

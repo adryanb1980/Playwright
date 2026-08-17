@@ -17,14 +17,16 @@
     "Butoane":{                          
                 "Adaugare": "data-testid=AddIcon",
                 "Salveaza": "#btnOk",
-                "Sterge": "data-testid=DeleteOutlineIcon"
+                "Sterge": "data-testid=DeleteOutlineIcon",
+                "Anuleaza": "#btnCancel"
             },
 
     "MainMenu":{
                 "MainMenuAccess" : "data-testid=AppsIcon",
                 "Angajati" : "Angajați",
                 "PuncteDeLucru" : "Puncte de lucru",
-                "Organizatii" : "Organizații"
+                "Organizatii" : "Organizații",
+                "Persoane" : "Persoane"
 
               
             }
