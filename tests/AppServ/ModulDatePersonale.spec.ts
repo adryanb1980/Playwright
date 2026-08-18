@@ -261,6 +261,18 @@ test('Adaugare persoane', async ({ page }) => {
   //Nume
   await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Nume).click(); 
   await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Nume).fill(DatePersonaleData.Persoane.AdaugarePersoana.Nume);
+  //Prenume
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Prenume).click();
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Prenume).fill(DatePersonaleData.Persoane.AdaugarePersoana.Prenume);
+  //CNP
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.CNP).click();
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.CNP).fill(DatePersonaleData.Persoane.AdaugarePersoana.CNP);
+  //Telefon
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Telefon).click();
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Telefon).fill(DatePersonaleData.Persoane.AdaugarePersoana.Telefon);
+  //Email
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Email).click();
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Email).fill(DatePersonaleData.Persoane.AdaugarePersoana.Email);
 
   /*
   //Tip
