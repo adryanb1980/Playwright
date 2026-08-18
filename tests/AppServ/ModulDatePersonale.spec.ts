@@ -167,7 +167,6 @@ test('Creare organizatii', async ({ page }) => {
   //Salvare
   try {
     await page.locator(GeneralLocators.Butoane.Salveaza).click();
-    await page.waitForTimeout(2000);
   } catch (error) {
     console.error('Eroare la click pe butonul Salveaza:', error);   
   }
@@ -257,7 +256,17 @@ test('Adaugare persoane', async ({ page }) => {
   
   //Click Persoane
   await page.getByText(GeneralLocators.MainMenu.Persoane,{exact:true}).click();
+  await page.locator(GeneralLocators.Butoane.Adaugare).click();
+  
+  //Nume
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Nume).click(); 
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Nume).fill(DatePersonaleData.Persoane.AdaugarePersoana.Nume);
 
+  /*
+  //Tip
+  await page.locator(LocatorsDatePersonale.PuncteDeLucru.AdaugarePuncteDeLucru.Tip).click();
+  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.CrearePuncteDeLucru.Tip}).click();
+  */
  
   //Logout
   await logoutUser(page);
