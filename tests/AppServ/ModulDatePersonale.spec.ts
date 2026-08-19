@@ -252,12 +252,10 @@ test('Stergere organizatii', async ({ page }) => {
 test('Adaugare persoane', async ({ page }) => {
   test.setTimeout(50000);
   //Login & main menu access
-  await loginUser(page);
-  
+  await loginUser(page); 
   //Click Persoane
   await page.getByText(GeneralLocators.MainMenu.Persoane,{exact:true}).click();
   await page.locator(GeneralLocators.Butoane.Adaugare).click();
-  
   //Nume
   await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Nume).click(); 
   await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Nume).fill(DatePersonaleData.Persoane.AdaugarePersoana.Nume);
@@ -273,13 +271,42 @@ test('Adaugare persoane', async ({ page }) => {
   //Email
   await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Email).click();
   await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Email).fill(DatePersonaleData.Persoane.AdaugarePersoana.Email);
-
-  /*
-  //Tip
-  await page.locator(LocatorsDatePersonale.PuncteDeLucru.AdaugarePuncteDeLucru.Tip).click();
-  await page.getByRole('option', {name:DatePersonaleData.PuncteDeLucru.CrearePuncteDeLucru.Tip}).click();
-  */
- 
+  //Organizatia
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Organizatia).click();
+  await page.getByRole('option').filter({ hasText: DatePersonaleData.Persoane.AdaugarePersoana.Organizatia }).click();
+  //Numar card
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.NumarCard).click();
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.NumarCard).fill(DatePersonaleData.Persoane.AdaugarePersoana.NumarCard);
+  //Nationalitate
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Nationalitate).click();
+  await page.getByRole('option').filter({ hasText: DatePersonaleData.Persoane.AdaugarePersoana.Nationalitate }).click();
+  //Refugiat
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Refugiat).check();
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Refugiat).uncheck();
+  //Nume anterior
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.NumeAnterior).click();
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.NumeAnterior).fill(DatePersonaleData.Persoane.AdaugarePersoana.NumeAnterior);
+  //Judet
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Judet).click();
+  await page.getByRole('option').filter({ hasText: DatePersonaleData.Persoane.AdaugarePersoana.Judet }).click();
+  //Localitate
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Localitate).click();
+  await page.getByRole('option').filter({ hasText: DatePersonaleData.Persoane.AdaugarePersoana.Localitate }).click();
+  //Strada
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Strada).click();
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Strada).fill(DatePersonaleData.Persoane.AdaugarePersoana.Strada);
+  //Numar
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Numar).click();
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Numar).fill(DatePersonaleData.Persoane.AdaugarePersoana.Numar);
+  //Apartament
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Ap).click();
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.Ap).fill(DatePersonaleData.Persoane.AdaugarePersoana.Ap);
+  //Cod postal
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.CodPostal).click();
+  await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.CodPostal).fill(DatePersonaleData.Persoane.AdaugarePersoana.CodPostal);
+  await page.mouse.wheel(0, 200); 
+  //Salvare
+  await page.locator(GeneralLocators.Butoane.Salveaza).click();
   //Logout
   await logoutUser(page);
 });

@@ -48,11 +48,11 @@
               "AdaugarePersoana":{
                             "Nume" : "Test",
                             "Prenume" : "Adi",
-                            "CNP" : "1900101020304",
+                            "CNP" : "1731003410153",
                             "Telefon" : "0712345678",
                             "Email" : "abcd@efgh.com",
-                            "Organizatia" : "Aramis Invest",
-                            "NumarCard" : " ",
+                            "Organizatia" : "Logistics BMPS",
+                            "NumarCard" : "(1)11,11111",
                             "Nationalitate" : "România",
                             "Refugiat" : "false",
                             "NumeAnterior" : "NumeAnterior",
@@ -65,11 +65,11 @@
               },
 
               "EditarePersoana":{
-                         "TBD" : "EP"
+                         "CNP" : "1731003410153"
               },
 
               "StergerePersoana":{
-                         "TBD" : "SP"
+                         "CNP" : "1731003410153"
               }
        } 
 }
