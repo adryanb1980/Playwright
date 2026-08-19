@@ -18,6 +18,7 @@
                 "Adaugare": "data-testid=AddIcon",
                 "Salveaza": "#btnOk",
                 "Sterge": "data-testid=DeleteOutlineIcon",
+                "Modifica": "data-testid=EditIcon",
                 "Anuleaza": "#btnCancel"
             },
 

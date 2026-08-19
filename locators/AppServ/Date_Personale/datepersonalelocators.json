@@ -52,7 +52,30 @@
                             "Numar" : "#homeNumber",
                             "Ap" : "#homeApartment",
                             "CodPostal" : "#homePostalCode"
+           },
+           "EditarePersoane":{
+                            "FiltrareCNP" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[3]/input",
+                            "Nume" : "#lastName",
+                            "Prenume" : "#firstName",
+                            "CNP" : "#personalCode",
+                            "Telefon" : "#phone", 
+                            "Email" : "#email",
+                            "Organizatia" : "#mui-component-select-organizationId",
+                            "NumarCard" : "#cardNumber",
+                            "Nationalitate" : "#mui-component-select-nationalityId",
+                            "Refugiat" : "#refugee",
+                            "NumeAnterior" : "#previousLastName",
+                            "Judet" : "#mui-component-select-homeRegionId",
+                            "Localitate" : "#mui-component-select-homeLocalityId",
+                            "Strada" : "#homeStreet",
+                            "Numar" : "#homeNumber",
+                            "Ap" : "#homeApartment",
+                            "CodPostal" : "#homePostalCode"
+            },
+            "StergerePersoane":{
+                            "FiltrareCNP" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input"
             }
+
     }                 
     
 

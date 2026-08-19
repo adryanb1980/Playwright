@@ -310,3 +310,78 @@ test('Adaugare persoane', async ({ page }) => {
   //Logout
   await logoutUser(page);
 });
+
+test('Editare persoane', async ({ page }) => {
+  test.setTimeout(50000);
+  //Login & main menu access
+  await loginUser(page); 
+  //Click Persoane
+  await page.getByText(GeneralLocators.MainMenu.Persoane,{exact:true}).click();
+  
+  
+ //Edit the component
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.FiltrareCNP).click();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.FiltrareCNP).fill(DatePersonaleData.Persoane.EditarePersoana.CNPInitial);
+  await page.mouse.wheel(100, 0);
+  await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.Persoane.EditarePersoana.CNPInitial}).last().click({ position: { x: 30, y: 0 } }); 
+  await page.locator(GeneralLocators.Butoane.Modifica).click();
+
+
+
+
+  //Nume
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Nume).click(); 
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Nume).fill(DatePersonaleData.Persoane.EditarePersoana.Nume);
+  //Prenume
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Prenume).click();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Prenume).fill(DatePersonaleData.Persoane.EditarePersoana.Prenume);
+  //CNP
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.CNP).click();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.CNP).fill(DatePersonaleData.Persoane.EditarePersoana.CNP);
+  //Telefon
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Telefon).click();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Telefon).fill(DatePersonaleData.Persoane.EditarePersoana.Telefon);
+  //Email
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Email).click();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Email).fill(DatePersonaleData.Persoane.EditarePersoana.Email);
+  //Organizatia
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Organizatia).click();
+  await page.getByRole('option').filter({ hasText: DatePersonaleData.Persoane.EditarePersoana.Organizatia }).click();
+  //Numar card
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.NumarCard).click();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.NumarCard).fill(DatePersonaleData.Persoane.EditarePersoana.NumarCard);
+  //Nationalitate
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Nationalitate).click();
+  await page.getByRole('option').filter({ hasText: DatePersonaleData.Persoane.EditarePersoana.Nationalitate }).click();
+  //Refugiat
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Refugiat).check();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Refugiat).uncheck();
+  //Nume anterior
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.NumeAnterior).click();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.NumeAnterior).fill(DatePersonaleData.Persoane.EditarePersoana.NumeAnterior);
+  //Judet
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Judet).click();
+  await page.getByRole('option').filter({ hasText: DatePersonaleData.Persoane.EditarePersoana.Judet }).click();
+  //Localitate
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Localitate).click();
+  await page.getByRole('option').filter({ hasText: DatePersonaleData.Persoane.EditarePersoana.Localitate }).click();
+  //Strada
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Strada).click();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Strada).fill(DatePersonaleData.Persoane.EditarePersoana.Strada);
+  //Numar
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Numar).click();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Numar).fill(DatePersonaleData.Persoane.EditarePersoana.Numar);
+  //Apartament
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Ap).click();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Ap).fill(DatePersonaleData.Persoane.EditarePersoana.Ap);
+  //Cod postal
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.CodPostal).click();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.CodPostal).fill(DatePersonaleData.Persoane.EditarePersoana.CodPostal);
+  await page.mouse.wheel(0, 200); 
+  //Salvare
+  await page.locator(GeneralLocators.Butoane.Salveaza).click();
+
+
+  //Logout
+//  await logoutUser(page);
+});
