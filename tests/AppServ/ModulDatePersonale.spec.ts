@@ -363,7 +363,7 @@ test('Editare persoane', async ({ page }) => {
 });
 
 //NU FUNCTIONEAZA DELETE-UL PE PERSOANE LA NIVEL DE APLICATIE
-test('Stergere persoana', async ({ page }) => {
+test('Stergere persoane', async ({ page }) => {
   test.setTimeout(50000);
   //Login & main menu access
   await loginUser(page);  
@@ -375,7 +375,7 @@ test('Stergere persoana', async ({ page }) => {
   await page.mouse.wheel(100, 0);
   await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.Persoane.StergerePersoana.CNP}).last().click({ position: { x: 30, y: 0 } }); 
   await Sterge(page);
-  //Afisare organizatie stearsa
+  //Afisare persoana stearsa
   await page.locator(LocatorsDatePersonale.Persoane.StergerePersoane.FiltrareCNP).click();
   await page.locator(LocatorsDatePersonale.Persoane.StergerePersoane.FiltrareCNP).clear();
   await page.locator(LocatorsDatePersonale.Persoane.StergerePersoane.FiltrareCNP).fill(DatePersonaleData.Persoane.StergerePersoana.CNP);
