@@ -317,17 +317,13 @@ test('Editare persoane', async ({ page }) => {
   await loginUser(page); 
   //Click Persoane
   await page.getByText(GeneralLocators.MainMenu.Persoane,{exact:true}).click();
-  
-  
- //Edit the component
+   
+  //Edit the component
   await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.FiltrareCNP).click();
   await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.FiltrareCNP).fill(DatePersonaleData.Persoane.EditarePersoana.CNPInitial);
   await page.mouse.wheel(100, 0);
   await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.Persoane.EditarePersoana.CNPInitial}).last().click({ position: { x: 30, y: 0 } }); 
   await page.locator(GeneralLocators.Butoane.Modifica).click();
-
-
-
 
   //Nume
   await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.Nume).click(); 
@@ -381,7 +377,13 @@ test('Editare persoane', async ({ page }) => {
   //Salvare
   await page.locator(GeneralLocators.Butoane.Salveaza).click();
 
-
+  //View the component
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.FiltrareCNP).click();
+  await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.FiltrareCNP).fill(DatePersonaleData.Persoane.EditarePersoana.CNP);
+  await page.mouse.wheel(100, 0);
+  await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.Persoane.EditarePersoana.CNP}).last().click({ position: { x: 30, y: 0 } }); 
+  await page.locator(GeneralLocators.Butoane.Modifica).click();
+  
   //Logout
-//  await logoutUser(page);
+  await logoutUser(page);
 });

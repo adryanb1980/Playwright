@@ -65,23 +65,23 @@
               },
 
               "EditarePersoana":{
-                            "CNPInitial" : "1731003410153",
-                            "Nume" : "TestUpd",
-                            "Prenume" : "AdiUpd",
-                            "CNP" : "1960501412607",
-                            "Telefon" : "0712345678",
-                            "Email" : "abcdupd@efgh.com",
+                            "CNPInitial" : "1960501412607",
+                            "Nume" : "TestUpd08201",
+                            "Prenume" : "AdiUpd08201",
+                            "CNP" : "1790121142187",
+                            "Telefon" : "0711111111",
+                            "Email" : "abcdupd1@efgh.com",
                             "Organizatia" : "Logistics BMPS",
-                            "NumarCard" : "(1)11,22222",
+                            "NumarCard" : "(2)22,33333",
                             "Nationalitate" : "România",
                             "Refugiat" : "false",
-                            "NumeAnterior" : "NumeAnteriorUpd",
-                            "Judet" : "Cluj",
-                            "Localitate" : "Aiton",
-                            "Strada" : "StradaUpd",
-                            "Numar" : "9",
-                            "Ap" : "9",
-                            "CodPostal" : "999999"
+                            "NumeAnterior" : "NumeAnteriorUpd08201",
+                            "Judet" : "Arad",
+                            "Localitate" : "Adea",
+                            "Strada" : "StradaUpd08201",
+                            "Numar" : "7",
+                            "Ap" : "7",
+                            "CodPostal" : "777777"
               },
 
               "StergerePersoana":{
