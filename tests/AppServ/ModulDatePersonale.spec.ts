@@ -6,7 +6,7 @@ import * as DatePersonaleData from '../../test-data/AppServ/datepersonaledata.js
 
 
 //Meniu mare - Puncte de lucru
-test('Creare puncte de lucru', async ({ page }) => {
+test('Adaugare puncte de lucru', async ({ page }) => {
   
   test.setTimeout(50000);
   //Login & main menu access
@@ -136,7 +136,7 @@ test('Stergere puncte de lucru', async ({ page }) => {
 
 //Meniu mare - Organizatii
 
-test('Creare organizatii', async ({ page }) => {
+test('Adaugare organizatii', async ({ page }) => {
   test.setTimeout(50000);
   //Login & main menu access
   await loginUser(page);
@@ -363,7 +363,7 @@ test('Editare persoane', async ({ page }) => {
 });
 
 //NU FUNCTIONEAZA DELETE-UL PE PERSOANE LA NIVEL DE APLICATIE
-test('Stergere persoane', async ({ page }) => {
+test('Stergere persoane - NU ESTE IMPLEMENTARE', async ({ page }) => {
   test.setTimeout(50000);
   //Login & main menu access
   await loginUser(page);  
