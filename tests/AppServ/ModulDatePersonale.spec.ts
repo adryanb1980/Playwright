@@ -1,5 +1,5 @@
 import { test, expect, selectors } from '@playwright/test';
-import {loginUser, logoutUser} from './CommonActions.spec.ts';
+import {loginUser, logoutUser, Sterge} from './CommonActions.spec.ts';
 import * as GeneralLocators from '../../locators/AppServ/Global_Locators/globallocators.json';
 import * as LocatorsDatePersonale from '../../locators/AppServ/Date_Personale/datepersonalelocators.json'; 
 import * as DatePersonaleData from '../../test-data/AppServ/datepersonaledata.json';
@@ -126,14 +126,7 @@ test('Stergere puncte de lucru', async ({ page }) => {
   await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.PuncteDeLucru.StergerePuncteDeLucru.Nume}).last().click({ position: { x: 30, y: 0 } }); 
   
   //Stergere
-  try {
-    //Sterge
-    await page.locator(GeneralLocators.Butoane.Sterge).click();
-    //Confirma
-    await page.locator(GeneralLocators.Butoane.Sterge).click();
-  } catch (error) {
-    console.error('Eroare la click pe butonul Sterge', error);
-  }
+  await Sterge(page);
 
   //Afisare date punct de lucru sters
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.StergerePuncteDeLucru.Nume).click();
@@ -231,14 +224,7 @@ test('Stergere organizatii', async ({ page }) => {
   await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.Organizatii.StergereOrganizatii.Nume}).last().click({ position: { x: 30, y: 0 } }); 
   
   //Stergere
-  try {
-    //Sterge
-    await page.locator(GeneralLocators.Butoane.Sterge).click();
-    //Confirma
-    await page.locator(GeneralLocators.Butoane.Sterge).click();
-  } catch (error) {
-    console.error('Eroare la click pe butonul Sterge', error);
-  }
+  await Sterge(page);
 
   //Afisare organizatie stearsa
   await page.locator(LocatorsDatePersonale.Organizatii.StergereOrganizatii.FiltrareNume).click();
@@ -383,6 +369,31 @@ test('Editare persoane', async ({ page }) => {
   await page.mouse.wheel(100, 0);
   await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.Persoane.EditarePersoana.CNP}).last().click({ position: { x: 30, y: 0 } }); 
   await page.locator(GeneralLocators.Butoane.Modifica).click();
+  
+  //Logout
+  await logoutUser(page);
+});
+
+//NU FUNCTIONEAZA DELETE-UL PE PERSOANE LA NIVEL DE APLICATIE
+test('Stergere persoana', async ({ page }) => {
+  test.setTimeout(50000);
+  //Login & main menu access
+  await loginUser(page);  
+  //Click Persoane
+  await page.getByText(GeneralLocators.MainMenu.Persoane,{exact:true}).click();
+  //Edit the component
+  await page.locator(LocatorsDatePersonale.Persoane.StergerePersoane.FiltrareCNP).click();
+  await page.locator(LocatorsDatePersonale.Persoane.StergerePersoane.FiltrareCNP).fill(DatePersonaleData.Persoane.StergerePersoana.CNP);
+  await page.mouse.wheel(100, 0);
+  await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.Persoane.StergerePersoana.CNP}).last().click({ position: { x: 30, y: 0 } }); 
+  await Sterge(page);
+  
+  //Afisare organizatie stearsa
+  await page.locator(LocatorsDatePersonale.Persoane.StergerePersoane.FiltrareCNP).click();
+  await page.locator(LocatorsDatePersonale.Persoane.StergerePersoane.FiltrareCNP).clear();
+  await page.locator(LocatorsDatePersonale.Persoane.StergerePersoane.FiltrareCNP).fill(DatePersonaleData.Persoane.StergerePersoana.CNP);
+  
+  await page.waitForTimeout(3000);
   
   //Logout
   await logoutUser(page);

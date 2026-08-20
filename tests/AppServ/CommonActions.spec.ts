@@ -22,3 +22,18 @@ export async function loginUser(page: Page) {
   //Acces meniu mare
   await page.locator(GeneralLocators.MainMenu.MainMenuAccess).click();
 }
+
+export async function Sterge(page: Page) {
+  //Stergere
+  try {
+    //Sterge
+    await page.locator(GeneralLocators.Butoane.Sterge).click();
+    //Confirma
+    await page.locator(GeneralLocators.Butoane.Sterge).click();
+      } 
+  catch (error) {
+    console.error('Eroare la stergere', error);
+  }
+}
+
+

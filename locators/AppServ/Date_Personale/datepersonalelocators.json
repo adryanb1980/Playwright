@@ -73,7 +73,7 @@
                             "CodPostal" : "#homePostalCode"
             },
             "StergerePersoane":{
-                            "FiltrareCNP" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input"
+                            "FiltrareCNP" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[3]/input"
             }
 
     }                 

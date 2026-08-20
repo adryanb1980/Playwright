@@ -23,7 +23,7 @@
             },
             
         "StergerePuncteDeLucru":{
-                         "Nume" : "PDLAdiTest0812-4-UPD"
+                         "Nume" : "TestAdiSterge"
             }
        },
         
@@ -39,7 +39,7 @@
               },
 
               "StergereOrganizatii":{
-                         "Nume" : "OrganizatieAdiTestLogout-UPD"
+                         "Nume" : "TestAdiSterge"
               }
        },
 
@@ -85,7 +85,7 @@
               },
 
               "StergerePersoana":{
-                         "CNP" : "1731003410153"
+                         "CNP" : "1890307416206"
               }
        } 
 }
