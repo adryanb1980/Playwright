@@ -383,3 +383,46 @@ test('Stergere persoane - NU ESTE IMPLEMENTARE', async ({ page }) => {
   //Logout
   await logoutUser(page);
 });
+
+test('Adaugare medici de familie', async ({ page }) => {
+  test.setTimeout(50000);
+  //Login & main menu access
+  await loginUser(page);
+  
+  //Click Medici de familie
+  await page.getByText(GeneralLocators.MainMenu.MediciDeFamilie,{exact:true}).click();
+  await page.locator(GeneralLocators.Butoane.Adaugare).click(); 
+
+  //Nume
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.CreareMediciDeFamilie.Nume).click();
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.CreareMediciDeFamilie.Nume).fill(DatePersonaleData.MediciDeFamilie.CreareMediciDeFamilie.Nume);
+  //Judet
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.CreareMediciDeFamilie.Judet).click();
+  await page.getByRole('option').filter({ hasText: DatePersonaleData.MediciDeFamilie.CreareMediciDeFamilie.Judet }).click();
+  //Adresa
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.CreareMediciDeFamilie.Adresa).click();
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.CreareMediciDeFamilie.Adresa).fill(DatePersonaleData.MediciDeFamilie.CreareMediciDeFamilie.Adresa);
+  //NumarContractCNAS
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.CreareMediciDeFamilie.NrContractCNAS).click();
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.CreareMediciDeFamilie.NrContractCNAS).fill(DatePersonaleData.MediciDeFamilie.CreareMediciDeFamilie.NrContractCNAS);
+  //Email
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.CreareMediciDeFamilie.Email).click();
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.CreareMediciDeFamilie.Email).fill(DatePersonaleData.MediciDeFamilie.CreareMediciDeFamilie.Email);
+  //Telefon
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.CreareMediciDeFamilie.Telefon).click();
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.CreareMediciDeFamilie.Telefon).fill(DatePersonaleData.MediciDeFamilie.CreareMediciDeFamilie.Telefon);
+
+  //Salvare
+  await Salveaza(page);
+
+  //Afisare medic de familie creat
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.EditareMediciDeFamilie.FiltrareNume).click();
+  await page.locator(LocatorsDatePersonale.MediciDeFamilie.EditareMediciDeFamilie.FiltrareNume).fill(DatePersonaleData.MediciDeFamilie.CreareMediciDeFamilie.Nume);
+  await page.mouse.wheel(100, 0);
+  await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.MediciDeFamilie.CreareMediciDeFamilie.Nume}).last().click({ position: { x: 30, y: 0 } }); 
+  await page.locator(GeneralLocators.Butoane.Modifica).click();
+
+  //Logout
+  await logoutUser(page);
+ 
+});

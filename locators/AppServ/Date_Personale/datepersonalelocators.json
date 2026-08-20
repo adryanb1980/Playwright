@@ -76,7 +76,26 @@
                             "FiltrareCNP" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[3]/input"
             }
 
-    }                 
+    },
+    
+    "MediciDeFamilie":{          
+            "CreareMediciDeFamilie":{
+                             "Nume" : "#name",
+                             "Judet" : "#mui-component-select-regionId",
+                             "Adresa" : "#address",
+                             "NrContractCNAS" : "#contractNo",
+                             "Email" : "#email",
+                             "Telefon" : "#phone"
+            },
+            "EditareMediciDeFamilie":{
+                            "FiltrareNume" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input",
+                            "Nume" : "#name",
+                            "Modifica": "data-testid=EditIcon"
+            },
+            "StergereMediciDeFamilie":{
+                            "FiltrareNume" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input"
+            }
+    }
     
 
 }

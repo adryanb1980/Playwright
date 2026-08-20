@@ -87,5 +87,26 @@
               "StergerePersoana":{
                          "CNP" : "1890307416206"
               }
-       } 
+       },
+         
+       "MediciDeFamilie":{
+        
+              "CreareMediciDeFamilie":{
+                         "Nume" : "Dr. Test",
+                         "Judet" : "Arad",
+                         "Adresa" : "Test Adresa Medic",
+                         "NrContractCNAS" : "12345",
+                         "Email" : "abcd@efgh.com",
+                         "Telefon" : "0712345678"
+              },
+
+              "EditareMediciDeFamilie":{
+                         "NumeInitial" : "OrganizatieAdi08201",
+                         "Nume" : "OrganizatieAdi08201-UPD"
+              },
+
+              "StergereMediciDeFamilie":{
+                         "Nume" : "TestAdiSterge"
+              }
+       }
 }
