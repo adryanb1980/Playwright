@@ -92,9 +92,9 @@
        "MediciDeFamilie":{
         
               "CreareMediciDeFamilie":{
-                         "Nume" : "Dr. Test",
+                         "Nume" : "Dr. Test New",
                          "Judet" : "Arad",
-                         "Adresa" : "Test Adresa Medic",
+                         "Adresa" : "Test Adresa Medic New",
                          "NrContractCNAS" : "12345",
                          "Email" : "abcd@efgh.com",
                          "Telefon" : "0712345678"
