@@ -2,24 +2,24 @@
      "PuncteDeLucru":{  
 
        "CrearePuncteDeLucru":{
-                         "Nume" : "PDLAdiTest0812-4",
+                         "Nume" : "AdiTest08201",
                          "Tip" : "Sediu principal",
                          "Tara" : "România",
-                         "Judet": "Arges",
-                         "Localitate": "Pitesti",
-                         "Adresa": "Strada Test nr. 08124",
+                         "Judet": "Sibiu",
+                         "Localitate": "Agnita",
+                         "Adresa": "Strada Test nr. 08201",
                          "CUI" : "08124"
             },
 
        "EditarePuncteDeLucru":{
-                         "NumeInitial" : "PDLAdiTest0812-4",
-                         "Nume" : "PDLAdiTest0812-4-UPD",
+                         "NumeInitial" : "AdiTest08201",
+                         "Nume" : "AdiTest08201-UPD",
                          "Tip" : "Sediu secundar",
                          "Tara" : "România",
                          "Judet": "Neamt",
                          "Localitate": "Bahna",
                          "Adresa": "Street No. 00",
-                         "CUI" : "081211"
+                         "CUI" : "081213"
             },
             
         "StergerePuncteDeLucru":{
@@ -30,12 +30,12 @@
        "Organizatii":{
         
               "CreareOrganizatii":{
-                         "Nume" : "OrganizatieAdi08181"
+                         "Nume" : "OrganizatieAdi08201"
               },
 
               "EditareOrganizatii":{
-                         "NumeInitial" : "OrganizatieAdiTestLogout",
-                         "Nume" : "OrganizatieAdiTestLogout-UPD"
+                         "NumeInitial" : "OrganizatieAdi08201",
+                         "Nume" : "OrganizatieAdi08201-UPD"
               },
 
               "StergereOrganizatii":{
@@ -46,9 +46,9 @@
        "Persoane":{
         
               "AdaugarePersoana":{
-                            "Nume" : "Test",
+                            "Nume" : "Test08201",
                             "Prenume" : "Adi",
-                            "CNP" : "1731003410153",
+                            "CNP" : "1871210414162",
                             "Telefon" : "0712345678",
                             "Email" : "abcd@efgh.com",
                             "Organizatia" : "Logistics BMPS",
@@ -65,23 +65,23 @@
               },
 
               "EditarePersoana":{
-                            "CNPInitial" : "1960501412607",
-                            "Nume" : "TestUpd08201",
-                            "Prenume" : "AdiUpd08201",
-                            "CNP" : "1790121142187",
-                            "Telefon" : "0711111111",
-                            "Email" : "abcdupd1@efgh.com",
+                            "CNPInitial" : "1890307135071",
+                            "Nume" : "AdiTestUpd08201-1",
+                            "Prenume" : "AdiAdiUpd0820Upd",
+                            "CNP" : "1871210292977",
+                            "Telefon" : "0722222222",
+                            "Email" : "abcdupd1upda22@efgh.com",
                             "Organizatia" : "Logistics BMPS",
-                            "NumarCard" : "(2)22,33333",
+                            "NumarCard" : "(4)44,44444",
                             "Nationalitate" : "România",
                             "Refugiat" : "false",
-                            "NumeAnterior" : "NumeAnteriorUpd08201",
+                            "NumeAnterior" : "44444444",
                             "Judet" : "Arad",
                             "Localitate" : "Adea",
-                            "Strada" : "StradaUpd08201",
-                            "Numar" : "7",
-                            "Ap" : "7",
-                            "CodPostal" : "777777"
+                            "Strada" : "StradaUpd4444",
+                            "Numar" : "4",
+                            "Ap" : "5",
+                            "CodPostal" : "666666"
               },
 
               "StergerePersoana":{

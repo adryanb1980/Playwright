@@ -1,5 +1,5 @@
 import { test, expect, selectors } from '@playwright/test';
-import {loginUser, logoutUser, Sterge} from './CommonActions.spec.ts';
+import {loginUser, logoutUser, Salveaza, Sterge} from './CommonActions.spec.ts';
 import * as GeneralLocators from '../../locators/AppServ/Global_Locators/globallocators.json';
 import * as LocatorsDatePersonale from '../../locators/AppServ/Date_Personale/datepersonalelocators.json'; 
 import * as DatePersonaleData from '../../test-data/AppServ/datepersonaledata.json';
@@ -37,12 +37,9 @@ test('Creare puncte de lucru', async ({ page }) => {
   //CUI
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.AdaugarePuncteDeLucru.CUI).click();
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.AdaugarePuncteDeLucru.CUI).fill(DatePersonaleData.PuncteDeLucru.CrearePuncteDeLucru.CUI);
+
   //Salvare
-  try {
-    await page.locator(GeneralLocators.Butoane.Salveaza).click();
-  } catch (error) {
-    console.error('Eroare la click pe butonul Salveaza:', error);   
-  }
+  await Salveaza(page);
 
    //Afisare date punct de lucru creat
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.AdaugarePuncteDeLucru.FiltruNume).click();
@@ -90,12 +87,9 @@ test('Editare puncte de lucru', async ({ page }) => {
   //CUI
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.AdaugarePuncteDeLucru.CUI).click();
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.AdaugarePuncteDeLucru.CUI).fill(DatePersonaleData.PuncteDeLucru.EditarePuncteDeLucru.CUI);
+
   //Salvare
-  try {
-    await page.locator(GeneralLocators.Butoane.Salveaza).click();
-  } catch (error) {
-    console.error('Eroare la click pe butonul Salveaza:', error);
-  }
+  await Salveaza(page);
 
   //Afisare date punct de lucru editat
   await page.locator(LocatorsDatePersonale.PuncteDeLucru.EditarePuncteDeLucru.Nume).click();
@@ -158,12 +152,8 @@ test('Creare organizatii', async ({ page }) => {
   //await page.locator(LocatorsDatePersonale.Organizatii.AdaugareOrganizatii.Implicita).click();
 
   //Salvare
-  try {
-    await page.locator(GeneralLocators.Butoane.Salveaza).click();
-  } catch (error) {
-    console.error('Eroare la click pe butonul Salveaza:', error);   
-  }
-  
+  await Salveaza(page);
+
   //Logout
   await logoutUser(page);
  
@@ -190,11 +180,7 @@ test('Editare organizatii', async ({ page }) => {
   await page.locator(LocatorsDatePersonale.Organizatii.EditareOrganizatii.Nume).fill(DatePersonaleData.Organizatii.EditareOrganizatii.Nume);
 
   //Salvare
-  try {
-    await page.locator(GeneralLocators.Butoane.Salveaza).click();
-  } catch (error) {
-    console.error('Eroare la click pe butonul Salveaza:', error);
-  }
+  await Salveaza(page);
 
   //Afisare organizatie editata
   await page.locator(LocatorsDatePersonale.Organizatii.EditareOrganizatii.FiltrareNume).click();
@@ -291,8 +277,10 @@ test('Adaugare persoane', async ({ page }) => {
   await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.CodPostal).click();
   await page.locator(LocatorsDatePersonale.Persoane.AdaugarePersoane.CodPostal).fill(DatePersonaleData.Persoane.AdaugarePersoana.CodPostal);
   await page.mouse.wheel(0, 200); 
+  
   //Salvare
-  await page.locator(GeneralLocators.Butoane.Salveaza).click();
+  await Salveaza(page);
+
   //Logout
   await logoutUser(page);
 });
@@ -361,7 +349,7 @@ test('Editare persoane', async ({ page }) => {
   await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.CodPostal).fill(DatePersonaleData.Persoane.EditarePersoana.CodPostal);
   await page.mouse.wheel(0, 200); 
   //Salvare
-  await page.locator(GeneralLocators.Butoane.Salveaza).click();
+  await Salveaza(page);
 
   //View the component
   await page.locator(LocatorsDatePersonale.Persoane.EditarePersoane.FiltrareCNP).click();
@@ -387,14 +375,11 @@ test('Stergere persoana', async ({ page }) => {
   await page.mouse.wheel(100, 0);
   await page.getByRole('gridcell').filter({ hasText: DatePersonaleData.Persoane.StergerePersoana.CNP}).last().click({ position: { x: 30, y: 0 } }); 
   await Sterge(page);
-  
   //Afisare organizatie stearsa
   await page.locator(LocatorsDatePersonale.Persoane.StergerePersoane.FiltrareCNP).click();
   await page.locator(LocatorsDatePersonale.Persoane.StergerePersoane.FiltrareCNP).clear();
   await page.locator(LocatorsDatePersonale.Persoane.StergerePersoane.FiltrareCNP).fill(DatePersonaleData.Persoane.StergerePersoana.CNP);
-  
   await page.waitForTimeout(3000);
-  
   //Logout
   await logoutUser(page);
 });
