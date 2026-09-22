@@ -2,18 +2,18 @@
      "PuncteDeLucru":{  
 
        "CrearePuncteDeLucru":{
-                         "Nume" : "AdiTest08201",
+                         "Nume" : "AdiTest09221",
                          "Tip" : "Sediu principal",
                          "Tara" : "România",
                          "Judet": "Sibiu",
                          "Localitate": "Agnita",
-                         "Adresa": "Strada Test nr. 08201",
+                         "Adresa": "Strada TestCJ nr. 08201",
                          "CUI" : "08124"
             },
 
        "EditarePuncteDeLucru":{
-                         "NumeInitial" : "AdiTest08201",
-                         "Nume" : "AdiTest08201-UPD",
+                         "NumeInitial" : "AdiTest092212",
+                         "Nume" : "AdiTest09221-UPD",
                          "Tip" : "Sediu secundar",
                          "Tara" : "România",
                          "Judet": "Neamt",
