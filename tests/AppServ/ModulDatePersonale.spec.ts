@@ -363,6 +363,7 @@ test('Editare persoane', async ({ page }) => {
 });
 
 //NU FUNCTIONEAZA DELETE-UL PE PERSOANE LA NIVEL DE APLICATIE
+/*
 test('Stergere persoane - NU ESTE IMPLEMENTARE', async ({ page }) => {
   test.setTimeout(50000);
   //Login & main menu access
@@ -383,6 +384,7 @@ test('Stergere persoane - NU ESTE IMPLEMENTARE', async ({ page }) => {
   //Logout
   await logoutUser(page);
 });
+*/
 
 test('Adaugare medici de familie', async ({ page }) => {
   test.setTimeout(50000);

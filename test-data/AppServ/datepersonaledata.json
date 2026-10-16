@@ -92,21 +92,21 @@
        "MediciDeFamilie":{
         
               "CreareMediciDeFamilie":{
-                         "Nume" : "Dr. Test New",
+                         "Nume" : "Dr. Test New 1",
                          "Judet" : "Arad",
-                         "Adresa" : "Test Adresa Medic New",
-                         "NrContractCNAS" : "12345",
-                         "Email" : "abcd@efgh.com",
-                         "Telefon" : "0712345678"
+                         "Adresa" : "Test Adresa Medic New 1",
+                         "NrContractCNAS" : "12335",
+                         "Email" : "abcd@efrgh.com",
+                         "Telefon" : "0712335678"
               },
 
               "EditareMediciDeFamilie":{
-                         "NumeInitial" : "OrganizatieAdi08201",
-                         "Nume" : "OrganizatieAdi08201-UPD"
+                         "NumeInitial" : "OrganizatieAdi10161",
+                         "Nume" : "OrganizatieAdi10161-UPD"
               },
 
               "StergereMediciDeFamilie":{
-                         "Nume" : "TestAdiSterge"
+                         "Nume" : "TestAdiSterge1"
               }
        }
 }
