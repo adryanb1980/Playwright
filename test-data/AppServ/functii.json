@@ -1,0 +1,30 @@
+{
+    "Functii":{
+            "CreareFunctii":{
+                            "Cod" : "AUTO-MEC",
+                            "Denumire" : "Mecanic Auto Test Automat",
+                            "DenumireEngleza" : "Car Mechanic Automated Test",
+                            "DenumireSingaleza" : "මෝටර් රථ කාර්මික ස්වයංක්‍රීය පරීක්ෂණය",
+                            "SalariuBrut" : "6200",
+                            "Categorie" : "145",
+                            "FunctiaOcupatia" : "Mecanic auto",
+                            "OptiuneCOR" : "723103 Mecanic auto"
+            },
+            "StergereFunctii":{
+                            "Cod" : "AUTO-CRO",
+                            "Denumire" : "Croitor Test Automat Stergere",
+                            "SalariuBrut" : "4300",
+                            "Categorie" : "85",
+                            "FunctiaOcupatia" : "Croitor",
+                            "OptiuneCOR" : "753101 Croitor"
+            },
+            "EditareFunctii":{
+                            "Cod" : "AL1",
+                            "Denumire" : "Alimentator 1",
+                            "ProductieInitial" : true,
+                            "CoordonareSchimbInitial" : false,
+                            "Productie" : false,
+                            "CoordonareSchimb" : true
+            }
+    }
+}

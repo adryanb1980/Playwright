@@ -26,7 +26,9 @@
                             "AvizMedical": "#medicalOpinionText",
                             "AvizApt": "#medicalOpinion",
                             "DataAviz": "#medicalExaminationDate",
-                            "DataControlUrmator": "#medicalExaminationNextDate"
+                            "DataControlUrmator": "#medicalExaminationNextDate",
+                            "DataControlUrmatorEroare": "#medicalExaminationNextDate-helper",
+                            "Recomandari": "#recommendations"
                         },        
                         
             "FisadeAptitudini":{

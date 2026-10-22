@@ -28,7 +28,11 @@
                 "PuncteDeLucru" : "Puncte de lucru",
                 "Organizatii" : "Organizații",
                 "Persoane" : "Persoane",
-                "MediciDeFamilie" : "Medici de familie"
+                "MediciDeFamilie" : "Medici de familie",
+                "Functii" : "Funcții",
+                "COR" : "COR",
+                "Schimburi" : "Schimburi",
+                "CentreDeCost" : "Centre de cost"
               
             }
     }

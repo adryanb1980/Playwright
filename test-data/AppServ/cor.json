@@ -1,0 +1,13 @@
+{
+    "COR":{
+            "CreareCOR":{
+                            "PrefixCod" : "99",
+                            "Denumire" : "Operator Linie Test Automat",
+                            "NivelStudii" : "Scoala profesionala cu licenta"
+            },
+            "EditareCOR":{
+                            "Denumire" : "Operator Linie Test Automat Editat",
+                            "NivelStudii" : "Post liceale"
+            }
+    }
+}

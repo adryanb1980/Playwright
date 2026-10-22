@@ -1,0 +1,11 @@
+{
+    "CentreDeCost":{
+            "CreareCentruDeCost":{
+                            "PrefixCod" : "QA",
+                            "Denumire" : "Croitorie Linia 3 Test Automat"
+            },
+            "EditareCentruDeCost":{
+                            "Denumire" : "Croitorie Linia 3 Regie Test Automat"
+            }
+    }
+}

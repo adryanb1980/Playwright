@@ -1,0 +1,11 @@
+{
+    "Schimburi":{
+            "CreareSchimburi":{
+                            "PrefixCod" : "T",
+                            "Denumire" : "Schimb Test Automat"
+            },
+            "EditareSchimburi":{
+                            "Denumire" : "Schimb Test Automat Editat"
+            }
+    }
+}

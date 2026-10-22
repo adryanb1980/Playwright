@@ -1,0 +1,34 @@
+{
+    "Functii":{
+            "AdaugareFunctii":{
+                            "Cod" : "#code",
+                            "Denumire" : "#name",
+                            "DenumireEngleza" : "#translation1",
+                            "DenumireSingaleza" : "#translation2",
+                            "SalariuBrut" : "#salary",
+                            "Categorie" : "#bonus",
+                            "FunctiaOcupatia" : "#corName",
+                            "Productie" : "#production",
+                            "CoordonareSchimb" : "#shiftCoordination",
+                            "PenalizarePrezenta" : "#presencePenalty",
+                            "CalculBonusPrezenta" : "#presenceBasedBonusCalculation",
+                            "ValoareBonusPrezenta" : "#presenceBasedBonusCalculationValue"
+            },
+            "Filtre":{
+                            "FiltrareCod" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input",
+                            "FiltrareDenumire" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[2]/input",
+                            "FiltrareCodCOR" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[5]/input",
+                            "FiltrareDenumireCOR" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[6]/input"
+            }
+    },
+
+    "Aprobari":{
+                            "Acces" : "header >> data-testid=FactCheckIcon",
+                            "ChipInAsteptare" : "În așteptare",
+                            "TipFunctieNoua" : "Funcție nouă",
+                            "Aproba" : "Aprobă",
+                            "DataActAditional" : "#date",
+                            "Confirma" : "#btnOk",
+                            "FiltrareDescriere" : "//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div/div[1]/div[1]/div[2]/div/div[4]/input"
+    }
+}

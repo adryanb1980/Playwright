@@ -1,0 +1,12 @@
+{
+    "CentreDeCost":{
+            "AdaugareCentruDeCost":{
+                            "Cod" : "#code",
+                            "Denumire" : "#name"
+            },
+            "Filtre":{
+                            "FiltrareCod" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[1]/input",
+                            "FiltrareDenumire" : "//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/div[2]/input"
+            }
+    }
+}

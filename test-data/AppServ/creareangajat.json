@@ -1,14 +1,14 @@
 {
-    "marca": "2026102002",
+    "marca": "2026102215",
     "lastname": "Adi",
-    "firstname": "Test102002",
-    "cnp" : "1931210076157",
+    "firstname": "Test102215",
+    "cnp" : "1900514023469",
     "phone" : "",
-    "email" : "abcd102002@test.com",
+    "email" : "abcd102215@test.com",
     "serie": "VT",
-    "numar": "102002",
-    "emisla": "2020-02-12",
-    "expirala": "2030-01-12",
+    "numar": "102215",
+    "emisla": "2021-03-15",
+    "expirala": "2031-03-15",
     "emisde": "SPCLEP",
     "strada": "Strada",
     "nr": "12",
@@ -18,4 +18,3 @@
     "judet": "Arad",
     "document": "Carte de rezidență"
 }
-
