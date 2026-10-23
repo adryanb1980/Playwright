@@ -1,22 +1,22 @@
 {
     "Functii":{
             "CreareFunctii":{
-                            "Cod" : "AUTO-MEC",
-                            "Denumire" : "Mecanic Auto Test Automat",
-                            "DenumireEngleza" : "Car Mechanic Automated Test",
-                            "DenumireSingaleza" : "මෝටර් රථ කාර්මික ස්වයංක්‍රීය පරීක්ෂණය",
-                            "SalariuBrut" : "6200",
-                            "Categorie" : "145",
-                            "FunctiaOcupatia" : "Mecanic auto",
-                            "OptiuneCOR" : "723103 Mecanic auto"
+                            "Cod" : "AUTO-ELA",
+                            "Denumire" : "Electrician Auto Test Automat",
+                            "DenumireEngleza" : "Automotive Electrician Automated Test",
+                            "DenumireSingaleza" : "මෝටර් රථ විදුලි කාර්මික ස්වයංක්‍රීය පරීක්ෂණය",
+                            "SalariuBrut" : "6500",
+                            "Categorie" : "150",
+                            "FunctiaOcupatia" : "Electrician auto",
+                            "OptiuneCOR" : "723101 Electrician auto"
             },
             "StergereFunctii":{
-                            "Cod" : "AUTO-CRO",
-                            "Denumire" : "Croitor Test Automat Stergere",
-                            "SalariuBrut" : "4300",
-                            "Categorie" : "85",
-                            "FunctiaOcupatia" : "Croitor",
-                            "OptiuneCOR" : "753101 Croitor"
+                            "Cod" : "AUTO-AMB",
+                            "Denumire" : "Ambalator Manual Test Automat Stergere",
+                            "SalariuBrut" : "4100",
+                            "Categorie" : "80",
+                            "FunctiaOcupatia" : "Ambalator manual",
+                            "OptiuneCOR" : "932101 Ambalator manual"
             },
             "EditareFunctii":{
                             "Cod" : "AL1",
