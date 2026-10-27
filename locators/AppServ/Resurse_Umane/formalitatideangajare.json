@@ -1,14 +1,14 @@
 {
             "FifrFsema":{
                             "Angajare" : "#request",
-                            "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[4]/button",                                                    
+                            "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[5]/button",                                                    
                             "DataAngajare": "#date",
                             "DataFifr":"#dateFifr",     
                             "Back": "data-testid=ArrowBackIcon"
                         },
 
             "FisaPsihologica":{
-                            "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[4]/button",                                                    
+                            "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[5]/button",                                                    
                             "Apt": "#result",
                             "Concluzii": "#conclusion",
                             "DataPsihologic": "#date",
@@ -17,7 +17,7 @@
                         },            
 
             "DosarMedical":{
-                            "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[4]/button",
+                            "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[5]/button",
                             "NrDosar": "#medicalFileNo",
                             "DataDosar": "#date",
                             "DataDosarAngajare": "#dateEmploymentMedicalApplicationForm",
@@ -37,7 +37,7 @@
                         },
 
             "ContractDeMunca":{
-                            "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[4]/button",
+                            "FormalitatiDeAngajare": "xpath=//*[@id=\"root\"]/div/div[3]/div/div/div[3]/div/div[5]/button",
                             "NrContract": "#number",
                             "DataIncheiereContract": "#date",
                             "DataIncepereActivitate": "#startDate"

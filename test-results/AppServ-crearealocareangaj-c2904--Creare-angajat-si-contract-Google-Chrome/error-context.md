@@ -1,0 +1,514 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: AppServ\crearealocareangajatcontract.spec.ts >> Creare angajat si contract
+- Location: tests\AppServ\crearealocareangajatcontract.spec.ts:13:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img "..." [ref=e8]
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "Barbos Adrian-Ioan" [ref=e11] [cursor=pointer]:
+              - /url: /admin/employees
+              - generic [ref=e12]: Barbos Adrian-Ioan
+      - list [ref=e14]:
+        - listitem [ref=e15]:
+          - link "Resurse umane" [ref=e16] [cursor=pointer]:
+            - /url: /admin/employees
+            - img [ref=e17]
+            - generic [ref=e19]: Resurse umane
+        - listitem [ref=e21]:
+          - link "Pontaje" [ref=e22] [cursor=pointer]:
+            - /url: /admin/employees
+            - img [ref=e23]
+            - generic [ref=e26]: Pontaje
+        - listitem [ref=e28]:
+          - link "Evaluări" [ref=e29] [cursor=pointer]:
+            - /url: /admin/employees
+            - img [ref=e30]
+            - generic [ref=e32]: Evaluări
+        - listitem [ref=e34]:
+          - link "Salarizare" [ref=e35] [cursor=pointer]:
+            - /url: /admin/employees
+            - img [ref=e36]
+            - generic [ref=e38]: Salarizare
+        - listitem [ref=e40]:
+          - link "Producție" [ref=e41] [cursor=pointer]:
+            - /url: /admin/employees
+            - img [ref=e42]
+            - generic [ref=e44]: Producție
+        - listitem [ref=e46]:
+          - link "Calitate" [ref=e47] [cursor=pointer]:
+            - /url: /admin/employees
+            - img [ref=e48]
+            - generic [ref=e50]: Calitate
+        - listitem [ref=e52]:
+          - link "Planificare producție" [ref=e53] [cursor=pointer]:
+            - /url: /admin/employees
+            - img [ref=e54]
+            - generic [ref=e56]: Planificare producție
+        - listitem [ref=e58]:
+          - link "Mentenanță" [ref=e59] [cursor=pointer]:
+            - /url: /admin/employees
+            - img [ref=e60]
+            - generic [ref=e62]: Mentenanță
+        - listitem [ref=e64]:
+          - link "Laborator testare" [ref=e65] [cursor=pointer]:
+            - /url: /admin/employees
+            - img [ref=e66]
+            - generic [ref=e70]: Laborator testare
+        - listitem [ref=e72]:
+          - link "Management proiect" [ref=e73] [cursor=pointer]:
+            - /url: /admin/employees
+            - img [ref=e74]
+            - generic [ref=e76]: Management proiect
+    - img [ref=e79]
+  - banner [ref=e82]:
+    - generic [ref=e83]:
+      - button [ref=e86] [cursor=pointer]:
+        - img [ref=e87]
+      - generic [ref=e90]:
+        - button [ref=e91] [cursor=pointer]:
+          - img [ref=e92]
+        - text: Angajați
+      - generic [ref=e94]:
+        - button [ref=e95] [cursor=pointer]:
+          - img [ref=e96]
+        - button [ref=e98] [cursor=pointer]:
+          - img [ref=e99]
+        - button [ref=e101] [cursor=pointer]:
+          - img [ref=e102]
+        - button "1" [ref=e104] [cursor=pointer]:
+          - generic [ref=e105]:
+            - img [ref=e106]
+            - generic [ref=e108]: "1"
+        - button [ref=e109] [cursor=pointer]:
+          - img [ref=e110]
+        - button [ref=e113] [cursor=pointer]:
+          - img [ref=e114]
+  - generic [ref=e118]:
+    - generic [ref=e119]:
+      - generic [ref=e121]:
+        - button "Activi" [ref=e122] [cursor=pointer]:
+          - generic [ref=e123]: Activi
+        - button "Suspendați" [ref=e124] [cursor=pointer]:
+          - generic [ref=e125]: Suspendați
+        - button "Boală prelungită" [ref=e126] [cursor=pointer]:
+          - generic [ref=e127]: Boală prelungită
+        - button "Lichidare în curs" [ref=e128] [cursor=pointer]:
+          - generic [ref=e129]: Lichidare în curs
+        - button "Formalități de angajare" [ref=e130] [cursor=pointer]:
+          - generic [ref=e131]: Formalități de angajare
+        - button "Nealocați pe post" [ref=e132] [cursor=pointer]:
+          - generic [ref=e133]: Nealocați pe post
+        - button "Inactivi" [ref=e134] [cursor=pointer]:
+          - generic [ref=e135]: Inactivi
+      - generic [ref=e136]:
+        - button "Adaugă" [ref=e137] [cursor=pointer]: Adaugă
+        - button "Exportă Excel" [ref=e138] [cursor=pointer]: Exportă Excel
+        - button [ref=e139] [cursor=pointer]:
+          - img [ref=e140]
+        - button [ref=e142] [cursor=pointer]:
+          - img [ref=e143]
+    - generic [ref=e145]:
+      - generic [ref=e146]:
+        - grid [ref=e147]:
+          - row "Marca  Nume  Prenume  Status  Departament  Subdepartament  Funcție  Schimb  Cod CC  CNP  Telefon  Salariu  Categorie " [ref=e149]:
+            - columnheader [ref=e150]:
+              - generic [ref=e151]:
+                - button [ref=e152] [cursor=pointer]:
+                  - img [ref=e153]
+                - button [ref=e155] [cursor=pointer]:
+                  - img [ref=e156]
+            - columnheader "Marca " [ref=e159] [cursor=pointer]:
+              - generic [ref=e160]: Marca 
+            - columnheader "Nume " [ref=e162] [cursor=pointer]:
+              - generic [ref=e163]: Nume 
+            - columnheader "Prenume " [ref=e165] [cursor=pointer]:
+              - generic [ref=e166]: Prenume 
+            - columnheader "Status " [ref=e168] [cursor=pointer]:
+              - generic [ref=e169]: Status 
+            - columnheader "Departament " [ref=e171] [cursor=pointer]:
+              - generic [ref=e172]: Departament 
+            - columnheader "Subdepartament " [ref=e174] [cursor=pointer]:
+              - generic [ref=e175]: Subdepartament 
+            - columnheader "Funcție " [ref=e177] [cursor=pointer]:
+              - generic [ref=e178]: Funcție 
+            - columnheader "Schimb " [ref=e180] [cursor=pointer]:
+              - generic [ref=e181]: Schimb 
+            - columnheader "Cod CC " [ref=e183] [cursor=pointer]:
+              - generic [ref=e184]: Cod CC 
+            - columnheader "CNP " [ref=e186] [cursor=pointer]:
+              - generic [ref=e187]: CNP 
+            - columnheader "Telefon " [ref=e189] [cursor=pointer]:
+              - generic [ref=e190]: Telefon 
+            - columnheader "Salariu " [ref=e192] [cursor=pointer]:
+              - generic [ref=e193]: Salariu 
+            - columnheader "Categorie " [ref=e195] [cursor=pointer]:
+              - generic [ref=e196]: Categorie 
+          - row "1760523416253" [ref=e199]:
+            - columnheader [ref=e200]
+            - columnheader [ref=e201]:
+              - textbox [ref=e202]
+            - columnheader [ref=e203]:
+              - textbox [ref=e204]
+            - columnheader [ref=e205]:
+              - textbox [ref=e206]
+            - columnheader [ref=e207]
+            - columnheader [ref=e208]:
+              - textbox [ref=e209]
+            - columnheader [ref=e210]:
+              - textbox [ref=e211]
+            - columnheader [ref=e212]:
+              - textbox [ref=e213]
+            - columnheader [ref=e214]:
+              - textbox [ref=e215]
+            - columnheader [ref=e216]:
+              - textbox [ref=e217]
+            - columnheader "1760523416253" [ref=e218]:
+              - textbox [ref=e219]: "1760523416253"
+            - columnheader [ref=e220]:
+              - textbox [ref=e221]
+            - columnheader [ref=e222]:
+              - textbox [ref=e223]
+            - columnheader [ref=e224]:
+              - textbox [ref=e225]
+          - generic [ref=e226]:
+            - rowgroup [ref=e227]:
+              - row "2026102302 Adi Test102302 Formalități de angajare Fabrica de Confectii Croitorie Bazaltului Tehnolog A PB314 1760523416253 2000" [ref=e228]:
+                - gridcell [ref=e229]:
+                  - checkbox [ref=e232] [cursor=pointer]
+                - gridcell "2026102302" [ref=e234]:
+                  - generic [ref=e235]: "2026102302"
+                - gridcell "Adi" [ref=e236]:
+                  - generic [ref=e237]: Adi
+                - gridcell "Test102302" [ref=e238]:
+                  - generic [ref=e239]: Test102302
+                - gridcell "Formalități de angajare" [ref=e240]:
+                  - generic [ref=e241]: Formalități de angajare
+                - gridcell "Fabrica de Confectii" [ref=e242]:
+                  - generic [ref=e243]: Fabrica de Confectii
+                - gridcell "Croitorie Bazaltului" [ref=e244]:
+                  - generic [ref=e245]: Croitorie Bazaltului
+                - gridcell "Tehnolog" [ref=e246]:
+                  - generic [ref=e247]: Tehnolog
+                - gridcell "A" [ref=e248]:
+                  - generic [ref=e249]: A
+                - gridcell "PB314" [ref=e250]:
+                  - generic [ref=e251]: PB314
+                - gridcell "1760523416253" [ref=e252]:
+                  - generic [ref=e253]: "1760523416253"
+                - gridcell [ref=e254]
+                - gridcell [ref=e255]
+                - gridcell "2000" [ref=e256]:
+                  - generic [ref=e257]: "2000"
+            - rowgroup [ref=e258]:
+              - row [ref=e259]:
+                - gridcell [ref=e260]
+                - gridcell [ref=e261]
+                - gridcell [ref=e262]
+                - gridcell [ref=e263]
+                - gridcell [ref=e264]
+                - gridcell [ref=e265]
+                - gridcell [ref=e266]
+                - gridcell [ref=e267]
+                - gridcell [ref=e268]
+                - gridcell [ref=e269]
+                - gridcell [ref=e270]
+                - gridcell [ref=e271]
+                - gridcell [ref=e272]
+                - gridcell [ref=e273]
+            - rowgroup [ref=e274]:
+              - row [ref=e275]:
+                - gridcell [ref=e276]
+                - gridcell [ref=e277]
+                - gridcell [ref=e278]
+                - gridcell [ref=e279]
+                - gridcell [ref=e280]
+                - gridcell [ref=e281]
+                - gridcell [ref=e282]
+                - gridcell [ref=e283]
+                - gridcell [ref=e284]
+                - gridcell [ref=e285]
+                - gridcell [ref=e286]
+                - gridcell [ref=e287]
+                - gridcell [ref=e288]
+                - gridcell [ref=e289]
+            - rowgroup [ref=e290]:
+              - row [ref=e291]:
+                - gridcell [ref=e292]
+                - gridcell [ref=e293]
+                - gridcell [ref=e294]
+                - gridcell [ref=e295]
+                - gridcell [ref=e296]
+                - gridcell [ref=e297]
+                - gridcell [ref=e298]
+                - gridcell [ref=e299]
+                - gridcell [ref=e300]
+                - gridcell [ref=e301]
+                - gridcell [ref=e302]
+                - gridcell [ref=e303]
+                - gridcell [ref=e304]
+                - gridcell [ref=e305]
+            - rowgroup [ref=e306]:
+              - row [ref=e307]:
+                - gridcell [ref=e308]
+                - gridcell [ref=e309]
+                - gridcell [ref=e310]
+                - gridcell [ref=e311]
+                - gridcell [ref=e312]
+                - gridcell [ref=e313]
+                - gridcell [ref=e314]
+                - gridcell [ref=e315]
+                - gridcell [ref=e316]
+                - gridcell [ref=e317]
+                - gridcell [ref=e318]
+                - gridcell [ref=e319]
+                - gridcell [ref=e320]
+                - gridcell [ref=e321]
+            - rowgroup [ref=e322]:
+              - row [ref=e323]:
+                - gridcell [ref=e324]
+                - gridcell [ref=e325]
+                - gridcell [ref=e326]
+                - gridcell [ref=e327]
+                - gridcell [ref=e328]
+                - gridcell [ref=e329]
+                - gridcell [ref=e330]
+                - gridcell [ref=e331]
+                - gridcell [ref=e332]
+                - gridcell [ref=e333]
+                - gridcell [ref=e334]
+                - gridcell [ref=e335]
+                - gridcell [ref=e336]
+                - gridcell [ref=e337]
+            - rowgroup [ref=e338]:
+              - row [ref=e339]:
+                - gridcell [ref=e340]
+                - gridcell [ref=e341]
+                - gridcell [ref=e342]
+                - gridcell [ref=e343]
+                - gridcell [ref=e344]
+                - gridcell [ref=e345]
+                - gridcell [ref=e346]
+                - gridcell [ref=e347]
+                - gridcell [ref=e348]
+                - gridcell [ref=e349]
+                - gridcell [ref=e350]
+                - gridcell [ref=e351]
+                - gridcell [ref=e352]
+                - gridcell [ref=e353]
+            - rowgroup [ref=e354]:
+              - row [ref=e355]:
+                - gridcell [ref=e356]
+                - gridcell [ref=e357]
+                - gridcell [ref=e358]
+                - gridcell [ref=e359]
+                - gridcell [ref=e360]
+                - gridcell [ref=e361]
+                - gridcell [ref=e362]
+                - gridcell [ref=e363]
+                - gridcell [ref=e364]
+                - gridcell [ref=e365]
+                - gridcell [ref=e366]
+                - gridcell [ref=e367]
+                - gridcell [ref=e368]
+                - gridcell [ref=e369]
+            - rowgroup [ref=e370]:
+              - row [ref=e371]:
+                - gridcell [ref=e372]
+                - gridcell [ref=e373]
+                - gridcell [ref=e374]
+                - gridcell [ref=e375]
+                - gridcell [ref=e376]
+                - gridcell [ref=e377]
+                - gridcell [ref=e378]
+                - gridcell [ref=e379]
+                - gridcell [ref=e380]
+                - gridcell [ref=e381]
+                - gridcell [ref=e382]
+                - gridcell [ref=e383]
+                - gridcell [ref=e384]
+                - gridcell [ref=e385]
+            - rowgroup [ref=e386]:
+              - row [ref=e387]:
+                - gridcell [ref=e388]
+                - gridcell [ref=e389]
+                - gridcell [ref=e390]
+                - gridcell [ref=e391]
+                - gridcell [ref=e392]
+                - gridcell [ref=e393]
+                - gridcell [ref=e394]
+                - gridcell [ref=e395]
+                - gridcell [ref=e396]
+                - gridcell [ref=e397]
+                - gridcell [ref=e398]
+                - gridcell [ref=e399]
+                - gridcell [ref=e400]
+                - gridcell [ref=e401]
+            - rowgroup [ref=e402]:
+              - row [ref=e403]:
+                - gridcell [ref=e404]
+                - gridcell [ref=e405]
+                - gridcell [ref=e406]
+                - gridcell [ref=e407]
+                - gridcell [ref=e408]
+                - gridcell [ref=e409]
+                - gridcell [ref=e410]
+                - gridcell [ref=e411]
+                - gridcell [ref=e412]
+                - gridcell [ref=e413]
+                - gridcell [ref=e414]
+                - gridcell [ref=e415]
+                - gridcell [ref=e416]
+                - gridcell [ref=e417]
+            - rowgroup [ref=e418]:
+              - row [ref=e419]:
+                - gridcell [ref=e420]
+                - gridcell [ref=e421]
+                - gridcell [ref=e422]
+                - gridcell [ref=e423]
+                - gridcell [ref=e424]
+                - gridcell [ref=e425]
+                - gridcell [ref=e426]
+                - gridcell [ref=e427]
+                - gridcell [ref=e428]
+                - gridcell [ref=e429]
+                - gridcell [ref=e430]
+                - gridcell [ref=e431]
+                - gridcell [ref=e432]
+                - gridcell [ref=e433]
+            - rowgroup [ref=e434]:
+              - row [ref=e435]:
+                - gridcell [ref=e436]
+                - gridcell [ref=e437]
+                - gridcell [ref=e438]
+                - gridcell [ref=e439]
+                - gridcell [ref=e440]
+                - gridcell [ref=e441]
+                - gridcell [ref=e442]
+                - gridcell [ref=e443]
+                - gridcell [ref=e444]
+                - gridcell [ref=e445]
+                - gridcell [ref=e446]
+                - gridcell [ref=e447]
+                - gridcell [ref=e448]
+                - gridcell [ref=e449]
+            - rowgroup [ref=e450]:
+              - row [ref=e451]:
+                - gridcell [ref=e452]
+                - gridcell [ref=e453]
+                - gridcell [ref=e454]
+                - gridcell [ref=e455]
+                - gridcell [ref=e456]
+                - gridcell [ref=e457]
+                - gridcell [ref=e458]
+                - gridcell [ref=e459]
+                - gridcell [ref=e460]
+                - gridcell [ref=e461]
+                - gridcell [ref=e462]
+                - gridcell [ref=e463]
+                - gridcell [ref=e464]
+                - gridcell [ref=e465]
+            - rowgroup [ref=e466]:
+              - row [ref=e467]:
+                - gridcell [ref=e468]
+                - gridcell [ref=e469]
+                - gridcell [ref=e470]
+                - gridcell [ref=e471]
+                - gridcell [ref=e472]
+                - gridcell [ref=e473]
+                - gridcell [ref=e474]
+                - gridcell [ref=e475]
+                - gridcell [ref=e476]
+                - gridcell [ref=e477]
+                - gridcell [ref=e478]
+                - gridcell [ref=e479]
+                - gridcell [ref=e480]
+                - gridcell [ref=e481]
+        - generic:
+          - generic: Loading...
+      - generic [ref=e483]:
+        - paragraph [ref=e484]: Înregistrări pe pagină
+        - generic [ref=e485]:
+          - combobox "Înregistrări pe pagină 15" [ref=e486] [cursor=pointer]: "15"
+          - textbox: "15"
+          - img
+        - paragraph [ref=e487]: 1-1 din 1
+        - generic [ref=e488]:
+          - button "Go to first page" [disabled]:
+            - img
+          - button "Go to previous page" [disabled]:
+            - img
+          - button "Go to next page" [disabled]:
+            - img
+          - button "Go to last page" [disabled]:
+            - img
+    - generic [ref=e489]:
+      - generic [ref=e491]:
+        - heading "Adi Test102302" [level=6] [ref=e493]
+        - button [ref=e495] [cursor=pointer]:
+          - img [ref=e496]
+      - separator [ref=e498]
+      - button "Schimbare PIN" [ref=e500] [cursor=pointer]:
+        - img [ref=e502]
+        - text: Schimbare PIN
+      - separator [ref=e504]
+      - button "Trimite în Reges" [ref=e506] [cursor=pointer]: Trimite în Reges
+      - separator [ref=e507]
+      - button "Istoric" [ref=e509] [cursor=pointer]:
+        - img [ref=e511]
+        - text: Istoric
+      - separator [ref=e513]
+      - button "Formalități de angajare" [ref=e515] [cursor=pointer]:
+        - img [ref=e517]
+        - text: Formalități de angajare
+      - separator [ref=e519]
+      - button "Documente" [ref=e521] [cursor=pointer]:
+        - img [ref=e523]
+        - text: Documente
+      - separator [ref=e525]
+      - button "Încarcă documente lipsă" [ref=e527] [cursor=pointer]:
+        - img [ref=e529]
+        - text: Încarcă documente lipsă
+      - separator [ref=e531]
+      - button "Adeverințe" [ref=e533] [cursor=pointer]:
+        - img [ref=e535]
+        - text: Adeverințe
+      - separator [ref=e538]
+      - button "Echipamente de protecție" [ref=e540] [cursor=pointer]:
+        - img [ref=e542]
+        - text: Echipamente de protecție
+      - separator [ref=e544]
+      - button "Observații" [ref=e546] [cursor=pointer]:
+        - img [ref=e548]
+        - text: Observații
+      - separator [ref=e550]
+      - button "Cerere curs stivuitorist" [ref=e552] [cursor=pointer]:
+        - img [ref=e554]
+        - text: Cerere curs stivuitorist
+      - generic [ref=e556]:
+        - button "Finalizare formalități" [ref=e558] [cursor=pointer]:
+          - img [ref=e560]
+          - text: Finalizare formalități
+        - button "Contract de muncă nefinalizat" [ref=e563] [cursor=pointer]:
+          - img [ref=e565]
+          - text: Contract de muncă nefinalizat
+```
